@@ -1,14 +1,17 @@
-import logo from "../assets/images/logo.svg";
-import ct_logo from "../assets/images/ct_logo.svg";
+import logo from '../assets/images/logo.svg'
+import ct_logo from '../assets/images/ct_logo.svg'
 
-import img_1 from "../assets/images/left-imgs/img-1.jpg";
-import img_2 from "../assets/images/left-imgs/img-2.jpg";
-import img_5 from "../assets/images/left-imgs/img-5.jpg";
-import img_6 from "../assets/images/left-imgs/img-6.jpg";
-import img_8 from "../assets/images/left-imgs/img-8.jpg";
-import img_9 from "../assets/images/left-imgs/img-9.jpg";
+import img_1 from '../assets/images/left-imgs/img-1.jpg'
+import img_2 from '../assets/images/left-imgs/img-2.jpg'
+import img_5 from '../assets/images/left-imgs/img-5.jpg'
+import img_6 from '../assets/images/left-imgs/img-6.jpg'
+import img_8 from '../assets/images/left-imgs/img-8.jpg'
+import img_9 from '../assets/images/left-imgs/img-9.jpg'
 
-import hd_dp from "../assets/images/hd_dp.jpg";
+import cours_img_sample from '../assets/images/courses/img_cours_sample.jpg'
+import avatar from '../assets/images/avatar.jpg'
+
+import hd_dp from '../assets/images/hd_dp.jpg'
 const images = {
     logo,
     ct_logo,
@@ -19,6 +22,8 @@ const images = {
     img_8,
     img_9,
     hd_dp,
-};
+    cours_img_sample,
+    avatar,
+}
 
-export default images;
+export default images

@@ -1,3 +1,5 @@
+import { IMAGES } from '../../../constants'
+
 export const RightSideBar = () => {
     return (
         <div className="col-xl-3 col-lg-4">
@@ -5,13 +7,13 @@ export const RightSideBar = () => {
                 <div className="fcrse_2 mb-30">
                     <div className="tutor_img">
                         <a href="my_instructor_profile_view.html">
-                            <img src="images/left-imgs/img-10.jpg" alt="" />
+                            <img src={IMAGES.avatar} alt="" />
                         </a>
                     </div>
                     <div className="tutor_content_dt">
                         <div className="tutor150">
                             <a href="my_instructor_profile_view.html" className="tutor_name">
-                                Joginder Singh
+                                奈汐酱Nice
                             </a>
                             <div className="mef78" title="Verify">
                                 <i className="uil uil-check-circle"></i>
