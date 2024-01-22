@@ -1,3 +1,6 @@
+import { Instructor } from './components/Instructor';
+import { IMAGES } from '../../../constants';
+
 export const PopularInstructorsSection = () => {
     return (
         <div className="section3125 mt-50">
@@ -7,376 +10,112 @@ export const PopularInstructorsSection = () => {
             </a>
             <div className="la5lo1">
                 <div className="owl-carousel top_instrutors owl-theme">
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-1.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        John Doe
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Wordpress &amp; Plugin Tutor</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">100K Students</span>
-                                    <span className="vdt15">15 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-2.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Kerstin Cable
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Language Learning Coach, Writer, Online Tutor</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">14K Students</span>
-                                    <span className="vdt15">11 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-3.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Jose Portilla
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Head of Data Science, Pierian Data Inc.</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">1M Students</span>
-                                    <span className="vdt15">25 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-4.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Farhat Amin
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Cookery Coach</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">1.5K Students</span>
-                                    <span className="vdt15">9 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-5.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Kyle Pew
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Microsoft Certified Trainer - 380,000+ Udemy Students</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">300K Students</span>
-                                    <span className="vdt15">18 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-7.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Jaysen Batchelor
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Illustrator &amp; Designer</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">491K Students</span>
-                                    <span className="vdt15">13 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-8.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Quinton Batchelor
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Photographer & Instructor</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">364K Students</span>
-                                    <span className="vdt15">6 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="fcrse_1 mb-20">
-                            <div className="tutor_img">
-                                <a href="instructor_profile_view.html">
-                                    <img src="images/left-imgs/img-6.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div className="tutor_content_dt">
-                                <div className="tutor150">
-                                    <a href="instructor_profile_view.html" className="tutor_name">
-                                        Eli Natoli
-                                    </a>
-                                    <div className="mef78" title="Verify">
-                                        <i className="uil uil-check-circle"></i>
-                                    </div>
-                                </div>
-                                <div className="tutor_cate">Entrepreneur - Passionate Teacher</div>
-                                <ul className="tutor_social_links">
-                                    <li>
-                                        <a href="#" className="fb">
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="tw">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="ln">
-                                            <i className="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="yu">
-                                            <i className="fab fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tut1250">
-                                    <span className="vdt15">615K Students</span>
-                                    <span className="vdt15">12 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Instructor
+                        name="John Doe"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Wordpress & Plugin Tutor"
+                        studentNumber="100K"
+                        coursNumber="15"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Kerstin Cable"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Language Learning Coach, Writer, Online Tutor"
+                        studentNumber="14K"
+                        coursNumber="11"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Jose Portilla"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Head of Data Science, Pierian Data Inc."
+                        studentNumber="1M"
+                        coursNumber="25"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Farhat Amin"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Cookery Coach"
+                        studentNumber="1.5K"
+                        coursNumber="9"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Kyle Pew"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Microsoft Certified Trainer - 380,000+ Udemy Students"
+                        studentNumber="300K"
+                        coursNumber="18"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Jaysen Batchelor"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Illustrator & Designer"
+                        studentNumber="491K"
+                        coursNumber="13"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Quinton Batchelor"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Photographer & Instructor"
+                        studentNumber="364K"
+                        coursNumber="6"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
+                    <Instructor
+                        name="Eli Natoli"
+                        avatar={IMAGES.avatar_instructor_1}
+                        className="Entrepreneur - Passionate Teacher"
+                        studentNumber="615K"
+                        coursNumber="16"
+                        socialLinks={{
+                            facebookUrl: '#',
+                            twitterUrl: '#',
+                            linkedinUrl: '#',
+                            youtubeUrl: '#',
+                        }}
+                    />
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

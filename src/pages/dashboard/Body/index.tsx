@@ -1,10 +1,11 @@
-import { LiveStreamSection } from './LiveStreamSection'
-import { FeatureCoursesSection } from './FeatureCoursesSection'
-import { NewestCoursesSection } from './NewestCoursesSection'
-import { GuildsSection } from './GuildsSection'
-import { PopularInstructorsSection } from './PopularInstructorsSection'
-import { RightSideBar } from './RightSideBar'
-import { StudentThoughts } from './StudentThoughts'
+import { LiveStreamSection } from './LiveStreamSection';
+import { FeatureCoursesSection } from './FeatureCoursesSection';
+import { NewestCoursesSection } from './NewestCoursesSection';
+import { GuildsSection } from './GuildsSection';
+import { PopularInstructorsSection } from './PopularInstructorsSection';
+import { RightSideBar } from './RightSideBar';
+import { StudentThoughtsSection } from './StudentThoughtsSection';
+import { Footer } from './Footer';
 
 export const Body = () => {
     return (
@@ -22,10 +23,12 @@ export const Body = () => {
 
                         <RightSideBar />
 
-                        <StudentThoughts />
+                        <StudentThoughtsSection />
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </div>
-    )
-}
+    );
+};

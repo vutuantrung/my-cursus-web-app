@@ -1,0 +1,8 @@
+Unicons: need to import in App.tsx
+
+Owl Carousel: need to add this to script in index.html (React)
+<script>
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel();
+    });
+</script>

@@ -1,3 +1,5 @@
+import { ICONS } from '../../../constants';
+
 export const GuildsSection = () => {
     return (
         <div className="section3126">
@@ -5,7 +7,7 @@ export const GuildsSection = () => {
                 <div className="col-xl-6 col-lg-12 col-md-6">
                     <div className="value_props">
                         <div className="value_icon">
-                            <i className="uil uil-history"></i>
+                            <img src={ICONS.history} alt="" style={{ width: '50px', height: '50px' }} />
                         </div>
                         <div className="value_content">
                             <h4>Go at your own pace</h4>
@@ -16,7 +18,7 @@ export const GuildsSection = () => {
                 <div className="col-xl-6 col-lg-12 col-md-6">
                     <div className="value_props">
                         <div className="value_icon">
-                            <i className="uil uil-user-check"></i>
+                            <img src={ICONS.user_check} alt="" style={{ width: '50px', height: '50px' }} />
                         </div>
                         <div className="value_content">
                             <h4>Learn from industry experts</h4>
@@ -27,7 +29,7 @@ export const GuildsSection = () => {
                 <div className="col-xl-6 col-lg-12 col-md-6">
                     <div className="value_props">
                         <div className="value_icon">
-                            <i className="uil uil-play-circle"></i>
+                            <img src={ICONS.play_circle} alt="" style={{ width: '50px', height: '50px' }} />
                         </div>
                         <div className="value_content">
                             <h4>Find video courses on almost any topic</h4>
@@ -38,7 +40,7 @@ export const GuildsSection = () => {
                 <div className="col-xl-6 col-lg-12 col-md-6">
                     <div className="value_props">
                         <div className="value_icon">
-                            <i className="uil uil-presentation-play"></i>
+                            <img src={ICONS.presentation_graph} alt="" style={{ width: '50px', height: '50px' }} />
                         </div>
                         <div className="value_content">
                             <h4>100,000 online courses</h4>
@@ -48,5 +50,5 @@ export const GuildsSection = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

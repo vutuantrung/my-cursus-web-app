@@ -1,62 +1,47 @@
-import { IMAGES } from "../../../constants";
+import { ICONS, IMAGES } from '../../../constants';
 
-import { CategoryItem } from "./components/CategoryItem";
+import { CategoryItem } from './components/CategoryItem';
 
 const Header = () => {
     return (
         <header className="header clearfix">
             <button type="button" id="toggleMenu" className="toggle_menu">
-                <i className="uil uil-bars"></i>
+                {/* <i className="uil uil-bars"></i> */}
+                <img src={ICONS.toogle_menu} alt="" style={{ width: '20px', height: '20px' }} />
             </button>
             <button id="collapse_menu" className="collapse_menu">
-                <i className="uil uil-bars collapse_menu--icon "></i>
-                <span className="collapse_menu--label"></span>
+                <img src={ICONS.toogle_menu} alt="" style={{ width: '20px', height: '20px' }} />
+                {/* <i className="uil uil-bars collapse_menu--icon "></i>
+                <span className="collapse_menu--label"></span> */}
             </button>
             <div className="main_logo" id="logo">
                 <a href="index.html">
                     <img src={IMAGES.logo} alt="Logo" />
                 </a>
                 <a href="index.html">
-                    <img
-                        className="logo-inverse"
-                        src={IMAGES.ct_logo}
-                        alt="Logo"
-                    />
+                    <img className="logo-inverse" src={IMAGES.ct_logo} alt="Logo" />
                 </a>
             </div>
             <div className="top-category">
                 <div className="ui compact menu cate-dpdwn">
                     <div className="ui simple dropdown item">
-                        <a
-                            href="#"
-                            className="option_links p-0"
-                            title="categories"
-                        >
-                            <i className="uil uil-apps"></i>
+                        <a href="#" className="option_links p-0" title="categories">
+                            <img src={ICONS.menu_four} alt="Logo" style={{ width: '20px', height: '20px', margin: '5px' }} />
                         </a>
                         <div className="menu dropdown_category5">
                             <CategoryItem name="Development" href="#" />
                             <CategoryItem name="Business" href="#" />
-                            <CategoryItem
-                                name="Finance & Accounting"
-                                href="#"
-                            />
+                            <CategoryItem name="Finance & Accounting" href="#" />
                             <CategoryItem name="IT & Software" href="#" />
                             <CategoryItem name="Office Productivity" href="#" />
-                            <CategoryItem
-                                name="Personal Development"
-                                href="#"
-                            />
+                            <CategoryItem name="Personal Development" href="#" />
                             <CategoryItem name="Design" href="#" />
                             <CategoryItem name="Marketing" href="#" />
                             <CategoryItem name="Lifestyle" href="#" />
                             <CategoryItem name="Photography" href="#" />
                             <CategoryItem name="Health & Fitness" href="#" />
                             <CategoryItem name="Music" href="#" />
-                            <CategoryItem
-                                name="Teaching & Academics"
-                                href="#"
-                            />
+                            <CategoryItem name="Teaching & Academics" href="#" />
                         </div>
                     </div>
                 </div>
@@ -76,28 +61,23 @@ const Header = () => {
             <div className="header_right">
                 <ul>
                     <li>
-                        <a
-                            href="create_new_course.html"
-                            className="upload_btn"
-                            title="Create New Course"
-                        >
+                        <a href="create_new_course.html" className="upload_btn" title="Create New Course">
                             Create New Course
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="shopping_cart.html"
-                            className="option_links"
-                            title="cart"
-                        >
-                            <i className="uil uil-shopping-cart-alt"></i>
+                        <a href="shopping_cart.html" className="option_links" title="cart">
+                            <img src={ICONS.shopping_cart} alt="Cart" style={{ width: '25px', height: '25px', margin: '5px' }} />
                             <span className="noti_count">2</span>
                         </a>
                     </li>
-
                     <li className="ui dropdown">
                         <a href="#" className="option_links" title="Messages">
-                            <i className="uil uil-envelope-alt"></i>
+                            <img
+                                src={ICONS.letter_opened}
+                                alt="Messages"
+                                style={{ width: '25px', height: '25px', margin: '5px' }}
+                            />
                             <span className="noti_count">3</span>
                         </a>
                         <div className="menu dropdown_ms">
@@ -106,14 +86,8 @@ const Header = () => {
                                     <img src={IMAGES.img_6} alt="" />
                                     <div className="pd_content">
                                         <h6>Zoena Singh</h6>
-                                        <p>
-                                            Hi! Sir, How are you. I ask you one
-                                            thing please explain it this video
-                                            price.
-                                        </p>
-                                        <span className="nm_time">
-                                            2 min ago
-                                        </span>
+                                        <p>Hi! Sir, How are you. I ask you one thing please explain it this video price.</p>
+                                        <span className="nm_time">2 min ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -122,13 +96,8 @@ const Header = () => {
                                     <img src={IMAGES.img_5} alt="" />
                                     <div className="pd_content">
                                         <h6>Joy Dua</h6>
-                                        <p>
-                                            Hello, I paid you video tutorial but
-                                            did not play error 404.
-                                        </p>
-                                        <span className="nm_time">
-                                            10 min ago
-                                        </span>
+                                        <p>Hello, I paid you video tutorial but did not play error 404.</p>
+                                        <span className="nm_time">10 min ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -138,28 +107,18 @@ const Header = () => {
                                     <div className="pd_content">
                                         <h6>Jass</h6>
                                         <p>Thanks Sir, Such a nice video.</p>
-                                        <span className="nm_time">
-                                            25 min ago
-                                        </span>
+                                        <span className="nm_time">25 min ago</span>
                                     </div>
                                 </div>
                             </a>
-                            <a
-                                className="vbm_btn"
-                                href="instructor_messages.html"
-                            >
+                            <a className="vbm_btn" href="instructor_messages.html">
                                 View All <i className="uil uil-arrow-right"></i>
                             </a>
                         </div>
                     </li>
-
                     <li className="ui dropdown">
-                        <a
-                            href="#"
-                            className="option_links"
-                            title="Notifications"
-                        >
-                            <i className="uil uil-bell"></i>
+                        <a href="#" className="option_links" title="Notifications">
+                            <img src={ICONS.bell} alt="Cart" style={{ width: '25px', height: '25px', margin: '5px' }} />
                             <span className="noti_count">3</span>
                         </a>
                         <div className="menu dropdown_mn">
@@ -169,15 +128,9 @@ const Header = () => {
                                     <div className="pd_content">
                                         <h6>Rock William</h6>
                                         <p>
-                                            Like Your Comment On Video{" "}
-                                            <strong>
-                                                How to create sidebar menu
-                                            </strong>
-                                            .
+                                            Like Your Comment On Video <strong>How to create sidebar menu</strong>.
                                         </p>
-                                        <span className="nm_time">
-                                            2 min ago
-                                        </span>
+                                        <span className="nm_time">2 min ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -187,15 +140,9 @@ const Header = () => {
                                     <div className="pd_content">
                                         <h6>Jassica Smith</h6>
                                         <p>
-                                            Added New Review In Video{" "}
-                                            <strong>
-                                                Full Stack PHP Developer
-                                            </strong>
-                                            .
+                                            Added New Review In Video <strong>Full Stack PHP Developer</strong>.
                                         </p>
-                                        <span className="nm_time">
-                                            12 min ago
-                                        </span>
+                                        <span className="nm_time">12 min ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -204,20 +151,14 @@ const Header = () => {
                                     <img src={IMAGES.img_9} alt="" />
                                     <div className="pd_content">
                                         <p>
-                                            {" "}
-                                            Your Membership Approved{" "}
-                                            <strong>Upload Video</strong>.
+                                            {' '}
+                                            Your Membership Approved <strong>Upload Video</strong>.
                                         </p>
-                                        <span className="nm_time">
-                                            20 min ago
-                                        </span>
+                                        <span className="nm_time">20 min ago</span>
                                     </div>
                                 </div>
                             </a>
-                            <a
-                                className="vbm_btn"
-                                href="instructor_notifications.html"
-                            >
+                            <a className="vbm_btn" href="instructor_notifications.html">
                                 View All <i className="uil uil-arrow-right"></i>
                             </a>
                         </div>
@@ -233,66 +174,41 @@ const Header = () => {
                                     <div className="pd_content">
                                         <div className="rhte85">
                                             <h6>Joginder Singh</h6>
-                                            <div
-                                                className="mef78"
-                                                title="Verify"
-                                            >
+                                            <div className="mef78" title="Verify">
                                                 <i className="uil uil-check-circle"></i>
                                             </div>
                                         </div>
                                         <span>gambol943@gmail.com</span>
                                     </div>
                                 </div>
-                                <a
-                                    href="my_instructor_profile_view.html"
-                                    className="dp_link_12"
-                                >
+                                <a href="my_instructor_profile_view.html" className="dp_link_12">
                                     View Instructor Profile
                                 </a>
                             </div>
                             <div className="night_mode_switch__btn">
-                                <a
-                                    href="#"
-                                    id="night-mode"
-                                    className="btn-night-mode"
-                                >
+                                <a href="#" id="night-mode" className="btn-night-mode">
                                     <i className="uil uil-moon"></i> Night mode
                                     <span className="btn-night-mode-switch">
                                         <span className="uk-switch-button"></span>
                                     </span>
                                 </a>
                             </div>
-                            <a
-                                href="instructor_dashboard.html"
-                                className="item channel_item"
-                            >
+                            <a href="instructor_dashboard.html" className="item channel_item">
                                 Cursus dashboard
                             </a>
-                            <a
-                                href="membership.html"
-                                className="item channel_item"
-                            >
+                            <a href="membership.html" className="item channel_item">
                                 Paid Memberships
                             </a>
-                            <a
-                                href="setting.html"
-                                className="item channel_item"
-                            >
+                            <a href="setting.html" className="item channel_item">
                                 Setting
                             </a>
                             <a href="help.html" className="item channel_item">
                                 Help
                             </a>
-                            <a
-                                href="feedback.html"
-                                className="item channel_item"
-                            >
+                            <a href="feedback.html" className="item channel_item">
                                 Send Feedback
                             </a>
-                            <a
-                                href="sign_in.html"
-                                className="item channel_item"
-                            >
+                            <a href="sign_in.html" className="item channel_item">
                                 Sign Out
                             </a>
                         </div>
