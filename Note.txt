@@ -6,3 +6,10 @@ Owl Carousel: need to add this to script in index.html (React)
         $('.owl-carousel').owlCarousel();
     });
 </script>
+
+Scripts not run: need to put all code from custom.js, night-mode.js
+<script>
+    $(document).ready(function () {
+        ... <code in custom.js, night-mode.js>
+    });
+</script>
