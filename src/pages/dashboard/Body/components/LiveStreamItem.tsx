@@ -4,10 +4,10 @@ export const LiveStreamItem = ({
     name,
     isLive,
 }: {
-    href: string
-    avatar: string
-    name: string
-    isLive: boolean
+    href: string;
+    avatar: string;
+    name: string;
+    isLive: boolean;
 }) => {
     return (
         <div className="item">
@@ -21,5 +21,5 @@ export const LiveStreamItem = ({
                 </a>
             </div>
         </div>
-    )
-}
+    );
+};

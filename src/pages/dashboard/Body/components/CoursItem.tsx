@@ -1,3 +1,5 @@
+import { ICONS } from '../../../../constants';
+
 export const CoursItem = ({
     isFeaturedCours,
     coursTheme,
@@ -10,16 +12,16 @@ export const CoursItem = ({
     coursViews,
     coursCreatedDate,
 }: {
-    isFeaturedCours: boolean
-    coursTheme: string
-    coursName: string
-    coursTag: string
-    coursAuthor: string
-    coursPrice: string
-    coursPoint: number
-    coursLength: string
-    coursViews: string
-    coursCreatedDate: string
+    isFeaturedCours: boolean;
+    coursTheme: string;
+    coursName: string;
+    coursTag: string;
+    coursAuthor: string;
+    coursPrice: string;
+    coursPoint: number;
+    coursLength: string;
+    coursViews: string;
+    coursCreatedDate: string;
 }) => {
     return (
         <div className="item">
@@ -84,5 +86,5 @@ export const CoursItem = ({
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

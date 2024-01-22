@@ -11,6 +11,9 @@
 # production
 /build
 
+# sample data
+/src/assets/images/test
+
 # misc
 .DS_Store
 .env.local

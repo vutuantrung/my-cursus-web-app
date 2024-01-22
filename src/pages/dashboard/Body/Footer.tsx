@@ -1,3 +1,5 @@
+import { ICONS, IMAGES } from '../../../constants';
+
 export const Footer = () => {
     return (
         <footer className="footer mt-30">
@@ -39,9 +41,17 @@ export const Footer = () => {
                                     data-content="Select Language"
                                 >
                                     <a href="#">
-                                        <i className="uil uil-globe lft"></i>
+                                        <img
+                                            src={ICONS.global}
+                                            alt=""
+                                            style={{ width: '15px', height: '15px', marginRight: '10px' }}
+                                        />
                                         Language
-                                        <i className="uil uil-angle-down rgt"></i>
+                                        <img
+                                            src={ICONS.arrow_down}
+                                            alt=""
+                                            style={{ width: '10px', height: '10px', marginLeft: '10px' }}
+                                        />
                                     </a>
                                     <div className="menu">
                                         <div className="scrolling menu">
@@ -161,14 +171,13 @@ export const Footer = () => {
                                         <li>
                                             <a href="index.html">
                                                 <div className="footer_logo">
-                                                    <img src="images/logo1.svg" alt="" />
+                                                    <img src={IMAGES.logo1} alt="" />
                                                 </div>
                                             </a>
                                         </li>
                                         <li>
                                             <p>
-                                                © 2020
-                                                <strong>Cursus</strong>. All Rights Reserved.
+                                                © 2020 <strong> Cursus</strong>. All Rights Reserved.
                                             </p>
                                         </li>
                                     </ul>
@@ -204,5 +213,5 @@ export const Footer = () => {
                 </div>
             </div>
         </footer>
-    )
-}
+    );
+};

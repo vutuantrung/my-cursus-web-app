@@ -1,3 +1,5 @@
+import { ICONS } from '../../../../constants';
+
 export const Instructor = ({
     name,
     avatar,
@@ -6,12 +8,12 @@ export const Instructor = ({
     coursNumber,
     socialLinks,
 }: {
-    name: string
-    avatar: string
-    className: string
-    studentNumber: string
-    coursNumber: string
-    socialLinks: any
+    name: string;
+    avatar: string;
+    className: string;
+    studentNumber: string;
+    coursNumber: string;
+    socialLinks: any;
 }) => {
     const renderSocialLinks = () => {
         return (
@@ -45,8 +47,8 @@ export const Instructor = ({
                     </li>
                 )}
             </div>
-        )
-    }
+        );
+    };
 
     return (
         <div className="item">
@@ -62,7 +64,7 @@ export const Instructor = ({
                             {name}
                         </a>
                         <div className="mef78" title="Verify">
-                            <i className="uil uil-check-circle"></i>
+                            <img src={ICONS.check_circle} alt="" style={{ width: '20px', height: '20px', marginLeft: '5px' }} />
                         </div>
                     </div>
                     <div className="tutor_cate">{className}</div>
@@ -74,5 +76,5 @@ export const Instructor = ({
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

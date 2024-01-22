@@ -1,16 +1,18 @@
-import { IMAGES } from '../../../constants'
+import { ICONS, IMAGES } from '../../../constants';
 
-import { CategoryItem } from './components/CategoryItem'
+import { CategoryItem } from './components/CategoryItem';
 
 const Header = () => {
     return (
         <header className="header clearfix">
             <button type="button" id="toggleMenu" className="toggle_menu">
-                <i className="uil uil-bars"></i>
+                {/* <i className="uil uil-bars"></i> */}
+                <img src={ICONS.toogle_menu} alt="" style={{ width: '20px', height: '20px' }} />
             </button>
             <button id="collapse_menu" className="collapse_menu">
-                <i className="uil uil-bars collapse_menu--icon "></i>
-                <span className="collapse_menu--label"></span>
+                <img src={ICONS.toogle_menu} alt="" style={{ width: '20px', height: '20px' }} />
+                {/* <i className="uil uil-bars collapse_menu--icon "></i>
+                <span className="collapse_menu--label"></span> */}
             </button>
             <div className="main_logo" id="logo">
                 <a href="index.html">
@@ -24,7 +26,7 @@ const Header = () => {
                 <div className="ui compact menu cate-dpdwn">
                     <div className="ui simple dropdown item">
                         <a href="#" className="option_links p-0" title="categories">
-                            <i className="uil uil-apps"></i>
+                            <img src={ICONS.menu_four} alt="Logo" style={{ width: '20px', height: '20px', margin: '5px' }} />
                         </a>
                         <div className="menu dropdown_category5">
                             <CategoryItem name="Development" href="#" />
@@ -65,14 +67,17 @@ const Header = () => {
                     </li>
                     <li>
                         <a href="shopping_cart.html" className="option_links" title="cart">
-                            <i className="uil uil-shopping-cart-alt"></i>
+                            <img src={ICONS.shopping_cart} alt="Cart" style={{ width: '25px', height: '25px', margin: '5px' }} />
                             <span className="noti_count">2</span>
                         </a>
                     </li>
-
                     <li className="ui dropdown">
                         <a href="#" className="option_links" title="Messages">
-                            <i className="uil uil-envelope-alt"></i>
+                            <img
+                                src={ICONS.letter_opened}
+                                alt="Messages"
+                                style={{ width: '25px', height: '25px', margin: '5px' }}
+                            />
                             <span className="noti_count">3</span>
                         </a>
                         <div className="menu dropdown_ms">
@@ -111,10 +116,9 @@ const Header = () => {
                             </a>
                         </div>
                     </li>
-
                     <li className="ui dropdown">
                         <a href="#" className="option_links" title="Notifications">
-                            <i className="uil uil-bell"></i>
+                            <img src={ICONS.bell} alt="Cart" style={{ width: '25px', height: '25px', margin: '5px' }} />
                             <span className="noti_count">3</span>
                         </a>
                         <div className="menu dropdown_mn">
@@ -212,7 +216,7 @@ const Header = () => {
                 </ul>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

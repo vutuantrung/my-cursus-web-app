@@ -5,33 +5,19 @@ const LeftSideBar = () => {
                 <div className="left_section">
                     <ul>
                         <li className="menu--item">
-                            <a
-                                href="index.html"
-                                className="menu--link active"
-                                title="Home"
-                            >
+                            <a href="index.html" className="menu--link active" title="Home">
                                 <i className="uil uil-home-alt menu--icon"></i>
                                 <span className="menu--label">Home</span>
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="live_streams.html"
-                                className="menu--link"
-                                title="Live Streams"
-                            >
+                            <a href="live_streams.html" className="menu--link" title="Live Streams">
                                 <i className="uil uil-kayak menu--icon"></i>
-                                <span className="menu--label">
-                                    Live Streams
-                                </span>
+                                <span className="menu--label">Live Streams</span>
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="explore.html"
-                                className="menu--link"
-                                title="Explore"
-                            >
+                            <a href="explore.html" className="menu--link" title="Explore">
                                 <i className="uil uil-search menu--icon"></i>
                                 <span className="menu--label">Explore</span>
                             </a>
@@ -116,34 +102,22 @@ const LeftSideBar = () => {
                             </label>
                             <ul className="sub_menu">
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="certification_center.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="certification_center.html" className="sub_menu--link">
                                         Certification Center
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="certification_start_form.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="certification_start_form.html" className="sub_menu--link">
                                         Certification Fill Form
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="certification_test_view.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="certification_test_view.html" className="sub_menu--link">
                                         Test View
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="certification_test__result.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="certification_test__result.html" className="sub_menu--link">
                                         Test Result
                                     </a>
                                 </li>
@@ -158,15 +132,9 @@ const LeftSideBar = () => {
                             </ul>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="saved_courses.html"
-                                className="menu--link"
-                                title="Saved Courses"
-                            >
+                            <a href="saved_courses.html" className="menu--link" title="Saved Courses">
                                 <i className="uil uil-heart-alt menu--icon"></i>
-                                <span className="menu--label">
-                                    Saved Courses
-                                </span>
+                                <span className="menu--label">Saved Courses</span>
                             </a>
                         </li>
                         <li className="menu--item  menu--item__has_sub_menu">
@@ -176,162 +144,102 @@ const LeftSideBar = () => {
                             </label>
                             <ul className="sub_menu">
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="about_us.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="about_us.html" className="sub_menu--link">
                                         About
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="sign_in.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="sign_in.html" className="sub_menu--link">
                                         Sign In
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="sign_up.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="sign_up.html" className="sub_menu--link">
                                         Sign Up
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="sign_up_steps.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="sign_up_steps.html" className="sub_menu--link">
                                         Sign Up Steps
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="membership.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="membership.html" className="sub_menu--link">
                                         Paid Membership
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="course_detail_view.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="course_detail_view.html" className="sub_menu--link">
                                         Course Detail View
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="checkout_membership.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="checkout_membership.html" className="sub_menu--link">
                                         Checkout
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="invoice.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="invoice.html" className="sub_menu--link">
                                         Invoice
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="career.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="career.html" className="sub_menu--link">
                                         Career
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="apply_job.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="apply_job.html" className="sub_menu--link">
                                         Job Apply
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="our_blog.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="our_blog.html" className="sub_menu--link">
                                         Our Blog
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="blog_single_view.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="blog_single_view.html" className="sub_menu--link">
                                         Blog Detail View
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="company_details.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="company_details.html" className="sub_menu--link">
                                         Company Details
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="press.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="press.html" className="sub_menu--link">
                                         Press
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="live_output.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="live_output.html" className="sub_menu--link">
                                         Live Stream View
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="add_streaming.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="add_streaming.html" className="sub_menu--link">
                                         Add live Stream
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="search_result.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="search_result.html" className="sub_menu--link">
                                         Search Result
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="thank_you.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="thank_you.html" className="sub_menu--link">
                                         Thank You
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="coming_soon.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="coming_soon.html" className="sub_menu--link">
                                         Coming Soon
                                     </a>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="error_404.html"
-                                        className="sub_menu--link"
-                                    >
+                                    <a href="error_404.html" className="sub_menu--link">
                                         Error 404
                                     </a>
                                 </li>
@@ -343,35 +251,23 @@ const LeftSideBar = () => {
                     <h6 className="left_title">SUBSCRIPTIONS</h6>
                     <ul>
                         <li className="menu--item">
-                            <a
-                                href="instructor_profile_view.html"
-                                className="menu--link user_img"
-                            >
+                            <a href="instructor_profile_view.html" className="menu--link user_img">
                                 <img src="images/left-imgs/img-1.jpg" alt="" />
                                 Rock Smith
                                 <div className="alrt_dot"></div>
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_profile_view.html"
-                                className="menu--link user_img"
-                            >
+                            <a href="instructor_profile_view.html" className="menu--link user_img">
                                 <img src="images/left-imgs/img-2.jpg" alt="" />
                                 Jassica William
                             </a>
                             <div className="alrt_dot"></div>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="all_instructor.html"
-                                className="menu--link"
-                                title="Browse Instructors"
-                            >
+                            <a href="all_instructor.html" className="menu--link" title="Browse Instructors">
                                 <i className="uil uil-plus-circle menu--icon"></i>
-                                <span className="menu--label">
-                                    Browse Instructors
-                                </span>
+                                <span className="menu--label">Browse Instructors</span>
                             </a>
                         </li>
                     </ul>
@@ -379,47 +275,27 @@ const LeftSideBar = () => {
                 <div className="left_section pt-2">
                     <ul>
                         <li className="menu--item">
-                            <a
-                                href="setting.html"
-                                className="menu--link"
-                                title="Setting"
-                            >
+                            <a href="setting.html" className="menu--link" title="Setting">
                                 <i className="uil uil-cog menu--icon"></i>
                                 <span className="menu--label">Setting</span>
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="help.html"
-                                className="menu--link"
-                                title="Help"
-                            >
+                            <a href="help.html" className="menu--link" title="Help">
                                 <i className="uil uil-question-circle menu--icon"></i>
                                 <span className="menu--label">Help</span>
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="report_history.html"
-                                className="menu--link"
-                                title="Report History"
-                            >
+                            <a href="report_history.html" className="menu--link" title="Report History">
                                 <i className="uil uil-windsock menu--icon"></i>
-                                <span className="menu--label">
-                                    Report History
-                                </span>
+                                <span className="menu--label">Report History</span>
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="feedback.html"
-                                className="menu--link"
-                                title="Send Feedback"
-                            >
+                            <a href="feedback.html" className="menu--link" title="Send Feedback">
                                 <i className="uil uil-comment-alt-exclamation menu--icon"></i>
-                                <span className="menu--label">
-                                    Send Feedback
-                                </span>
+                                <span className="menu--label">Send Feedback</span>
                             </a>
                         </li>
                     </ul>

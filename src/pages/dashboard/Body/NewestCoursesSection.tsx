@@ -1,5 +1,5 @@
-import { IMAGES } from '../../../constants'
-import { CoursItem } from './components/CoursItem'
+import { IMAGES } from '../../../constants';
+import { CoursItem } from './components/CoursItem';
 
 export const NewestCoursesSection = () => {
     return (
@@ -9,11 +9,10 @@ export const NewestCoursesSection = () => {
                 See all
             </a>
             <div className="la5lo1">
-                <div className="featured_courses owl-theme">
+                <div className="owl-carousel featured_courses owl-theme">
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme={IMAGES.cours_img_sample}
-                        // coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="Complete Python Bootcamp: Go from zero to hero in Python 3"
                         coursTag="Web Development | Python"
                         coursAuthor="John Doe"
@@ -25,7 +24,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="The Complete JavaScript Course 2020: Build Real Projects!"
                         coursTag="Development | JavaScript"
                         coursAuthor="Jassica William"
@@ -37,7 +36,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="Beginning C++ Programming - From Beginner to Beyond"
                         coursTag="Development | C++"
                         coursAuthor="Joginder Singh"
@@ -49,7 +48,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="The Complete Digital Marketing Course - 12 Courses in 1"
                         coursTag="Digital Marketing | Marketing"
                         coursAuthor="Poonam Verma"
@@ -61,7 +60,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="Microsoft Excel - Excel from Beginner to Advanced"
                         coursTag="Office Productivity | Excel"
                         coursAuthor="Rock William"
@@ -73,7 +72,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="Angular 8 - The Complete Guide (2020 Edition)"
                         coursTag="Development | Angular"
                         coursAuthor="John Doe"
@@ -85,7 +84,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="WordPress for Beginners: Create a Website Step by Step"
                         coursTag="Design | Wordpress"
                         coursAuthor="Sabnam SIngh"
@@ -97,7 +96,7 @@ export const NewestCoursesSection = () => {
                     />
                     <CoursItem
                         isFeaturedCours={false}
-                        coursTheme="images/courses/img-1.jpg"
+                        coursTheme={IMAGES.img_cours_sample_0}
                         coursName="CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)"
                         coursTag="Design | CSS"
                         coursAuthor="Jashanpreet Singh"
@@ -110,5 +109,5 @@ export const NewestCoursesSection = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
