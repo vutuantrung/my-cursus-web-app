@@ -1,23 +1,8 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { IMAGES } from '../../../constants';
-
-import { CategoryItem } from './components/CategoryItem';
-import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const night_mode_switch = useRef<HTMLAnchorElement>(null);
-    const onNightModeSwitch = (event: Event) => {
-        event.preventDefault();
-        document.documentElement.classList.toggle('night-mode');
-        if (document.documentElement.classList.contains('night-mode')) {
-            localStorage.setItem('gmtNightMode', 'true');
-            return;
-        }
-        localStorage.removeItem('gmtNightMode');
-    };
-    useEffect(() => {
-        if (night_mode_switch.current) night_mode_switch.current.addEventListener('click', onNightModeSwitch);
-    }, []);
     return (
         <header className="header clearfix">
             <button type="button" id="toggleMenu" className="toggle_menu">
@@ -42,19 +27,45 @@ const Header = () => {
                             <i className="uil uil-apps"></i>
                         </a>
                         <div className="menu dropdown_category5">
-                            <CategoryItem name="Development" href="#" />
-                            <CategoryItem name="Business" href="#" />
-                            <CategoryItem name="Finance & Accounting" href="#" />
-                            <CategoryItem name="IT & Software" href="#" />
-                            <CategoryItem name="Office Productivity" href="#" />
-                            <CategoryItem name="Personal Development" href="#" />
-                            <CategoryItem name="Design" href="#" />
-                            <CategoryItem name="Marketing" href="#" />
-                            <CategoryItem name="Lifestyle" href="#" />
-                            <CategoryItem name="Photography" href="#" />
-                            <CategoryItem name="Health & Fitness" href="#" />
-                            <CategoryItem name="Music" href="#" />
-                            <CategoryItem name="Teaching & Academics" href="#" />
+                            <a href="#" className="item channel_item">
+                                Development
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Business
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Finance & Accounting
+                            </a>
+                            <a href="#" className="item channel_item">
+                                IT & Software
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Office Productivity
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Personal Development
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Design
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Marketing
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Lifestyle
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Photography
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Health & Fitness
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Music
+                            </a>
+                            <a href="#" className="item channel_item">
+                                Teaching & Academics
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -74,11 +85,9 @@ const Header = () => {
             <div className="header_right">
                 <ul>
                     <li>
-                        <Link to="/createNewCours">
-                            <div className="upload_btn" title="Create New Course">
-                                Create New Course
-                            </div>
-                        </Link>
+                        <a href="create_new_course.html" className="upload_btn" title="Create New Course">
+                            Create New Course
+                        </a>
                     </li>
                     <li>
                         <a href="shopping_cart.html" className="option_links" title="cart">
@@ -94,7 +103,7 @@ const Header = () => {
                         <div className="menu dropdown_ms">
                             <a href="#" className="channel_my item">
                                 <div className="profile_link">
-                                    <img src={IMAGES.img_6} alt="" />
+                                    <img src="images/left-imgs/img-6.jpg" alt="" />
                                     <div className="pd_content">
                                         <h6>Zoena Singh</h6>
                                         <p>Hi! Sir, How are you. I ask you one thing please explain it this video price.</p>
@@ -104,7 +113,7 @@ const Header = () => {
                             </a>
                             <a href="#" className="channel_my item">
                                 <div className="profile_link">
-                                    <img src={IMAGES.img_5} alt="" />
+                                    <img src="images/left-imgs/img-5.jpg" alt="" />
                                     <div className="pd_content">
                                         <h6>Joy Dua</h6>
                                         <p>Hello, I paid you video tutorial but did not play error 404.</p>
@@ -114,7 +123,7 @@ const Header = () => {
                             </a>
                             <a href="#" className="channel_my item">
                                 <div className="profile_link">
-                                    <img src={IMAGES.img_8} alt="" />
+                                    <img src="images/left-imgs/img-8.jpg" alt="" />
                                     <div className="pd_content">
                                         <h6>Jass</h6>
                                         <p>Thanks Sir, Such a nice video.</p>
@@ -135,7 +144,7 @@ const Header = () => {
                         <div className="menu dropdown_mn">
                             <a href="#" className="channel_my item">
                                 <div className="profile_link">
-                                    <img src={IMAGES.img_1} alt="" />
+                                    <img src="images/left-imgs/img-1.jpg" alt="" />
                                     <div className="pd_content">
                                         <h6>Rock William</h6>
                                         <p>
@@ -147,7 +156,7 @@ const Header = () => {
                             </a>
                             <a href="#" className="channel_my item">
                                 <div className="profile_link">
-                                    <img src={IMAGES.img_2} alt="" />
+                                    <img src="images/left-imgs/img-2.jpg" alt="" />
                                     <div className="pd_content">
                                         <h6>Jassica Smith</h6>
                                         <p>
@@ -159,7 +168,7 @@ const Header = () => {
                             </a>
                             <a href="#" className="channel_my item">
                                 <div className="profile_link">
-                                    <img src={IMAGES.img_9} alt="" />
+                                    <img src="images/left-imgs/img-9.jpg" alt="" />
                                     <div className="pd_content">
                                         <p>
                                             {' '}
@@ -197,7 +206,7 @@ const Header = () => {
                                 </a>
                             </div>
                             <div className="night_mode_switch__btn">
-                                <a href="###" id="night-mode" className="btn-night-mode" ref={night_mode_switch}>
+                                <a href="#" id="night-mode" className="btn-night-mode">
                                     <i className="uil uil-moon"></i> Night mode
                                     <span className="btn-night-mode-switch">
                                         <span className="uk-switch-button"></span>
