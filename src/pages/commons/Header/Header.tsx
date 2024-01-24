@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { IMAGES } from '../../../constants';
-
 import { CategoryItem } from './components/CategoryItem';
 import { useEffect, useRef } from 'react';
 
 const Header = () => {
     const night_mode_switch = useRef<HTMLAnchorElement>(null);
     const onNightModeSwitch = (event: Event) => {
+        console.log('onNightModeSwitch');
         event.preventDefault();
         document.documentElement.classList.toggle('night-mode');
         if (document.documentElement.classList.contains('night-mode')) {
@@ -15,9 +15,13 @@ const Header = () => {
         }
         localStorage.removeItem('gmtNightMode');
     };
+
     useEffect(() => {
-        if (night_mode_switch.current) night_mode_switch.current.addEventListener('click', onNightModeSwitch);
+        if (night_mode_switch.current) {
+            night_mode_switch.current.addEventListener('click', onNightModeSwitch);
+        }
     }, []);
+
     return (
         <header className="header clearfix">
             <button type="button" id="toggleMenu" className="toggle_menu">

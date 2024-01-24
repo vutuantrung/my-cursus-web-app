@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Body } from './Body';
-import Header from './Header';
-import LeftSideBar from './LeftSideBar';
+import Header from '../commons/Header/Header';
+import LeftSideBar from '../commons/LeftSideBar/LeftSideBar';
 
 const Dashboard = () => {
     useEffect(() => {
@@ -159,11 +159,11 @@ const Dashboard = () => {
         });
     }, []);
     return (
-        <div>
+        <>
             <Header />
             <LeftSideBar />
             <Body />
-        </div>
+        </>
     );
 };
 
