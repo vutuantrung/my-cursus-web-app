@@ -1,8 +1,23 @@
+import { Link } from 'react-router-dom';
 import { IMAGES } from '../../../constants';
 
 import { CategoryItem } from './components/CategoryItem';
+import { useEffect, useRef } from 'react';
 
 const Header = () => {
+    const night_mode_switch = useRef<HTMLAnchorElement>(null);
+    const onNightModeSwitch = (event: Event) => {
+        event.preventDefault();
+        document.documentElement.classList.toggle('night-mode');
+        if (document.documentElement.classList.contains('night-mode')) {
+            localStorage.setItem('gmtNightMode', 'true');
+            return;
+        }
+        localStorage.removeItem('gmtNightMode');
+    };
+    useEffect(() => {
+        if (night_mode_switch.current) night_mode_switch.current.addEventListener('click', onNightModeSwitch);
+    }, []);
     return (
         <header className="header clearfix">
             <button type="button" id="toggleMenu" className="toggle_menu">
@@ -13,12 +28,12 @@ const Header = () => {
                 <span className="collapse_menu--label"></span>
             </button>
             <div className="main_logo" id="logo">
-                <a href="index.html">
+                <Link to="/">
                     <img src={IMAGES.logo} alt="Logo" />
-                </a>
-                <a href="index.html">
+                </Link>
+                <Link to="/">
                     <img className="logo-inverse" src={IMAGES.ct_logo} alt="Logo" />
-                </a>
+                </Link>
             </div>
             <div className="top-category">
                 <div className="ui compact menu cate-dpdwn">
@@ -59,9 +74,11 @@ const Header = () => {
             <div className="header_right">
                 <ul>
                     <li>
-                        <a href="create_new_course.html" className="upload_btn" title="Create New Course">
-                            Create New Course
-                        </a>
+                        <Link to="/createNewCours">
+                            <div className="upload_btn" title="Create New Course">
+                                Create New Course
+                            </div>
+                        </Link>
                     </li>
                     <li>
                         <a href="shopping_cart.html" className="option_links" title="cart">
@@ -180,7 +197,7 @@ const Header = () => {
                                 </a>
                             </div>
                             <div className="night_mode_switch__btn">
-                                <a href="#" id="night-mode" className="btn-night-mode">
+                                <a href="###" id="night-mode" className="btn-night-mode" ref={night_mode_switch}>
                                     <i className="uil uil-moon"></i> Night mode
                                     <span className="btn-night-mode-switch">
                                         <span className="uk-switch-button"></span>

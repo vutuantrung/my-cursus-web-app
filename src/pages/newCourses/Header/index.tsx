@@ -1,4 +1,6 @@
 import React from 'react';
+import { IMAGES } from '../../../constants';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -11,12 +13,12 @@ const Header = () => {
                 <span className="collapse_menu--label"></span>
             </button>
             <div className="main_logo" id="logo">
-                <a href="index.html">
-                    <img src="images/logo.svg" alt="" />
-                </a>
-                <a href="index.html">
-                    <img className="logo-inverse" src="images/ct_logo.svg" alt="" />
-                </a>
+                <Link to="/">
+                    <img src={IMAGES.logo} alt="Logo" />
+                </Link>
+                <Link to="/">
+                    <img className="logo-inverse" src={IMAGES.ct_logo} alt="Logo" />
+                </Link>
             </div>
             <div className="top-category">
                 <div className="ui compact menu cate-dpdwn">
@@ -183,12 +185,12 @@ const Header = () => {
                     </li>
                     <li className="ui dropdown">
                         <a href="#" className="opts_account" title="Account">
-                            <img src="images/hd_dp.jpg" alt="" />
+                            <img src={IMAGES.hd_dp} alt="" />
                         </a>
                         <div className="menu dropdown_account">
                             <div className="channel_my">
                                 <div className="profile_link">
-                                    <img src="images/hd_dp.jpg" alt="" />
+                                    <img src={IMAGES.hd_dp} alt="" />
                                     <div className="pd_content">
                                         <div className="rhte85">
                                             <h6>Joginder Singh</h6>
