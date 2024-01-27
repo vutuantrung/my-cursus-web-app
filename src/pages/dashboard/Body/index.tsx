@@ -5,7 +5,7 @@ import { GuildsSection } from './GuildsSection';
 import { PopularInstructorsSection } from './PopularInstructorsSection';
 import { RightSideBar } from './RightSideBar';
 import { StudentThoughtsSection } from './StudentThoughtsSection';
-import Footer from '../../commons/Footer/Footer';
+import AppFooter from '../../commons/Footer/AppFooter';
 
 export const Body = () => {
     return (
@@ -27,7 +27,7 @@ export const Body = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <AppFooter />
         </div>
     );
 };

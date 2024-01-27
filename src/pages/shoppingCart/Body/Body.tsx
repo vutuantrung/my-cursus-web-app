@@ -1,5 +1,5 @@
 import { IMAGES } from '../../../constants';
-import Footer from '../../commons/Footer/Footer';
+import AppFooter from '../../commons/Footer/AppFooter';
 
 const Body = () => {
     return (
@@ -110,7 +110,7 @@ const Body = () => {
                 </div>
             </div>
 
-            <Footer />
+            <AppFooter />
         </div>
     );
 };

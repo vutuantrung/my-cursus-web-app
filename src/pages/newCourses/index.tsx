@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Body from './Body';
-import Header from '../commons/Header/Header';
-import LeftSideBar from '../commons/LeftSideBar/LeftSideBar';
+import AppHeader from '../commons/Header/AppHeader';
+import PageLeftsideBar from '../commons/LeftSideBar/PageLeftsideBar';
 
 const CreateNewCoursePage = () => {
     useEffect(() => {
@@ -15,8 +15,8 @@ const CreateNewCoursePage = () => {
     }, []);
     return (
         <>
-            <Header />
-            <LeftSideBar />
+            <AppHeader />
+            <PageLeftsideBar />
             <Body />
         </>
     );

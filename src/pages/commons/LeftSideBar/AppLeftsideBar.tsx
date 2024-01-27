@@ -1,4 +1,4 @@
-const LeftSideBar = () => {
+const AppLeftsideBar = () => {
     return (
         <nav className="vertical_nav">
             <div className="left_section menu_left" id="js-menu">
@@ -338,4 +338,4 @@ const LeftSideBar = () => {
     );
 };
 
-export default LeftSideBar;
+export default AppLeftsideBar;

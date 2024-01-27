@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const Footer = () => {
+const AppFooter = () => {
     useEffect(() => {
         ($('.ui.dropdown') as any).dropdown();
 
@@ -220,4 +220,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default AppFooter;

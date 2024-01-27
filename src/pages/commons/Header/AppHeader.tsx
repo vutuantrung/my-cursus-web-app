@@ -3,7 +3,7 @@ import { IMAGES } from '../../../constants';
 import { CategoryItem } from './components/CategoryItem';
 import { useEffect, useRef } from 'react';
 
-const Header = () => {
+const AppHeader = () => {
     const night_mode_switch = useRef<HTMLAnchorElement>(null);
     const onNightModeSwitch = (event: Event) => {
         event.preventDefault();
@@ -235,4 +235,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default AppHeader;
