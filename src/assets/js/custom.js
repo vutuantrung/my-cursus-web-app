@@ -177,14 +177,14 @@ if ($('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player
     $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
 
         /*Floating js Start*/
-        var windows = $(window);
-        var iframeWrap = $(this).parent();
-        var iframe = $(this);
-        var iframeHeight = iframe.outerHeight();
-        var iframeElement = iframe.get(0);
+        const windows = $(window);
+        const iframeWrap = $(this).parent();
+        const iframe = $(this);
+        const iframeHeight = iframe.outerHeight();
+        const iframeElement = iframe.get(0);
         windows.on('scroll', function () {
-            var windowScrollTop = windows.scrollTop();
-            var iframeBottom = iframeHeight + iframeWrap.offset().top;
+            const windowScrollTop = windows.scrollTop();
+            const iframeBottom = iframeHeight + iframeWrap.offset().top;
             //alert(iframeBottom);
 
             if ((windowScrollTop > iframeBottom)) {
@@ -200,43 +200,31 @@ if ($('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player
     });
 }
 
-/*Floating Code for Iframe End*/
-
-// expand/collapse all Start
-
-var headers = $('#accordion .accordion-header');
-var contentAreas = $('#accordion .ui-accordion-content ').hide()
-    .first().show().end();
-var expandLink = $('.accordion-expand-all');
+const headers = $('#accordion .accordion-header');
+const contentAreas = $('#accordion .ui-accordion-content ').hide().first().show().end();
+const expandLink = $('.accordion-expand-all');
+const inputPayment = $('input[name="paymentmethod"]')
 
 // add the accordion functionality
-headers.click(function () {
-    // close all panels
+headers.on("click", function () {
     contentAreas.slideUp();
-    // open the appropriate panel
     $(this).next().slideDown();
-    // reset Expand all button
-    expandLink.text('Expand all')
-        .data('isAllOpen', false);
-    // stop page scroll
+    expandLink.text('Expand all').data('isAllOpen', false);
     return false;
-});
+})
 
 // hook up the expand/collapse all
-expandLink.click(function () {
-    var isAllOpen = !$(this).data('isAllOpen');
-    console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
+expandLink.on("click", function () {
+    const isAllOpen = !$(this).data('isAllOpen');
+    // console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
     contentAreas[isAllOpen ? 'slideDown' : 'slideUp']();
-
-    expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all')
-        .data('isAllOpen', isAllOpen);
-});
+    expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all').data('isAllOpen', isAllOpen);
+})
 
 
 // Payment Method Accordion
-$('input[name="paymentmethod"]').on('click', function () {
-    var $value = $(this).attr('value');
+inputPayment.on('click', function () {
+    const $value = $(this).attr('value');
     $('.return-departure-dts').slideUp();
     $('[data-method="' + $value + '"]').slideDown();
 });
-

@@ -6,7 +6,6 @@ import { useEffect, useRef } from 'react';
 const Header = () => {
     const night_mode_switch = useRef<HTMLAnchorElement>(null);
     const onNightModeSwitch = (event: Event) => {
-        console.log('onNightModeSwitch');
         event.preventDefault();
         document.documentElement.classList.toggle('night-mode');
         if (document.documentElement.classList.contains('night-mode')) {
@@ -85,10 +84,12 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="shopping_cart.html" className="option_links" title="cart">
-                            <i className="uil uil-shopping-cart-alt"></i>
-                            <span className="noti_count">2</span>
-                        </a>
+                        <Link to="/shoppingCart">
+                            <div className="option_links" title="cart">
+                                <i className="uil uil-shopping-cart-alt"></i>
+                                <span className="noti_count">2</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="ui dropdown">
                         <a href="#" className="option_links" title="Messages">

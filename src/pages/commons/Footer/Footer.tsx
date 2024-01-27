@@ -1,6 +1,20 @@
-import { ICONS, IMAGES } from '../../../constants';
+import { useEffect } from 'react';
 
-export const Footer = () => {
+const Footer = () => {
+    useEffect(() => {
+        ($('.ui.dropdown') as any).dropdown();
+
+        // === Model === //
+        ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
+        // === Tab === //
+        ($('.menu .item') as any).tab();
+        // === checkbox Toggle === //
+        ($('.ui.checkbox') as any).checkbox();
+        // === Toggle === //
+        $('.enable.button').on('click', function () {
+            ($(this).nextAll('.checkbox') as any).checkbox('enable');
+        });
+    }, []);
     return (
         <footer className="footer mt-30">
             <div className="container">
@@ -41,21 +55,12 @@ export const Footer = () => {
                                     data-content="Select Language"
                                 >
                                     <a href="#">
-                                        <img
-                                            src={ICONS.global}
-                                            alt=""
-                                            style={{ width: '15px', height: '15px', marginRight: '10px' }}
-                                        />
-                                        Language
-                                        <img
-                                            src={ICONS.arrow_down}
-                                            alt=""
-                                            style={{ width: '10px', height: '10px', marginLeft: '10px' }}
-                                        />
+                                        <i className="uil uil-globe lft"></i>Language
+                                        <i className="uil uil-angle-down rgt"></i>
                                     </a>
                                     <div className="menu">
                                         <div className="scrolling menu">
-                                            <div className="item" data-value="en" data-english="English">
+                                            <div className="item" data-percent="100" data-value="en" data-english="English">
                                                 <span className="description">English</span>
                                                 English
                                             </div>
@@ -92,7 +97,6 @@ export const Footer = () => {
                                                 <span className="description">ελληνικά</span>
                                                 Greek
                                             </div>
-
                                             <div className="item" data-percent="37" data-value="ru" data-english="Russian">
                                                 <span className="description">Русский</span>
                                                 Russian
@@ -171,13 +175,13 @@ export const Footer = () => {
                                         <li>
                                             <a href="index.html">
                                                 <div className="footer_logo">
-                                                    <img src={IMAGES.logo1} alt="" />
+                                                    <img src="images/logo1.svg" alt="" />
                                                 </div>
                                             </a>
                                         </li>
                                         <li>
                                             <p>
-                                                © 2020 <strong> Cursus</strong>. All Rights Reserved.
+                                                © 2020 <strong>Cursus</strong>. All Rights Reserved.
                                             </p>
                                         </li>
                                     </ul>
@@ -215,3 +219,5 @@ export const Footer = () => {
         </footer>
     );
 };
+
+export default Footer;
