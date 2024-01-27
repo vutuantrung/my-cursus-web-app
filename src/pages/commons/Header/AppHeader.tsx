@@ -77,7 +77,7 @@ const AppHeader = () => {
             <div className="header_right">
                 <ul>
                     <li>
-                        <Link to="/createNewCours">
+                        <Link to="/createNewCourse">
                             <div className="upload_btn" title="Create New Course">
                                 Create New Course
                             </div>
@@ -94,7 +94,7 @@ const AppHeader = () => {
                     <li className="ui dropdown">
                         <a href="#" className="option_links" title="Messages">
                             <i className="uil uil-envelope-alt"></i>
-                            <span className="noti_count">3</span>
+                            <span className="noti_count">4</span>
                         </a>
                         <div className="menu dropdown_ms">
                             <a href="#" className="channel_my item">
@@ -127,9 +127,11 @@ const AppHeader = () => {
                                     </div>
                                 </div>
                             </a>
-                            <a className="vbm_btn" href="instructor_messages.html">
-                                View All <i className="uil uil-arrow-right"></i>
-                            </a>
+                            <Link to="/instructorMessages">
+                                <div className="vbm_btn">
+                                    View All <i className="uil uil-arrow-right"></i>
+                                </div>
+                            </Link>
                         </div>
                     </li>
                     <li className="ui dropdown">
