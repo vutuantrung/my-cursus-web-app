@@ -62,26 +62,20 @@ const PageLeftsideBar = () => {
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_courses.html"
-                                id="instructor_courses_page_lsb"
-                                className="menu--link"
-                                title="Courses"
-                            >
-                                <i className="uil uil-book-alt menu--icon"></i>
-                                <span className="menu--label">Courses</span>
-                            </a>
+                            <Link to="/instructorCourses">
+                                <div id="instructor_courses_page_lsb" className="menu--link" title="Courses">
+                                    <i className="uil uil-book-alt menu--icon"></i>
+                                    <span className="menu--label">Courses</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_analyics.html"
-                                id="instructor_analyics_page_lsb"
-                                className="menu--link"
-                                title="Analyics"
-                            >
-                                <i className="uil uil-analysis menu--icon"></i>
-                                <span className="menu--label">Analyics</span>
-                            </a>
+                            <Link to="/instructorAnalyics">
+                                <div id="instructor_analyics_page_lsb" className="menu--link" title="Analyics">
+                                    <i className="uil uil-analysis menu--icon"></i>
+                                    <span className="menu--label">Analyics</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
                             <a

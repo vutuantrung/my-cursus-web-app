@@ -19,6 +19,8 @@ import InstructorNotifications from './pages/notifications';
 
 import { useEffect } from 'react';
 import InstructorDashboard from './pages/instructorDashboard';
+import InstructorCourses from './pages/instructorCourses.tsx';
+import InstructorAnalyics from './pages/instructorAnalyics';
 
 const App = () => {
     useEffect(() => {
@@ -30,8 +32,10 @@ const App = () => {
                 <Route index element={<Dashboard />} />
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
+                <Route path="instructorAnalyics" element={<InstructorAnalyics />} />
                 <Route path="instructorMessages" element={<InstructorMessage />} />
                 <Route path="instructorDashboard" element={<InstructorDashboard />} />
+                <Route path="instructorCourses" element={<InstructorCourses />} />
                 <Route path="instructorNotifications" element={<InstructorNotifications />} />
             </Routes>
         </BrowserRouter>
