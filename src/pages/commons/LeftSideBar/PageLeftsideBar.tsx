@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const PageLeftsideBar = () => {
     useEffect(() => {
@@ -53,15 +54,12 @@ const PageLeftsideBar = () => {
                 <div className="left_section">
                     <ul>
                         <li className="menu--item">
-                            <a
-                                href="instructor_dashboard.html"
-                                id="instructor_dashboard_page_lsb"
-                                className="menu--link"
-                                title="Dashboard"
-                            >
-                                <i className="uil uil-apps menu--icon"></i>
-                                <span className="menu--label">Dashboard</span>
-                            </a>
+                            <Link to="/instructorDashboard">
+                                <div id="instructor_dashboard_page_lsb" className="menu--link" title="Dashboard">
+                                    <i className="uil uil-apps menu--icon"></i>
+                                    <span className="menu--label">Dashboard</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
                             <a

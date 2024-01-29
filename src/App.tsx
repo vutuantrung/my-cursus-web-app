@@ -18,23 +18,11 @@ import InstructorMessage from './pages/instructorMessage';
 import InstructorNotifications from './pages/notifications';
 
 import { useEffect } from 'react';
+import InstructorDashboard from './pages/instructorDashboard';
 
 const App = () => {
     useEffect(() => {
         console.log('App useeffect');
-
-        // ($('.ui.dropdown') as any).dropdown();
-
-        // // === Model === //
-        // ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
-        // // === Tab === //
-        // ($('.menu .item') as any).tab();
-        // // === checkbox Toggle === //
-        // ($('.ui.checkbox') as any).checkbox();
-        // // === Toggle === //
-        // $('.enable.button').on('click', function () {
-        //     ($(this).nextAll('.checkbox') as any).checkbox('enable');
-        // });
     });
     return (
         <BrowserRouter>
@@ -43,6 +31,7 @@ const App = () => {
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
                 <Route path="instructorMessages" element={<InstructorMessage />} />
+                <Route path="instructorDashboard" element={<InstructorDashboard />} />
                 <Route path="instructorNotifications" element={<InstructorNotifications />} />
             </Routes>
         </BrowserRouter>
