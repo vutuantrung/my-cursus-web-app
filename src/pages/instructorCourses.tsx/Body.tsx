@@ -472,7 +472,6 @@ const Body = () => {
                                                                                         className="prompt srch_explore"
                                                                                         type="number"
                                                                                         name="off"
-                                                                                        value=""
                                                                                         required
                                                                                         min="1"
                                                                                         max="99"
