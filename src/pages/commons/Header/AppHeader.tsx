@@ -16,6 +16,19 @@ const AppHeader = () => {
     };
 
     useEffect(() => {
+        ($('.ui.dropdown') as any).dropdown();
+
+        // === Model === //
+        ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
+        // === Tab === //
+        ($('.menu .item') as any).tab();
+        // === checkbox Toggle === //
+        ($('.ui.checkbox') as any).checkbox();
+        // === Toggle === //
+        $('.enable.button').on('click', function () {
+            ($(this).nextAll('.checkbox') as any).checkbox('enable');
+        });
+
         if (night_mode_switch.current) {
             night_mode_switch.current.addEventListener('click', onNightModeSwitch);
         }
@@ -176,9 +189,11 @@ const AppHeader = () => {
                                     </div>
                                 </div>
                             </a>
-                            <a className="vbm_btn" href="instructor_notifications.html">
-                                View All <i className="uil uil-arrow-right"></i>
-                            </a>
+                            <Link to="/instructorNotifications">
+                                <div className="vbm_btn">
+                                    View All <i className="uil uil-arrow-right"></i>
+                                </div>
+                            </Link>
                         </div>
                     </li>
                     <li className="ui dropdown">

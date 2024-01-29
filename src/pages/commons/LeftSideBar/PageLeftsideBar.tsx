@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 const PageLeftsideBar = () => {
     useEffect(() => {
         const firstPath = window.location.pathname.split('/')[1];
-        console.log(firstPath);
         if (firstPath.includes('instructorDashboard')) {
             document.getElementById('instructor_dashboard_page_lsb')?.classList.add('active');
         }
