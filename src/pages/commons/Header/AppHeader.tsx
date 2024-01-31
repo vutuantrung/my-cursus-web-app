@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { IMAGES } from '../../../constants';
-import { CategoryItem } from './components/CategoryItem';
+import { CATEGORIES, IMAGES } from '../../../constants';
 import { useEffect, useRef } from 'react';
 
 const AppHeader = () => {
@@ -58,19 +57,13 @@ const AppHeader = () => {
                             <i className="uil uil-apps"></i>
                         </a>
                         <div className="menu dropdown_category5">
-                            <CategoryItem name="Development" href="#" />
-                            <CategoryItem name="Business" href="#" />
-                            <CategoryItem name="Finance & Accounting" href="#" />
-                            <CategoryItem name="IT & Software" href="#" />
-                            <CategoryItem name="Office Productivity" href="#" />
-                            <CategoryItem name="Personal Development" href="#" />
-                            <CategoryItem name="Design" href="#" />
-                            <CategoryItem name="Marketing" href="#" />
-                            <CategoryItem name="Lifestyle" href="#" />
-                            <CategoryItem name="Photography" href="#" />
-                            <CategoryItem name="Health & Fitness" href="#" />
-                            <CategoryItem name="Music" href="#" />
-                            <CategoryItem name="Teaching & Academics" href="#" />
+                            {CATEGORIES.map((item) => {
+                                return (
+                                    <a key={item.name} href={item.link} className="item channel_item">
+                                        {item.name}
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

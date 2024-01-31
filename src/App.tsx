@@ -5,7 +5,6 @@ import './assets/styles/css/style.css';
 import './assets/styles/css/jquery-steps.css';
 import './assets/styles/css/responsive.css';
 import './assets/styles/css/night-mode.css';
-import './assets/styles/css/vertical-responsive-menu1.min.css';
 import './assets/styles/css/instructor-dashboard.css';
 import './assets/styles/css/instructor-responsive.css';
 
@@ -29,15 +28,16 @@ import InstructorStatements from './pages/instructorStatements';
 import InstructorVerification from './pages/instructorVerification';
 import Settings from './pages/settings';
 import Feedback from './pages/feedback';
+import LiveStream from './pages/liveStreams';
+import LiveOutput from './pages/liveOutput';
 
 const App = () => {
-    useEffect(() => {
-        console.log('App useeffect');
-    });
     return (
         <BrowserRouter>
             <Routes>
                 <Route index element={<Dashboard />} />
+                <Route path="liveStreams" element={<LiveStream />} />
+                <Route path="liveStreams/output/:id" element={<LiveOutput />} />
                 <Route path="settings" element={<Settings />} />
                 <Route path="feedback" element={<Feedback />} />
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />

@@ -1,38 +1,25 @@
 // === Dropdown === //
 import $ from 'jquery';
 
-$('.ui.dropdown')
-    .dropdown()
-    ;
+$('.ui.dropdown').dropdown();
 
 // === Model === //
 $('.ui.modal')
     .modal({
-        blurring: true
+        blurring: true,
     })
-    .modal('show')
-    ;
+    .modal('show');
 
 // === Tab === //
-$('.menu .item')
-    .tab()
-    ;
+$('.menu .item').tab();
 
 // === checkbox Toggle === //
-$('.ui.checkbox')
-    .checkbox()
-    ;
+$('.ui.checkbox').checkbox();
 
 // === Toggle === //
-$('.enable.button')
-    .on('click', function () {
-        $(this)
-            .nextAll('.checkbox')
-            .checkbox('enable')
-            ;
-    })
-    ;
-
+$('.enable.button').on('click', function () {
+    $(this).nextAll('.checkbox').checkbox('enable');
+});
 
 // Home Live Stream
 $('.live_stream').owlCarousel({
@@ -44,22 +31,22 @@ $('.live_stream').owlCarousel({
     navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
     responsive: {
         0: {
-            items: 2
+            items: 2,
         },
         600: {
-            items: 3
+            items: 3,
         },
         1000: {
-            items: 3
+            items: 3,
         },
         1200: {
-            items: 5
+            items: 5,
         },
         1400: {
-            items: 6
-        }
-    }
-})
+            items: 6,
+        },
+    },
+});
 
 // Featured Courses home
 $('.featured_courses').owlCarousel({
@@ -71,22 +58,22 @@ $('.featured_courses').owlCarousel({
     navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
     responsive: {
         0: {
-            items: 1
+            items: 1,
         },
         600: {
-            items: 2
+            items: 2,
         },
         1000: {
-            items: 1
+            items: 1,
         },
         1200: {
-            items: 2
+            items: 2,
         },
         1400: {
-            items: 3
-        }
-    }
-})
+            items: 3,
+        },
+    },
+});
 
 // Featured Courses home
 $('.top_instrutors').owlCarousel({
@@ -98,22 +85,22 @@ $('.top_instrutors').owlCarousel({
     navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
     responsive: {
         0: {
-            items: 1
+            items: 1,
         },
         600: {
-            items: 2
+            items: 2,
         },
         1000: {
-            items: 1
+            items: 1,
         },
         1200: {
-            items: 2
+            items: 2,
         },
         1400: {
-            items: 3
-        }
-    }
-})
+            items: 3,
+        },
+    },
+});
 
 // Student Says
 $('.Student_says').owlCarousel({
@@ -125,22 +112,22 @@ $('.Student_says').owlCarousel({
     navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
     responsive: {
         0: {
-            items: 1
+            items: 1,
         },
         600: {
-            items: 2
+            items: 2,
         },
         1000: {
-            items: 2
+            items: 2,
         },
         1200: {
-            items: 3
+            items: 3,
         },
         1400: {
-            items: 3
-        }
-    }
-})
+            items: 3,
+        },
+    },
+});
 
 // features Careers
 $('.feature_careers').owlCarousel({
@@ -152,30 +139,35 @@ $('.feature_careers').owlCarousel({
     navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
     responsive: {
         0: {
-            items: 1
+            items: 1,
         },
         600: {
-            items: 1
+            items: 1,
         },
         1000: {
-            items: 1
+            items: 1,
         },
         1200: {
-            items: 1
+            items: 1,
         },
         1400: {
-            items: 1
-        }
-    }
-})
+            items: 1,
+        },
+    },
+});
 
 /*Floating Code for Iframe Start*/
-if ($('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]').length > 0) {
+if (
+    $(
+        'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
+    ).length > 0
+) {
     /*Wrap (all code inside div) all vedio code inside div*/
-    $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap("<div class='iframe-parent-class'></div>");
+    $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap(
+        "<div class='iframe-parent-class'></div>"
+    );
     /*main code of each (particular) vedio*/
     $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
-
         /*Floating js Start*/
         const windows = $(window);
         const iframeWrap = $(this).parent();
@@ -187,10 +179,10 @@ if ($('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player
             const iframeBottom = iframeHeight + iframeWrap.offset().top;
             //alert(iframeBottom);
 
-            if ((windowScrollTop > iframeBottom)) {
+            if (windowScrollTop > iframeBottom) {
                 iframeWrap.height(iframeHeight);
                 iframe.addClass('stuck');
-                $(".scrolldown").css({ "display": "none" });
+                $('.scrolldown').css({ display: 'none' });
             } else {
                 iframeWrap.height('auto');
                 iframe.removeClass('stuck');
@@ -203,24 +195,23 @@ if ($('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player
 const headers = $('#accordion .accordion-header');
 const contentAreas = $('#accordion .ui-accordion-content ').hide().first().show().end();
 const expandLink = $('.accordion-expand-all');
-const inputPayment = $('input[name="paymentmethod"]')
+const inputPayment = $('input[name="paymentmethod"]');
 
 // add the accordion functionality
-headers.on("click", function () {
+headers.on('click', function () {
     contentAreas.slideUp();
     $(this).next().slideDown();
     expandLink.text('Expand all').data('isAllOpen', false);
     return false;
-})
+});
 
 // hook up the expand/collapse all
-expandLink.on("click", function () {
+expandLink.on('click', function () {
     const isAllOpen = !$(this).data('isAllOpen');
     // console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
     contentAreas[isAllOpen ? 'slideDown' : 'slideUp']();
     expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all').data('isAllOpen', isAllOpen);
-})
-
+});
 
 // Payment Method Accordion
 inputPayment.on('click', function () {

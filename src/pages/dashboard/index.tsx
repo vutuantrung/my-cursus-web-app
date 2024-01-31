@@ -13,16 +13,15 @@ const Dashboard = () => {
             navText: navText,
         };
 
-        ($('.ui.dropdown') as any).dropdown();
-
+        ($('.ui .dropdown') as any).dropdown();
         // === Model === //
-        ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
+        ($('.ui .modal') as any).modal({ blurring: true }).modal('show');
         // === Tab === //
         ($('.menu .item') as any).tab();
         // === checkbox Toggle === //
-        ($('.ui.checkbox') as any).checkbox();
+        ($('.ui .checkbox') as any).checkbox();
         // === Toggle === //
-        $('.enable.button').on('click', function () {
+        $('.enable .button').on('click', function () {
             ($(this).nextAll('.checkbox') as any).checkbox('enable');
         });
 
@@ -111,7 +110,6 @@ const Dashboard = () => {
                 windows.on('scroll', function () {
                     const windowScrollTop = windows.scrollTop();
                     const iframeBottom = iframeHeight! + iframeWrap.offset()!.top;
-                    //alert(iframeBottom);
 
                     if (windowScrollTop! > iframeBottom) {
                         iframeWrap.height(iframeHeight!);
@@ -125,38 +123,6 @@ const Dashboard = () => {
                 /*Floating js End*/
             });
         }
-
-        /*Floating Code for Iframe End*/
-        const headers = $('#accordion .accordion-header');
-        const contentAreas = $('#accordion .ui-accordion-content ').hide().first().show().end();
-        const expandLink = $('.accordion-expand-all');
-        const inputPayment = $('input[name="paymentmethod"]');
-
-        // add the accordion functionality
-        headers.on('click', function () {
-            // close all panels
-            contentAreas.slideUp();
-            // open the appropriate panel
-            $(this).next().slideDown();
-            // reset Expand all button
-            expandLink.text('Expand all').data('isAllOpen', false);
-            // stop page scroll
-            return false;
-        });
-
-        // hook up the expand/collapse all
-        expandLink.on('click', function () {
-            const isAllOpen = !$(this).data('isAllOpen');
-            contentAreas[isAllOpen ? 'slideDown' : 'slideUp']();
-            expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all').data('isAllOpen', isAllOpen);
-        });
-
-        // Payment Method Accordion
-        inputPayment.on('click', function () {
-            const $value = $(this).attr('value');
-            $('.return-departure-dts').slideUp();
-            $('[data-method="' + $value + '"]').slideDown();
-        });
     }, []);
     return (
         <>

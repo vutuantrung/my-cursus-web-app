@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import { CATEGORIES, IMAGES } from '../../../constants';
+
 const AppLeftsideBar = () => {
     return (
         <nav className="vertical_nav">
@@ -11,10 +14,12 @@ const AppLeftsideBar = () => {
                             </a>
                         </li>
                         <li className="menu--item">
-                            <a href="live_streams.html" className="menu--link" title="Live Streams">
-                                <i className="uil uil-kayak menu--icon"></i>
-                                <span className="menu--label">Live Streams</span>
-                            </a>
+                            <Link to="/liveStreams">
+                                <div className="menu--link" title="Live Streams">
+                                    <i className="uil uil-kayak menu--icon"></i>
+                                    <span className="menu--label">Live Streams</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
                             <a href="explore.html" className="menu--link" title="Explore">
@@ -28,71 +33,15 @@ const AppLeftsideBar = () => {
                                 <span className="menu--label">Categories</span>
                             </label>
                             <ul className="sub_menu">
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Development
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Business
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Finance & Accounting
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#.html" className="sub_menu--link">
-                                        IT & Software
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Office Productivity
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Personal Development
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Design
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Marketing
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Lifestyle
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Photography
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Health & Fitness
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Music
-                                    </a>
-                                </li>
-                                <li className="sub_menu--item">
-                                    <a href="#" className="sub_menu--link">
-                                        Teaching & Academics
-                                    </a>
-                                </li>
+                                {CATEGORIES.map((item) => {
+                                    return (
+                                        <li key={item.name} className="sub_menu--item">
+                                            <a href={item.link} className="sub_menu--link">
+                                                {item.name}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </li>
                         <li className="menu--item  menu--item__has_sub_menu">
@@ -252,14 +201,14 @@ const AppLeftsideBar = () => {
                     <ul>
                         <li className="menu--item">
                             <a href="instructor_profile_view.html" className="menu--link user_img">
-                                <img src="images/left-imgs/img-1.jpg" alt="" />
+                                <img src={IMAGES.avatar_instructor_0} alt="" />
                                 Rock Smith
                                 <div className="alrt_dot"></div>
                             </a>
                         </li>
                         <li className="menu--item">
                             <a href="instructor_profile_view.html" className="menu--link user_img">
-                                <img src="images/left-imgs/img-2.jpg" alt="" />
+                                <img src={IMAGES.avatar_instructor_1} alt="" />
                                 Jassica William
                             </a>
                             <div className="alrt_dot"></div>
@@ -275,10 +224,12 @@ const AppLeftsideBar = () => {
                 <div className="left_section pt-2">
                     <ul>
                         <li className="menu--item">
-                            <a href="setting.html" className="menu--link" title="Setting">
-                                <i className="uil uil-cog menu--icon"></i>
-                                <span className="menu--label">Setting</span>
-                            </a>
+                            <Link to="/settings">
+                                <div className="menu--link" title="Setting">
+                                    <i className="uil uil-cog menu--icon"></i>
+                                    <span className="menu--label">Setting</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
                             <a href="help.html" className="menu--link" title="Help">

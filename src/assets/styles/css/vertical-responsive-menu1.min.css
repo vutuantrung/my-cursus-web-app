@@ -100,7 +100,7 @@
     height: 45px;
     line-height: 45px;
     font-family: FontAwesome;
-    content: "\f0d7";
+    content: '\f0d7';
 }
 
 .menu--subitens__opened {
@@ -124,7 +124,7 @@
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu--link:hover,
@@ -160,7 +160,7 @@
     padding-left: 50px;
     padding-right: 16px;
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #333;
     text-decoration: none;
@@ -210,7 +210,7 @@
     }
 
     .vertical_nav__minify .menu--item__has_sub_menu .menu--link:after {
-        content: "";
+        content: '';
     }
 
     .vertical_nav__minify .menu--subitens__opened .menu--label,

@@ -88,8 +88,8 @@ Vertical Reponsive Menu
     right: 15px;
     height: 40px;
     line-height: 40px;
-    font-family: "FontAwesome";
-    content: "\f0d7";
+    font-family: 'FontAwesome';
+    content: '\f0d7';
 }
 
 /* line 100, sass/vertical-responsive-menu.scss */
@@ -207,7 +207,7 @@ Vertical Reponsive Menu
     }
     /* line 222, sass/vertical-responsive-menu.scss */
     .vertical_nav__minify .menu--item__has_sub_menu .menu--link:after {
-        content: "";
+        content: '';
     }
     /* line 228, sass/vertical-responsive-menu.scss */
     .vertical_nav__minify .menu--subitens__opened .menu--label,
@@ -264,7 +264,7 @@ Vertical Reponsive Menu
     }
     /* line 282, sass/vertical-responsive-menu.scss */
     .collapse_menu .collapse_menu--icon:before {
-        content: "\f053";
+        content: '\f053';
     }
     /* line 288, sass/vertical-responsive-menu.scss */
     .collapse_menu .collapse_menu--label {
