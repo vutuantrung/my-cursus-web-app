@@ -19,8 +19,16 @@ import InstructorNotifications from './pages/notifications';
 
 import { useEffect } from 'react';
 import InstructorDashboard from './pages/instructorDashboard';
-import InstructorCourses from './pages/instructorCourses.tsx';
+import InstructorCourses from './pages/instructorCourses';
 import InstructorAnalyics from './pages/instructorAnalyics';
+import InstructorCertificate from './pages/instructorCertificate';
+import InstructorReviews from './pages/instructorReviews';
+import InstructorEarning from './pages/instructorEarning';
+import InstructorPayout from './pages/instructorPayout';
+import InstructorStatements from './pages/instructorStatements';
+import InstructorVerification from './pages/instructorVerification';
+import Settings from './pages/settings';
+import Feedback from './pages/feedback';
 
 const App = () => {
     useEffect(() => {
@@ -30,12 +38,20 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route index element={<Dashboard />} />
+                <Route path="settings" element={<Settings />} />
+                <Route path="feedback" element={<Feedback />} />
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
                 <Route path="instructorAnalyics" element={<InstructorAnalyics />} />
                 <Route path="instructorMessages" element={<InstructorMessage />} />
                 <Route path="instructorDashboard" element={<InstructorDashboard />} />
                 <Route path="instructorCourses" element={<InstructorCourses />} />
+                <Route path="instructorReviews" element={<InstructorReviews />} />
+                <Route path="instructorEarning" element={<InstructorEarning />} />
+                <Route path="instructorPayout" element={<InstructorPayout />} />
+                <Route path="instructorVerification" element={<InstructorVerification />} />
+                <Route path="instructorStatements" element={<InstructorStatements />} />
+                <Route path="instructorCertificates" element={<InstructorCertificate />} />
                 <Route path="instructorNotifications" element={<InstructorNotifications />} />
             </Routes>
         </BrowserRouter>

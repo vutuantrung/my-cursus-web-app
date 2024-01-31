@@ -78,119 +78,96 @@ const PageLeftsideBar = () => {
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="create_new_course.html"
-                                id="create_new_course_page_lsb"
-                                className="menu--link"
-                                title="Create Course"
-                            >
-                                <i className="uil uil-plus-circle menu--icon"></i>
-                                <span className="menu--label">Create Course</span>
-                            </a>
+                            <Link to="/createNewCourse">
+                                <div id="create_new_course_page_lsb" className="menu--link" title="Create Course">
+                                    <i className="uil uil-plus-circle menu--icon"></i>
+                                    <span className="menu--label">Create Course</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_messages.html"
-                                id="instructor_messages_page_lsb"
-                                className="menu--link"
-                                title="Messages"
-                            >
-                                <i className="uil uil-comments menu--icon"></i>
-                                <span className="menu--label">Messages</span>
-                            </a>
+                            <Link to="/instructorMessages">
+                                <div id="instructor_messages_page_lsb" className="menu--link" title="Messages">
+                                    <i className="uil uil-comments menu--icon"></i>
+                                    <span className="menu--label">Messages</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_notifications.html"
-                                id="instructor_notifications_page_lsb"
-                                className="menu--link"
-                                title="Notifications"
-                            >
-                                <i className="uil uil-bell menu--icon"></i>
-                                <span className="menu--label">Notifications</span>
-                            </a>
+                            <Link to="/instructorNotifications">
+                                <div id="instructor_notifications_page_lsb" className="menu--link" title="Notifications">
+                                    <i className="uil uil-bell menu--icon"></i>
+                                    <span className="menu--label">Notifications</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_my_certificates.html"
-                                id="instructor_my_certificates_page_lsb"
-                                className="menu--link"
-                                title="My Certificates"
-                            >
-                                <i className="uil uil-award menu--icon"></i>
-                                <span className="menu--label">My Certificates</span>
-                            </a>
+                            <Link to="/instructorCertificates">
+                                <div id="instructor_my_certificates_page_lsb" className="menu--link" title="My Certificates">
+                                    <i className="uil uil-award menu--icon"></i>
+                                    <span className="menu--label">My Certificates</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_all_reviews.html"
-                                id="instructor_all_reviews_page_lsb"
-                                className="menu--link"
-                                title="Reviews"
-                            >
-                                <i className="uil uil-star menu--icon"></i>
-                                <span className="menu--label">Reviews</span>
-                            </a>
+                            <Link to="/instructorReviews">
+                                <div id="instructor_all_reviews_page_lsb" className="menu--link" title="Reviews">
+                                    <i className="uil uil-star menu--icon"></i>
+                                    <span className="menu--label">Reviews</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_earning.html"
-                                id="instructor_earning_page_lsb"
-                                className="menu--link"
-                                title="Earning"
-                            >
-                                <i className="uil uil-dollar-sign menu--icon"></i>
-                                <span className="menu--label">Earning</span>
-                            </a>
+                            <Link to="/instructorEarning">
+                                <div id="instructor_earning_page_lsb" className="menu--link" title="Earning">
+                                    <i className="uil uil-dollar-sign menu--icon"></i>
+                                    <span className="menu--label">Earning</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_payout.html"
-                                id="instructor_payout_page_lsb"
-                                className="menu--link"
-                                title="Payout"
-                            >
-                                <i className="uil uil-wallet menu--icon"></i>
-                                <span className="menu--label">Payout</span>
-                            </a>
+                            <Link to="/instructorPayout">
+                                <div id="instructor_payout_page_lsb" className="menu--link" title="Payout">
+                                    <i className="uil uil-wallet menu--icon"></i>
+                                    <span className="menu--label">Payout</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_statements.html"
-                                id="instructor_statements_page_lsb"
-                                className="menu--link"
-                                title="Statements"
-                            >
-                                <i className="uil uil-file-alt menu--icon"></i>
-                                <span className="menu--label">Statements</span>
-                            </a>
+                            <Link to="/instructorStatements">
+                                <div id="instructor_statements_page_lsb" className="menu--link" title="Statements">
+                                    <i className="uil uil-file-alt menu--icon"></i>
+                                    <span className="menu--label">Statements</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a
-                                href="instructor_verification.html"
-                                id="instructor_verification_page_lsb"
-                                className="menu--link"
-                                title="Verification"
-                            >
-                                <i className="uil uil-check-circle menu--icon"></i>
-                                <span className="menu--label">Verification</span>
-                            </a>
+                            <Link to="/instructorVerification">
+                                <div id="instructor_verification_page_lsb" className="menu--link" title="Verification">
+                                    <i className="uil uil-check-circle menu--icon"></i>
+                                    <span className="menu--label">Verification</span>
+                                </div>
+                            </Link>
                         </li>
                     </ul>
                 </div>
                 <div className="left_section pt-2">
                     <ul>
                         <li className="menu--item">
-                            <a href="setting.html" id="setting_page_lsb" className="menu--link" title="Setting">
-                                <i className="uil uil-cog menu--icon"></i>
-                                <span className="menu--label">Setting</span>
-                            </a>
+                            <Link to="/settings">
+                                <div id="setting_page_lsb" className="menu--link" title="Setting">
+                                    <i className="uil uil-cog menu--icon"></i>
+                                    <span className="menu--label">Setting</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="feedback.html" id="feedback_page_lsb" className="menu--link" title="Send Feedback">
-                                <i className="uil uil-comment-alt-exclamation menu--icon"></i>
-                                <span className="menu--label">Send Feedback</span>
-                            </a>
+                            <Link to="/feedback">
+                                <div id="feedback_page_lsb" className="menu--link" title="Send Feedback">
+                                    <i className="uil uil-comment-alt-exclamation menu--icon"></i>
+                                    <span className="menu--label">Send Feedback</span>
+                                </div>
+                            </Link>
                         </li>
                     </ul>
                 </div>

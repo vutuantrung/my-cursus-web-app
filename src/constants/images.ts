@@ -11,9 +11,11 @@ import img_9 from '../assets/images/left-imgs/img-9.jpg';
 
 import avatar from '../assets/images/test/avatar.jpg';
 import img_cours_sample_0 from '../assets/images/test/img_cours_sample_0.jpg';
-import img_cours_sample_1 from '../assets/images/test/img_cours_sample_1.gif';
+import img_cours_sample_1 from '../assets/images/test/img_cours_sample_1.jpg';
 import avatar_instructor_0 from '../assets/images/test/avatar_instructor_0.jpg';
 import avatar_instructor_1 from '../assets/images/test/avatar_instructor_1.jpg';
+
+import verified_account from '../assets/images/verified-account.svg';
 
 import hd_dp from '../assets/images/hd_dp.jpg';
 const images = {
@@ -32,6 +34,7 @@ const images = {
     avatar,
     avatar_instructor_0,
     avatar_instructor_1,
+    verified_account,
 };
 
 export default images;
