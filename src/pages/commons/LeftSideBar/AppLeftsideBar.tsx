@@ -22,10 +22,12 @@ const AppLeftsideBar = () => {
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="explore.html" className="menu--link" title="Explore">
-                                <i className="uil uil-search menu--icon"></i>
-                                <span className="menu--label">Explore</span>
-                            </a>
+                            <Link to="/explore">
+                                <div className="menu--link" title="Explore">
+                                    <i className="uil uil-search menu--icon"></i>
+                                    <span className="menu--label">Explore</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item menu--item__has_sub_menu">
                             <label className="menu--link" title="Categories">
@@ -81,10 +83,12 @@ const AppLeftsideBar = () => {
                             </ul>
                         </li>
                         <li className="menu--item">
-                            <a href="saved_courses.html" className="menu--link" title="Saved Courses">
-                                <i className="uil uil-heart-alt menu--icon"></i>
-                                <span className="menu--label">Saved Courses</span>
-                            </a>
+                            <Link to="/savedCourses">
+                                <div className="menu--link" title="Saved Courses">
+                                    <i className="uil uil-heart-alt menu--icon"></i>
+                                    <span className="menu--label">Saved Courses</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item  menu--item__has_sub_menu">
                             <label className="menu--link" title="Pages">
@@ -200,24 +204,30 @@ const AppLeftsideBar = () => {
                     <h6 className="left_title">SUBSCRIPTIONS</h6>
                     <ul>
                         <li className="menu--item">
-                            <a href="instructor_profile_view.html" className="menu--link user_img">
-                                <img src={IMAGES.avatar_instructor_0} alt="" />
-                                Rock Smith
-                                <div className="alrt_dot"></div>
-                            </a>
+                            <Link to={`/instructorProfile/${12345}`}>
+                                <div className="menu--link user_img">
+                                    <img src={IMAGES.avatar_instructor_0} alt="" />
+                                    Rock Smith
+                                    <div className="alrt_dot"></div>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="instructor_profile_view.html" className="menu--link user_img">
-                                <img src={IMAGES.avatar_instructor_1} alt="" />
-                                Jassica William
-                            </a>
-                            <div className="alrt_dot"></div>
+                            <Link to={`/instructorProfile/${54321}`}>
+                                <div className="menu--link user_img">
+                                    <img src={IMAGES.avatar_instructor_1} alt="" />
+                                    Jassica William
+                                    <div className="alrt_dot"></div>
+                                </div>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="all_instructor.html" className="menu--link" title="Browse Instructors">
-                                <i className="uil uil-plus-circle menu--icon"></i>
-                                <span className="menu--label">Browse Instructors</span>
-                            </a>
+                            <Link to={`/allInstructor`}>
+                                <div className="menu--link" title="Browse Instructors">
+                                    <i className="uil uil-plus-circle menu--icon"></i>
+                                    <span className="menu--label">Browse Instructors</span>
+                                </div>
+                            </Link>
                         </li>
                     </ul>
                 </div>

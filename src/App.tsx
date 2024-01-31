@@ -16,7 +16,6 @@ import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 import InstructorMessage from './pages/instructorMessage';
 import InstructorNotifications from './pages/notifications';
 
-import { useEffect } from 'react';
 import InstructorDashboard from './pages/instructorDashboard';
 import InstructorCourses from './pages/instructorCourses';
 import InstructorAnalyics from './pages/instructorAnalyics';
@@ -26,10 +25,16 @@ import InstructorEarning from './pages/instructorEarning';
 import InstructorPayout from './pages/instructorPayout';
 import InstructorStatements from './pages/instructorStatements';
 import InstructorVerification from './pages/instructorVerification';
+
 import Settings from './pages/settings';
 import Feedback from './pages/feedback';
 import LiveStream from './pages/liveStreams';
 import LiveOutput from './pages/liveOutput';
+import Explore from './pages/explore';
+import CoursDetails from './pages/coursDetails';
+import SavedCourses from './pages/savedCourses';
+import InstructorProfile from './pages/instructorProfile';
+import AllInstructor from './pages/allInstructors';
 
 const App = () => {
     return (
@@ -38,10 +43,17 @@ const App = () => {
                 <Route index element={<Dashboard />} />
                 <Route path="liveStreams" element={<LiveStream />} />
                 <Route path="liveStreams/output/:id" element={<LiveOutput />} />
+                <Route path="coursDetails/:id" element={<CoursDetails />} />
                 <Route path="settings" element={<Settings />} />
+                <Route path="explore" element={<Explore />} />
                 <Route path="feedback" element={<Feedback />} />
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
+
+                <Route path="savedCourses" element={<SavedCourses />} />
+                <Route path="allInstructor" element={<AllInstructor />} />
+
+                <Route path="instructorProfile/:id" element={<InstructorProfile />} />
                 <Route path="instructorAnalyics" element={<InstructorAnalyics />} />
                 <Route path="instructorMessages" element={<InstructorMessage />} />
                 <Route path="instructorDashboard" element={<InstructorDashboard />} />
