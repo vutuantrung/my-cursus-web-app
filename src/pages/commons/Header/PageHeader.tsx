@@ -1,32 +1,65 @@
+import { Link } from 'react-router-dom';
+import { IMAGES } from '../../../constants';
+import { useEffect, useRef } from 'react';
+
 const PageHeader = () => {
+    const night_mode_switch = useRef<HTMLAnchorElement>(null);
+    const onNightModeSwitch = (event: Event) => {
+        event.preventDefault();
+        document.documentElement.classList.toggle('night-mode');
+        if (document.documentElement.classList.contains('night-mode')) {
+            localStorage.setItem('gmtNightMode', 'true');
+            return;
+        }
+        localStorage.removeItem('gmtNightMode');
+    };
+
+    useEffect(() => {
+        ($('.ui.dropdown') as any).dropdown();
+
+        // === Model === //
+        ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
+        // === Tab === //
+        ($('.menu .item') as any).tab();
+        // === checkbox Toggle === //
+        ($('.ui.checkbox') as any).checkbox();
+        // === Toggle === //
+        $('.enable.button').on('click', function () {
+            ($(this).nextAll('.checkbox') as any).checkbox('enable');
+        });
+
+        if (night_mode_switch.current) {
+            night_mode_switch.current.addEventListener('click', onNightModeSwitch);
+        }
+    }, []);
     return (
         <header className="header clearfix">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div className="back_link">
-                            <a href="index.html" className="hde151">
-                                Back To Cursus
-                            </a>
-                            <a href="index.html" className="hde152">
-                                Back
-                            </a>
+                            <Link to="/">
+                                <div className="hde151">Back To Cursus</div>
+                            </Link>
+                            <Link to="/">
+                                <div className="hde152">Back</div>
+                            </Link>
                         </div>
                         <div className="ml_item">
                             <div className="main_logo main_logo15" id="logo">
-                                <a href="index.html">
-                                    <img src="images/logo.svg" alt="" />
-                                </a>
-                                <a href="index.html">
-                                    <img className="logo-inverse" src="images/ct_logo.svg" alt="" />
-                                </a>
+                                <Link to="/">
+                                    <img src={IMAGES.logo} alt="" />
+                                </Link>
+                                <Link to="/">
+                                    <img className="logo-inverse" src={IMAGES.ct_logo} alt="" />
+                                </Link>
                             </div>
                         </div>
                         <div className="header_right pr-0">
                             <ul>
                                 <li className="ui top right pointing dropdown">
                                     <a href="#" className="opts_account">
-                                        <img src="images/hd_dp.jpg" alt="" />
+                                        <img src={IMAGES.hd_dp} alt="" />
                                     </a>
                                     <div className="menu dropdown_account">
                                         <div className="channel_my">
@@ -47,7 +80,7 @@ const PageHeader = () => {
                                             </a>
                                         </div>
                                         <div className="night_mode_switch__btn">
-                                            <a href="#" id="night-mode" className="btn-night-mode">
+                                            <a href="###" id="night-mode" className="btn-night-mode" ref={night_mode_switch}>
                                                 <i className="uil uil-moon"></i> Night mode
                                                 <span className="btn-night-mode-switch">
                                                     <span className="uk-switch-button"></span>
@@ -70,5 +103,4 @@ const PageHeader = () => {
         </header>
     );
 };
-
 export default PageHeader;

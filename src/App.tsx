@@ -35,12 +35,43 @@ import CoursDetails from './pages/coursDetails';
 import SavedCourses from './pages/savedCourses';
 import InstructorProfile from './pages/instructorProfile';
 import AllInstructor from './pages/allInstructors';
+import CertificateCenter from './pages/certificateCenter';
+import CertificateFillForm from './pages/certificateFillForm';
+import CertificateTestView from './pages/certificateTestView';
+import CertificateTestResult from './pages/certificateTestResult';
+import SignIn from './pages/signIn';
+import SignUp from './pages/signUp';
+import SignUpSteps from './pages/signUpSteps';
+import PaidMembership from './pages/paidMembership';
+import CheckoutMemberShip from './pages/checkoutMembership';
+import Invoice from './pages/invoice';
+import ApplyJob from './pages/applyJob';
+import BlogSingleView from './pages/blogSingleView';
+import AddStreaming from './pages/addStreaming';
+import SearchResult from './pages/searchResult';
+import Thankyou from './pages/thankyou';
+import CommingSoon from './pages/commingSoon';
+import { Error404 } from './pages/errors';
+import About from './pages/about';
+import OurBlog from './pages/about/OurBlog';
+import CompanyDetails from './pages/about/CompanyDetails';
+import Career from './pages/about/Career';
+import Press from './pages/about/Press';
+import AboutUs from './pages/about/AboutUs';
 
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route index element={<Dashboard />} />
+                <Route path="about" element={<About />}>
+                    <Route path="aboutUs" element={<AboutUs />} />
+                    <Route path="ourBlog" element={<OurBlog />} />
+                    <Route path="companyDetails" element={<CompanyDetails />} />
+                    <Route path="career" element={<Career />} />
+                    <Route path="press" element={<Press />} />
+                </Route>
+
                 <Route path="liveStreams" element={<LiveStream />} />
                 <Route path="liveStreams/output/:id" element={<LiveOutput />} />
                 <Route path="coursDetails/:id" element={<CoursDetails />} />
@@ -49,6 +80,25 @@ const App = () => {
                 <Route path="feedback" element={<Feedback />} />
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
+
+                <Route path="certificateCenter" element={<CertificateCenter />} />
+                <Route path="certificateFillForm" element={<CertificateFillForm />} />
+                <Route path="certificateTestView" element={<CertificateTestView />} />
+                <Route path="certificateTestResult" element={<CertificateTestResult />} />
+
+                <Route path="signIn" element={<SignIn />} />
+                <Route path="signUp" element={<SignUp />} />
+                <Route path="signUpSteps" element={<SignUpSteps />} />
+                <Route path="paidMembership" element={<PaidMembership />} />
+                <Route path="checkoutMembership" element={<CheckoutMemberShip />} />
+                <Route path="invoice" element={<Invoice />} />
+                <Route path="applyJob" element={<ApplyJob />} />
+                <Route path="blogSingleView" element={<BlogSingleView />} />
+                <Route path="addStream" element={<AddStreaming />} />
+                <Route path="searchResult" element={<SearchResult />} />
+                <Route path="thankyou" element={<Thankyou />} />
+                <Route path="commingSoon" element={<CommingSoon />} />
+                <Route path="error404" element={<Error404 />} />
 
                 <Route path="savedCourses" element={<SavedCourses />} />
                 <Route path="allInstructor" element={<AllInstructor />} />

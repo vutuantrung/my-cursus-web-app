@@ -13,3 +13,12 @@ Scripts not run: need to put all code from custom.js, night-mode.js
         ... <code in custom.js, night-mode.js>
     });
 </script>
+
+<img (.*)>
+<img $1 />
+
+onclick="(.*)" 
+onClick={()=>"$1"} 
+
+tabindex="([0-9]*)"
+tabIndex={$1}
