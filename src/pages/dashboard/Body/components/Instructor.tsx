@@ -1,47 +1,33 @@
 import { ICONS } from '../../../../constants';
 
-export const Instructor = ({
-    name,
-    avatar,
-    className,
-    studentNumber,
-    coursNumber,
-    socialLinks,
-}: {
-    name: string;
-    avatar: string;
-    className: string;
-    studentNumber: string;
-    coursNumber: string;
-    socialLinks: any;
-}) => {
-    const renderSocialLinks = () => {
+export const Instructor = (item: any) => {
+    const displaySocialLinks = () => {
         return (
             <div>
-                {socialLinks.facebookUrl && (
+                {item.facebookUrl && (
                     <li>
-                        <a href={socialLinks.facebookUrl} className="fb">
+                        <a href={item.socialLinks.facebookUrl} className="fb">
                             <i className="fab fa-facebook-f"></i>
                         </a>
                     </li>
                 )}
-                {socialLinks.twitterUrl && (
+                {item.socialLinks.twitterUrl && (
                     <li>
-                        <a href={socialLinks.twitterUrl} className="tw">
+                        <a href={item.socialLinks.twitterUrl} className="tw">
                             <i className="fab fa-twitter"></i>
                         </a>
                     </li>
                 )}
-                {socialLinks.linkedinUrl && (
+                {item.socialLinks.linkedinUrl && (
                     <li>
-                        <a href={socialLinks.linkedinUrl} className="ln">
+                        <a href={item.socialLinks.linkedinUrl} className="ln">
                             <i className="fab fa-linkedin-in"></i>
                         </a>
                     </li>
                 )}
-                {socialLinks.youtubeUrl && (
+                {item.socialLinks.youtubeUrl && (
                     <li>
-                        <a href={socialLinks.youtubeUrl} className="yu">
+                        <a href={item.socialLinks.youtubeUrl} className="yu">
                             <i className="fab fa-youtube"></i>
                         </a>
                     </li>
@@ -49,29 +35,28 @@ export const Instructor = ({
             </div>
         );
     };
-
     return (
         <div className="item">
             <div className="fcrse_1 mb-20">
                 <div className="tutor_img">
                     <a href="instructor_profile_view.html">
-                        <img src={avatar} alt="" />
+                        <img src={item.avatar} alt="" />
                     </a>
                 </div>
                 <div className="tutor_content_dt">
                     <div className="tutor150">
                         <a href="instructor_profile_view.html" className="tutor_name">
-                            {name}
+                            {item.name}
                         </a>
                         <div className="mef78" title="Verify">
                             <img src={ICONS.check_circle} alt="" style={{ width: '20px', height: '20px', marginLeft: '5px' }} />
                         </div>
                     </div>
-                    <div className="tutor_cate">{className}</div>
-                    <ul className="tutor_social_links">{renderSocialLinks()}</ul>
+                    <div className="tutor_cate">{item.className}</div>
+                    <ul className="tutor_social_links">{displaySocialLinks()}</ul>
                     <div className="tut1250">
-                        <span className="vdt15">{studentNumber} Students</span>
-                        <span className="vdt15">{coursNumber} Courses</span>
+                        <span className="vdt15">{item.studentNumber} Students</span>
+                        <span className="vdt15">{item.coursNumber} Courses</span>
                     </div>
                 </div>
             </div>

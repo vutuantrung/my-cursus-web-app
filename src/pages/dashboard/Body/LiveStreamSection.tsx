@@ -1,7 +1,63 @@
-import { LiveStreamItem } from './components/LiveStreamItem';
-import { IMAGES } from '../../../constants';
+import LiveStreamItem from './components/LiveStreamItem';
+import { generateRandomNumber } from '../../../helpers/helpers';
 
 export const LiveStreamSection = (props: any) => {
+    const dumpData = [
+        {
+            id: 12723,
+            isLive: true,
+            name: 'John Doe',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 8435,
+            isLive: true,
+            name: 'Jassica',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 72334,
+            isLive: true,
+            name: 'Edututs+',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 72315,
+            isLive: true,
+            name: 'Joginder Singh',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 6231,
+            isLive: true,
+            name: 'Zoena',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 5625,
+            isLive: true,
+            name: 'Ridhima',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 72317,
+            isLive: true,
+            name: 'Albert Dua',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 87314,
+            isLive: true,
+            name: 'Amritpal',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 12161,
+            isLive: true,
+            name: 'Jimmy',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+    ];
     return (
         <div className="section3125">
             <h4 className="item_title">Live Streams</h4>
@@ -10,15 +66,16 @@ export const LiveStreamSection = (props: any) => {
             </a>
             <div className="la5lo1">
                 <div className="owl-carousel live_stream owl-theme">
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="John Doe" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Jassica" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Edututs+" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Joginder Singh" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Zoena" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Ridhima" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Albert Dua" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Amritpal" isLive />
-                    <LiveStreamItem href="live_output.html" avatar={IMAGES.avatar_instructor_0} name="Jimmy" isLive />
+                    {dumpData.map((instructor) => {
+                        return (
+                            <LiveStreamItem
+                                id={instructor.id}
+                                avatar={instructor.avatar}
+                                name={instructor.name}
+                                isLive={instructor.isLive}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </div>

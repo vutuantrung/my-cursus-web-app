@@ -19,20 +19,20 @@ const About = () => {
                                 <div className="course_tabs">
                                     <nav>
                                         <div className="nav nav-tabs tab_crse  justify-content-center">
-                                            <NavLink to="aboutUs">
-                                                <div className="nav-item nav-link active">About</div>
+                                            <NavLink to="aboutUs" className="nav-item nav-link">
+                                                About
                                             </NavLink>
-                                            <NavLink to="ourBlog">
-                                                <div className="nav-item nav-link">Blog</div>
+                                            <NavLink to="ourBlog" className="nav-item nav-link">
+                                                Blog
                                             </NavLink>
-                                            <NavLink to="companyDetails">
-                                                <div className="nav-item nav-link">Company</div>
+                                            <NavLink to="companyDetails" className="nav-item nav-link">
+                                                Company
                                             </NavLink>
-                                            <NavLink to="career">
-                                                <div className="nav-item nav-link">Careers</div>
+                                            <NavLink to="career" className="nav-item nav-link">
+                                                Careers
                                             </NavLink>
-                                            <NavLink to="press">
-                                                <div className="nav-item nav-link">Press</div>
+                                            <NavLink to="press" className="nav-item nav-link">
+                                                Press
                                             </NavLink>
                                         </div>
                                     </nav>
@@ -45,6 +45,7 @@ const About = () => {
                     </div>
                 </div>
                 <Routes>
+                    <Route path="" Component={AboutUs} />
                     <Route path="aboutUs" Component={AboutUs} />
                     <Route path="ourBlog" Component={OurBlog} />
                     <Route path="companyDetails" Component={CompanyDetails} />

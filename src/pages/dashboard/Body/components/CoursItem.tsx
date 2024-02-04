@@ -1,47 +1,23 @@
-import { ICONS } from '../../../../constants';
-
-export const CoursItem = ({
-    isFeaturedCours,
-    coursTheme,
-    coursName,
-    coursTag,
-    coursAuthor,
-    coursPrice,
-    coursPoint,
-    coursLength,
-    coursViews,
-    coursCreatedDate,
-}: {
-    isFeaturedCours: boolean;
-    coursTheme: string;
-    coursName: string;
-    coursTag: string;
-    coursAuthor: string;
-    coursPrice: string;
-    coursPoint: number;
-    coursLength: string;
-    coursViews: string;
-    coursCreatedDate: string;
-}) => {
+export const CoursItem = (item: any) => {
     return (
         <div className="item">
             <div className="fcrse_1 mb-20">
                 <a href="course_detail_view.html" className="fcrse_img">
-                    <img src={coursTheme} alt="" />
+                    <img src={item.theme} alt="" />
                     <div className="course-overlay">
-                        {isFeaturedCours && (
+                        {item.isFeaturedCours && (
                             <div>
                                 <div className="badge_seller">Bestseller</div>
                                 <div className="crse_reviews">
                                     <i className="uil uil-star"></i>
-                                    {coursPoint.toFixed(1)}
+                                    {item.point.toFixed(1)}
                                 </div>
                             </div>
                         )}
                         <span className="play_btn1">
                             <i className="uil uil-play"></i>
                         </span>
-                        <div className="crse_timer">{coursLength}</div>
+                        <div className="crse_timer">{item.length}</div>
                     </div>
                 </a>
                 <div className="fcrse_content">
@@ -65,20 +41,20 @@ export const CoursItem = ({
                         </div>
                     </div>
                     <div className="vdtodt">
-                        <span className="vdt14">{coursViews} views</span>
-                        <span className="vdt14">{coursCreatedDate} ago</span>
+                        <span className="vdt14">{item.views} views</span>
+                        <span className="vdt14">{item.createdDate} ago</span>
                     </div>
                     <a href="course_detail_view.html" className="crse14s">
-                        {coursName}
+                        {item.name}
                     </a>
                     <a href="#" className="crse-cate">
-                        {coursTag}
+                        {item.tag}
                     </a>
                     <div className="auth1lnkprce">
                         <p className="cr1fot">
-                            By <a href="#">{coursAuthor}</a>
+                            By <a href="#">{item.author}</a>
                         </p>
-                        <div className="prce142">{coursPrice}</div>
+                        <div className="prce142">{item.price}</div>
                         <button className="shrt-cart-btn" title="cart">
                             <i className="uil uil-shopping-cart-alt"></i>
                         </button>

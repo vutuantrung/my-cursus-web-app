@@ -1,7 +1,106 @@
 import { IMAGES } from '../../../constants';
+import { generateRandomNumber } from '../../../helpers/helpers';
 import { CoursItem } from './components/CoursItem';
 
 export const NewestCoursesSection = () => {
+    const dumpData = [
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Complete Python Bootcamp: Go from zero to hero in Python 3',
+            tag: 'Web Development | Python',
+            author: 'John Doe',
+            price: '$10',
+            point: 4.5,
+            length: '25 hours',
+            views: '5M',
+            createdDate: '15 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'The Complete JavaScript Course 2020: Build Real Projects!',
+            tag: 'Development | JavaScript',
+            author: 'Jassica William',
+            price: '$5',
+            point: 4.5,
+            length: '28 hours',
+            views: '109k',
+            createdDate: '15 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Beginning C++ Programming - From Beginner to Beyond',
+            tag: 'Development | C++',
+            author: 'Joginder Singh',
+            price: '$13',
+            point: 4.5,
+            length: '12 hours',
+            views: '1M',
+            createdDate: '18 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'The Complete Digital Marketing Course - 12 Courses in 1',
+            tag: 'Digital Marketing | Marketing',
+            author: 'Poonam Verma',
+            price: '$12',
+            point: 5,
+            length: '16 hours',
+            views: '153k',
+            createdDate: '18 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Microsoft Excel - Excel from Beginner to Advanced',
+            tag: 'Office Productivity | Excel',
+            author: 'Rock William',
+            price: '$6',
+            point: 4.5,
+            length: '1.5 hours',
+            views: '53k',
+            createdDate: '14 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Angular 8 - The Complete Guide (2020 Edition)',
+            tag: 'Development | Angular',
+            author: 'John Doe',
+            price: '$6',
+            point: 5,
+            length: '15 hours',
+            views: '253k',
+            createdDate: '10 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'WordPress for Beginners: Create a Website Step by Step',
+            tag: 'Design | Wordpress',
+            author: 'Sabnam SIngh',
+            price: '$18',
+            point: 5,
+            length: '5.4 hours',
+            views: '109k',
+            createdDate: '15 days',
+        },
+        {
+            isFeaturedCours: false,
+            theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)',
+            tag: 'Design | CSS',
+            author: 'Jashanpreet Singh',
+            price: '$10',
+            point: 4,
+            length: '23 hours',
+            views: '196k',
+            createdDate: '1 month',
+        },
+    ];
     return (
         <div className="section3125 mt-30">
             <h4 className="item_title">Newest Courses</h4>
@@ -10,102 +109,9 @@ export const NewestCoursesSection = () => {
             </a>
             <div className="la5lo1">
                 <div className="owl-carousel featured_courses owl-theme">
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="Complete Python Bootcamp: Go from zero to hero in Python 3"
-                        coursTag="Web Development | Python"
-                        coursAuthor="John Doe"
-                        coursPrice="$10"
-                        coursPoint={4.5}
-                        coursLength="25 hours"
-                        coursViews="5M"
-                        coursCreatedDate="15 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="The Complete JavaScript Course 2020: Build Real Projects!"
-                        coursTag="Development | JavaScript"
-                        coursAuthor="Jassica William"
-                        coursPrice="$5"
-                        coursPoint={4.5}
-                        coursLength="28 hours"
-                        coursViews="109k"
-                        coursCreatedDate="15 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="Beginning C++ Programming - From Beginner to Beyond"
-                        coursTag="Development | C++"
-                        coursAuthor="Joginder Singh"
-                        coursPrice="$13"
-                        coursPoint={4.5}
-                        coursLength="12 hours"
-                        coursViews="1M"
-                        coursCreatedDate="18 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="The Complete Digital Marketing Course - 12 Courses in 1"
-                        coursTag="Digital Marketing | Marketing"
-                        coursAuthor="Poonam Verma"
-                        coursPrice="$12"
-                        coursPoint={5}
-                        coursLength="16 hours"
-                        coursViews="153k"
-                        coursCreatedDate="18 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="Microsoft Excel - Excel from Beginner to Advanced"
-                        coursTag="Office Productivity | Excel"
-                        coursAuthor="Rock William"
-                        coursPrice="$6"
-                        coursPoint={4.5}
-                        coursLength="1.5 hours"
-                        coursViews="53k"
-                        coursCreatedDate="14 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="Angular 8 - The Complete Guide (2020 Edition)"
-                        coursTag="Development | Angular"
-                        coursAuthor="John Doe"
-                        coursPrice="$6"
-                        coursPoint={5}
-                        coursLength="15 hours"
-                        coursViews="253k"
-                        coursCreatedDate="10 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="WordPress for Beginners: Create a Website Step by Step"
-                        coursTag="Design | Wordpress"
-                        coursAuthor="Sabnam SIngh"
-                        coursPrice="$18"
-                        coursPoint={5}
-                        coursLength="5.4 hours"
-                        coursViews="109k"
-                        coursCreatedDate="15 days"
-                    />
-                    <CoursItem
-                        isFeaturedCours={false}
-                        coursTheme={IMAGES.img_cours_sample_0}
-                        coursName="CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)"
-                        coursTag="Design | CSS"
-                        coursAuthor="Jashanpreet Singh"
-                        coursPrice="$10"
-                        coursPoint={4}
-                        coursLength="23 hours"
-                        coursViews="196k"
-                        coursCreatedDate="1 month"
-                    />
+                    {dumpData.map((cours) => {
+                        return <CoursItem {...cours} />;
+                    })}
                 </div>
             </div>
         </div>

@@ -209,7 +209,7 @@ const Body = () => {
                                             <td className="text-center">001</td>
                                             <td className="cell-ta">
                                                 <div className="thumb_img">
-                                                    <img src="images/courses/img-2.jpg" alt="" />
+                                                    <img src="./assets/images/test/img_cours_sample/1.jpg" alt="" />
                                                 </div>
                                             </td>
                                             <td className="cell-ta">Course Title Here</td>
