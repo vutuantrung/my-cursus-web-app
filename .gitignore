@@ -13,6 +13,7 @@
 
 # sample data
 /src/assets/images/test
+/public/assets/images/test
 
 # misc
 .DS_Store
