@@ -1,4 +1,5 @@
-import { IMAGES } from '../../../constants'
+import { Link } from 'react-router-dom';
+import { IMAGES } from '../../../constants';
 
 export const RightSideBar = () => {
     return (
@@ -6,15 +7,15 @@ export const RightSideBar = () => {
             <div className="right_side">
                 <div className="fcrse_2 mb-30">
                     <div className="tutor_img">
-                        <a href="my_instructor_profile_view.html">
+                        <Link to="/myInstructorProfile" className="tutor_name">
                             <img src={IMAGES.avatar} alt="" />
-                        </a>
+                        </Link>
                     </div>
                     <div className="tutor_content_dt">
                         <div className="tutor150">
-                            <a href="my_instructor_profile_view.html" className="tutor_name">
+                            <Link to="/myInstructorProfile" className="tutor_name">
                                 奈汐酱Nice
-                            </a>
+                            </Link>
                             <div className="mef78" title="Verify">
                                 <i className="uil uil-check-circle"></i>
                             </div>
@@ -46,9 +47,9 @@ export const RightSideBar = () => {
                             <span className="vdt15">615K Students</span>
                             <span className="vdt15">12 Courses</span>
                         </div>
-                        <a href="my_instructor_profile_view.html" className="prfle12link">
+                        <Link to="/myInstructorProfile" className="prfle12link">
                             Go To Profile
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="fcrse_3">
@@ -64,7 +65,7 @@ export const RightSideBar = () => {
                             <button
                                 className="live_link"
                                 onClick={() => {
-                                    console.log("window.location.href = 'add_streaming.html';")
+                                    console.log("window.location.href = 'add_streaming.html';");
                                 }}
                             >
                                 Get Started
@@ -79,7 +80,7 @@ export const RightSideBar = () => {
                     <button
                         className="Get_btn"
                         onClick={() => {
-                            console.log("window.location.href = '#';")
+                            console.log("window.location.href = '#';");
                         }}
                     >
                         Get Started
@@ -141,7 +142,7 @@ export const RightSideBar = () => {
                     <button
                         className="Get_btn"
                         onClick={() => {
-                            console.log("window.location.href = '#';")
+                            console.log("window.location.href = '#';");
                         }}
                     >
                         Start Teaching
@@ -149,5 +150,5 @@ export const RightSideBar = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

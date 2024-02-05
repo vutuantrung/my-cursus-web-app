@@ -7,7 +7,7 @@ export const StudentThought = (item: any) => {
                 </div>
                 <div className="st_group">
                     <div className="stud_img">
-                        <img src={item.avatar} alt="" />
+                        <img src={item.avatar} alt="avatar" />
                     </div>
                     <h4>{item.name}</h4>
                 </div>

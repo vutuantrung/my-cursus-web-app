@@ -66,15 +66,8 @@ export const LiveStreamSection = (props: any) => {
             </a>
             <div className="la5lo1">
                 <div className="owl-carousel live_stream owl-theme">
-                    {dumpData.map((instructor) => {
-                        return (
-                            <LiveStreamItem
-                                id={instructor.id}
-                                avatar={instructor.avatar}
-                                name={instructor.name}
-                                isLive={instructor.isLive}
-                            />
-                        );
+                    {dumpData.map((item) => {
+                        return <LiveStreamItem key={item.id} {...item} />;
                     })}
                 </div>
             </div>

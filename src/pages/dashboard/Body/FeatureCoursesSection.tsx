@@ -4,6 +4,7 @@ import { generateRandomNumber } from '../../../helpers/helpers';
 export const FeatureCoursesSection = () => {
     const dumpData = [
         {
+            id: 15123,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Complete Python Bootcamp: Go from zero to hero in Python 3',
@@ -16,6 +17,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '15 days',
         },
         {
+            id: 1267,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'The Complete JavaScript Course 2020: Build Real Projects!',
@@ -28,6 +30,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '15 days',
         },
         {
+            id: 612,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Beginning C++ Programming - From Beginner to Beyond',
@@ -40,6 +43,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '18 days',
         },
         {
+            id: 1281,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'The Complete Digital Marketing Course - 12 Courses in 1',
@@ -52,6 +56,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '18 days',
         },
         {
+            id: 9452,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Microsoft Excel - Excel from Beginner to Advanced',
@@ -64,6 +69,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '14 days',
         },
         {
+            id: 11111,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Angular 8 - The Complete Guide (2020 Edition)',
@@ -76,6 +82,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '10 days',
         },
         {
+            id: 83111,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'WordPress for Beginners: Create a Website Step by Step',
@@ -88,6 +95,7 @@ export const FeatureCoursesSection = () => {
             createdDate: '15 days',
         },
         {
+            id: 6666,
             isFeaturedCours: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)',
@@ -108,8 +116,8 @@ export const FeatureCoursesSection = () => {
             </a>
             <div className="la5lo1">
                 <div className="owl-carousel featured_courses owl-theme">
-                    {dumpData.map((cours) => {
-                        return <CoursItem {...cours} />;
+                    {dumpData.map((item) => {
+                        return <CoursItem key={item.id} {...item} />;
                     })}
                 </div>
             </div>

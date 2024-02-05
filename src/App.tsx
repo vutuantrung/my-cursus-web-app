@@ -58,6 +58,12 @@ import CompanyDetails from './pages/about/CompanyDetails';
 import Career from './pages/about/Career';
 import Press from './pages/about/Press';
 import AboutUs from './pages/about/AboutUs';
+import MyInstructorProfileView from './pages/myInstructorProfileView';
+import AboutMe from './pages/myInstructorProfileView/AboutMe';
+import Discussions from './pages/myInstructorProfileView/Discussions';
+import MyCourses from './pages/myInstructorProfileView/MyCourses';
+import PurchasedCourses from './pages/myInstructorProfileView/PurchasedCourses';
+import Subscriptions from './pages/myInstructorProfileView/Subscriptions';
 
 const App = () => {
     return (
@@ -70,6 +76,14 @@ const App = () => {
                     <Route path="companyDetails" element={<CompanyDetails />} />
                     <Route path="career" element={<Career />} />
                     <Route path="press" element={<Press />} />
+                </Route>
+
+                <Route path="myInstructorProfile" element={<MyInstructorProfileView />}>
+                    <Route path="aboutMe" element={<AboutMe />} />
+                    <Route path="discussions" element={<Discussions />} />
+                    <Route path="myCourses" element={<MyCourses />} />
+                    <Route path="purchasedCourses" element={<PurchasedCourses />} />
+                    <Route path="subscriptions" element={<Subscriptions />} />
                 </Route>
 
                 <Route path="liveStreams" element={<LiveStream />} />

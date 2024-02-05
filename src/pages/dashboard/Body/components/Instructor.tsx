@@ -40,7 +40,7 @@ export const Instructor = (item: any) => {
             <div className="fcrse_1 mb-20">
                 <div className="tutor_img">
                     <a href="instructor_profile_view.html">
-                        <img src={item.avatar} alt="" />
+                        <img src={item.avatar} alt="avatar" />
                     </a>
                 </div>
                 <div className="tutor_content_dt">

@@ -1,168 +1,107 @@
+import { NavLink, Route, Routes } from 'react-router-dom';
+import AboutMe from './AboutMe';
+import Discussions from './Discussions';
+import MyCourses from './MyCourses';
+import PurchasedCourses from './PurchasedCourses';
+import Subscriptions from './Subscriptions';
 import { Link } from 'react-router-dom';
-import { generateRandomNumber } from '../../helpers/helpers';
 
 const Body = () => {
-    const streamDumpData = [
-        {
-            name: 'John Doe',
-            id: 23456,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Jassica',
-            id: 3424,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Edututs+',
-            id: 5742,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Joginder Singh',
-            id: 12453,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Zoena',
-            id: 3645,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Albert Dua',
-            id: 1235,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Ridhima',
-            id: 3463,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Amritpal',
-            id: 63756,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Jimmy',
-            id: 24572,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Quinton Batchelor',
-            id: 4234,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Eli Natoli',
-            id: 32452,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Jaysen Batchelor',
-            id: 7456,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Farhat Amin',
-            id: 432,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Kyle Pew',
-            id: 23567,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Kerstin Cable',
-            id: 7357,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-        {
-            name: 'Jose Portilla',
-            id: 235,
-            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
-            isLive: true,
-        },
-    ];
-
     return (
-        <div className="wrapper">
-            <div className="sa4d25">
+        <div className="wrapper _bg4586">
+            {/* <!-- Profile --> */}
+            <div className="_216b01">
                 <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-xl-9 col-lg-8">
-                            <div className="section3125">
-                                <h4 className="item_title">All Live Streams</h4>
-                                <div className="la5lo1">
-                                    <div className="row">
-                                        {streamDumpData.map((item) => {
-                                            return (
-                                                <div key={item.id} className="col-md-3">
-                                                    <div className="stream_1 mb-30">
-                                                        <Link to={`/liveStreams/output/${item.id}`}>
-                                                            <div className="stream_bg">
-                                                                <img src={item.avatar} alt="" />
-                                                                <h4>{item.name}</h4>
-                                                                {item.isLive && (
-                                                                    <p>
-                                                                        live<span></span>
-                                                                    </p>
-                                                                )}
-                                                            </div>
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                            );
-                                        })}
-                                        <div className="col-md-12">
-                                            <div className="main-loader mt-20">
-                                                <div className="spinner">
-                                                    <div className="bounce1"></div>
-                                                    <div className="bounce2"></div>
-                                                    <div className="bounce3"></div>
-                                                </div>
+                    <div className="row justify-content-md-center">
+                        <div className="col-md-10">
+                            <div className="section3125 rpt145">
+                                <div className="row">
+                                    <div className="col-lg-7">
+                                        <a href="#" className="_216b22">
+                                            <span>
+                                                <i className="uil uil-cog"></i>
+                                            </span>
+                                            Setting
+                                        </a>
+                                        <div className="dp_dt150">
+                                            <div className="img148">
+                                                <img src="images/hd_dp.jpg" alt="" />
+                                            </div>
+                                            <div className="prfledt1">
+                                                <h2>Joginder Singh</h2>
+                                                <span>UI / UX Designer and Web Developer</span>
                                             </div>
                                         </div>
+                                        <ul className="_ttl120">
+                                            <li>
+                                                <div className="_ttl121">
+                                                    <div className="_ttl122">Enroll Students</div>
+                                                    <div className="_ttl123">612K</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="_ttl121">
+                                                    <div className="_ttl122">Courses</div>
+                                                    <div className="_ttl123">8</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="_ttl121">
+                                                    <div className="_ttl122">Reviews</div>
+                                                    <div className="_ttl123">11K</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="_ttl121">
+                                                    <div className="_ttl122">Subscriptions</div>
+                                                    <div className="_ttl123">452K</div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4">
-                            <div className="right_side">
-                                <div className="fcrse_3">
-                                    <div className="cater_ttle">
-                                        <h4>Live Streaming</h4>
-                                    </div>
-                                    <div className="live_text">
-                                        <div className="live_icon">
-                                            <i className="uil uil-kayak"></i>
+                                    <div className="col-lg-5">
+                                        <Link to="/settings" className="_216b12">
+                                            <span>
+                                                <i className="uil uil-cog"></i>
+                                            </span>
+                                            Setting
+                                        </Link>
+                                        <div className="rgt-145">
+                                            <ul className="tutor_social_links">
+                                                <li>
+                                                    <a href="#" className="fb">
+                                                        <i className="fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="tw">
+                                                        <i className="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="ln">
+                                                        <i className="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="yu">
+                                                        <i className="fab fa-youtube"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div className="live-content">
-                                            <p>Set up your channel and stream live to your students</p>
-                                            <button
-                                                className="live_link"
-                                                onClick={() => "window.location.href = 'add_streaming.html';"}
-                                            >
-                                                Get Started
-                                            </button>
-                                            <span className="livinfo">Info : This feature only for 'Instructors'.</span>
-                                        </div>
+                                        <ul className="_bty149">
+                                            <li>
+                                                <Link to="/instructorDashboard">
+                                                    <button className="studio-link-btn btn500">Cursus Studio</button>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/settings">
+                                                    <button className="msg125 btn500">Edit</button>
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -170,6 +109,57 @@ const Body = () => {
                     </div>
                 </div>
             </div>
+            {/* <!-- Nav-bar header --> */}
+            <div className="_215b15">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="course_tabs">
+                                <nav>
+                                    <div className="nav nav-tabs tab_crse" id="nav-tab" role="tablist">
+                                        <NavLink to="aboutMe" className="nav-item nav-link">
+                                            About
+                                        </NavLink>
+                                        <NavLink to="discussions" className="nav-item nav-link">
+                                            Discussion
+                                        </NavLink>
+                                        <NavLink to="myCourses" className="nav-item nav-link">
+                                            Courses
+                                        </NavLink>
+                                        <NavLink to="purchasedCourses" className="nav-item nav-link">
+                                            Purchased
+                                        </NavLink>
+                                        <NavLink to="subscriptions" className="nav-item nav-link">
+                                            Subscriptions
+                                        </NavLink>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <!-- Nav-bar content --> */}
+            <div className="_215b17">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="course_tab_content">
+                                <Routes>
+                                    <Route path="" Component={AboutMe} />
+                                    <Route path="aboutMe" Component={AboutMe} />
+                                    <Route path="discussions" Component={Discussions} />
+                                    <Route path="myCourses" Component={MyCourses} />
+                                    <Route path="purchasedCourses" Component={PurchasedCourses} />
+                                    <Route path="subscriptions" Component={Subscriptions} />
+                                </Routes>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <!-- Footer --> */}
             <footer className="footer mt-30">
                 <div className="container">
                     <div className="row">
@@ -379,5 +369,4 @@ const Body = () => {
         </div>
     );
 };
-
 export default Body;

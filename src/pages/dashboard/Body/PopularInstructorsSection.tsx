@@ -4,6 +4,7 @@ import { generateRandomNumber } from '../../../helpers/helpers';
 export const PopularInstructorsSection = () => {
     const dumpData = [
         {
+            id: 12512,
             name: 'John Doe',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Wordpress & Plugin Tutor',
@@ -17,6 +18,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 2534,
             name: 'Kerstin Cable',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Language Learning Coach, Writer, Online Tutor',
@@ -30,6 +32,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 7123,
             name: 'Jose Portilla',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Head of Data Science, Pierian Data Inc.',
@@ -43,6 +46,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 5953,
             name: 'Farhat Amin',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Cookery Coach',
@@ -56,6 +60,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 126766,
             name: 'Kyle Pew',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
@@ -69,6 +74,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 66633,
             name: 'Jaysen Batchelor',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Illustrator & Designer',
@@ -82,6 +88,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 112233,
             name: 'Quinton Batchelor',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Photographer & Instructor',
@@ -95,6 +102,7 @@ export const PopularInstructorsSection = () => {
             },
         },
         {
+            id: 9673,
             name: 'Eli Natoli',
             avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Entrepreneur - Passionate Teacher',
@@ -116,8 +124,8 @@ export const PopularInstructorsSection = () => {
             </a>
             <div className="la5lo1">
                 <div className="owl-carousel top_instrutors owl-theme">
-                    {dumpData.map((instructor) => {
-                        return <Instructor {...instructor} />;
+                    {dumpData.map((item) => {
+                        return <Instructor key={item.id} {...item} />;
                     })}
                 </div>
             </div>

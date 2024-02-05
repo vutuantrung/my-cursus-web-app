@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { IMAGES } from '../../constants';
+import { generateRandomNumber } from '../../helpers/helpers';
 
 const Body = () => {
     const dumpData = [
@@ -7,7 +8,7 @@ const Body = () => {
             id: 12351,
             name: 'John Doe',
             category: 'Wordpress & Plugin Tutor',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#', yt: '#' },
             studentNumber: '100K',
             coursNumber: 15,
@@ -16,7 +17,7 @@ const Body = () => {
             id: 7658,
             name: 'Kerstin Cable',
             category: 'Language Learning Coach, Writer, Online Tutor',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#', yt: '#' },
             studentNumber: '14K',
             coursNumber: 12,
@@ -25,7 +26,7 @@ const Body = () => {
             id: 5767,
             name: 'Jose Portilla',
             category: 'Head of Data Science, Pierian Data Inc.',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#', yt: '#' },
             studentNumber: '1M',
             coursNumber: 51,
@@ -34,7 +35,7 @@ const Body = () => {
             id: 2222,
             name: 'Kyle Pew',
             category: 'Microsoft Certified Trainer - 380,000+ Udemy Students',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#' },
             studentNumber: '1M',
             coursNumber: 42,
@@ -43,7 +44,7 @@ const Body = () => {
             id: 1269,
             name: 'Jaysen Batchelor',
             category: 'Illustrator & Designer',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#', yt: '#' },
             studentNumber: '305K',
             coursNumber: 25,
@@ -52,7 +53,7 @@ const Body = () => {
             id: 987,
             name: 'Quinton Batchelor',
             category: 'Photographer & Instructor',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#', yt: '#' },
             studentNumber: '419K',
             coursNumber: 12,
@@ -61,7 +62,7 @@ const Body = () => {
             id: 131,
             name: 'Eli Natoli',
             category: 'Entrepreneur - Passionate Teacher',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { tw: '#', lk: '#', yt: '#' },
             studentNumber: '123K',
             coursNumber: 13,
@@ -70,7 +71,7 @@ const Body = () => {
             id: 2356,
             name: 'Sunny William',
             category: 'Entrepreneur - Passionate Teacher',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#', yt: '#' },
             studentNumber: '2K',
             coursNumber: 8,
@@ -79,7 +80,7 @@ const Body = () => {
             id: 3267,
             name: 'Neha Smith',
             category: 'English Teacher',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', lk: '#', yt: '#' },
             studentNumber: '953K',
             coursNumber: 35,
@@ -88,7 +89,7 @@ const Body = () => {
             id: 236,
             name: 'Sukhwinder Singh',
             category: 'Web Development',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', yt: '#' },
             studentNumber: '12K',
             coursNumber: 21,
@@ -97,7 +98,7 @@ const Body = () => {
             id: 363,
             name: 'Saloni Prabhakar',
             category: 'Photographer',
-            avatar: '',
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             socialUrls: { fb: '#', tw: '#', lk: '#' },
             studentNumber: '1K',
             coursNumber: 7,
@@ -129,7 +130,7 @@ const Body = () => {
                                                 <div className="fcrse_1 mt-30">
                                                     <div className="tutor_img">
                                                         <Link to={`/instructorProfile/${item.id}`}>
-                                                            <img src={IMAGES.avatar} alt="" />
+                                                            <img src={item.avatar} alt="" />
                                                         </Link>
                                                     </div>
                                                     <div className="tutor_content_dt">

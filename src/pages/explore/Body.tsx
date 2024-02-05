@@ -1,24 +1,104 @@
 import { Link } from 'react-router-dom';
-import { IMAGES } from '../../constants';
+import { generateRandomNumber } from '../../helpers/helpers';
 
 const Body = () => {
     const streamDumpData = [
-        { name: 'John Doe', id: 23456, avatar: '', isLive: true },
-        { name: 'Jassica', id: 3424, avatar: '', isLive: true },
-        { name: 'Edututs+', id: 5742, avatar: '', isLive: true },
-        { name: 'Joginder Singh', id: 12453, avatar: '', isLive: true },
-        { name: 'Zoena', id: 3645, avatar: '', isLive: true },
-        { name: 'Albert Dua', id: 1235, avatar: '', isLive: true },
-        { name: 'Ridhima', id: 3463, avatar: '', isLive: true },
-        { name: 'Amritpal', id: 63756, avatar: '', isLive: true },
-        { name: 'Jimmy', id: 24572, avatar: '', isLive: true },
-        { name: 'Quinton Batchelor', id: 4234, avatar: '', isLive: true },
-        { name: 'Eli Natoli', id: 32452, avatar: '', isLive: true },
-        { name: 'Jaysen Batchelor', id: 7456, avatar: '', isLive: true },
-        { name: 'Farhat Amin', id: 432, avatar: '', isLive: true },
-        { name: 'Kyle Pew', id: 23567, avatar: '', isLive: true },
-        { name: 'Kerstin Cable', id: 7357, avatar: '', isLive: true },
-        { name: 'Jose Portilla', id: 235, avatar: '', isLive: true },
+        {
+            name: 'John Doe',
+            id: 23456,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Jassica',
+            id: 3424,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Edututs+',
+            id: 5742,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Joginder Singh',
+            id: 12453,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Zoena',
+            id: 3645,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Albert Dua',
+            id: 1235,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Ridhima',
+            id: 3463,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Amritpal',
+            id: 63756,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Jimmy',
+            id: 24572,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Quinton Batchelor',
+            id: 4234,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Eli Natoli',
+            id: 32452,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Jaysen Batchelor',
+            id: 7456,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Farhat Amin',
+            id: 432,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Kyle Pew',
+            id: 23567,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Kerstin Cable',
+            id: 7357,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
+        {
+            name: 'Jose Portilla',
+            id: 235,
+            avatar: `./assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+            isLive: true,
+        },
     ];
 
     const courseDumpData = [
@@ -27,7 +107,7 @@ const Body = () => {
             name: 'Complete Python Bootcamp: Go from zero to hero in Python 3',
             category: 'Web Development | Python',
             price: '$10',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: true,
             points: '4.5',
             length: '25 hours',
@@ -40,7 +120,7 @@ const Body = () => {
             name: 'The Complete JavaScript Course 2020: Build Real Projects!',
             category: 'Development | JavaScript',
             price: '$5',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: true,
             points: '4.5',
             length: '28 hours',
@@ -53,7 +133,7 @@ const Body = () => {
             name: 'WordPress Development - Themes, Plugins & Gutenberg',
             category: 'Design | Wordpress',
             price: '$14',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: false,
             points: '5.0',
             length: '21 hours',
@@ -66,7 +146,7 @@ const Body = () => {
             name: 'The Complete Digital Marketing Course - 12 Courses in 1',
             category: 'Digital Marketing | Marketing',
             price: '$12',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: true,
             points: '5.0',
             length: '1 hour',
@@ -79,7 +159,7 @@ const Body = () => {
             name: 'The Complete Node.js Developer Course (3rd Edition)',
             category: 'Development | Node.js',
             price: '$3',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: false,
             points: '',
             length: '30 hours',
@@ -92,7 +172,7 @@ const Body = () => {
             name: 'WordPress for Beginners: Create a Website Step by Step',
             category: 'Design | Wordpress',
             price: '$18',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: true,
             points: '5.0',
             length: '5.4 hours',
@@ -105,7 +185,7 @@ const Body = () => {
             name: 'CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)',
             category: 'Design | CSS',
             price: '$10',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: true,
             points: '4.0',
             length: '23 hours',
@@ -118,7 +198,7 @@ const Body = () => {
             name: 'Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)',
             category: 'Development | Vue JS',
             price: '$10',
-            thumbs: '',
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             isBestSeller: false,
             points: '',
             length: '22 hours',
@@ -163,7 +243,7 @@ const Body = () => {
                                                     <div className="stream_1">
                                                         <Link to={`/liveStreams/output/${item.id}`}>
                                                             <div className="stream_bg">
-                                                                <img src={IMAGES.avatar_instructor_1} alt="" />
+                                                                <img src={item.avatar} alt="" />
                                                                 <h4>{item.name}</h4>
                                                                 {item.isLive && (
                                                                     <p>
@@ -189,7 +269,7 @@ const Body = () => {
                                                 <div className="fcrse_1 mt-30">
                                                     <Link to={`/coursDetails/${item.id}`}>
                                                         <div className="fcrse_img">
-                                                            <img src={IMAGES.img_cours_sample_0} alt="" />
+                                                            <img src={item.thumbs} alt="" />
                                                             <div className="course-overlay">
                                                                 {item.isBestSeller && (
                                                                     <div className="badge_seller">Bestseller</div>
