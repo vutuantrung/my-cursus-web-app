@@ -1,10 +1,12 @@
+import { IMAGES } from '../../../constants';
+
 const AppFooter = () => {
     return (
         <footer className="footer mt-30">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-3 col-sm-6">
-                        <div className="item_f1">
+                        <div className="item_f1" style={{ display: 'flex', flexDirection: 'column' }}>
                             <a href="about_us.html">About</a>
                             <a href="our_blog.html">Blog</a>
                             <a href="career.html">Careers</a>
@@ -12,7 +14,7 @@ const AppFooter = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-6">
-                        <div className="item_f1">
+                        <div className="item_f1" style={{ display: 'flex', flexDirection: 'column' }}>
                             <a href="help.html">Help</a>
                             <a href="coming_soon.html">Advertise</a>
                             <a href="coming_soon.html">Developers</a>
@@ -20,7 +22,7 @@ const AppFooter = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-6">
-                        <div className="item_f1">
+                        <div className="item_f1" style={{ display: 'flex', flexDirection: 'column' }}>
                             <a href="terms_of_use.html">Copyright Policy</a>
                             <a href="terms_of_use.html">Terms</a>
                             <a href="terms_of_use.html">Privacy Policy</a>
@@ -159,7 +161,7 @@ const AppFooter = () => {
                                         <li>
                                             <a href="index.html">
                                                 <div className="footer_logo">
-                                                    <img src="images/logo1.svg" alt="" />
+                                                    <img src={IMAGES.logo1} alt="" />
                                                 </div>
                                             </a>
                                         </li>

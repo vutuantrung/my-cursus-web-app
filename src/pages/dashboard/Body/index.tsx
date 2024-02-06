@@ -9,7 +9,7 @@ import AppFooter from '../../commons/Footer/AppFooter';
 
 export const Body = () => {
     return (
-        <div className="wrapper">
+        <div className="wrapper app-footer-padding">
             <div className="sa4d25">
                 <div className="container-fluid">
                     <div className="row">

@@ -421,7 +421,7 @@
     }
 
     .wrapper__minify {
-        margin-left: 50px;
+        margin-left: 0;
     }
 
     .message-inner-dt > p {

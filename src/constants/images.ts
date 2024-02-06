@@ -22,8 +22,17 @@ import line from '../assets/images/line.svg';
 import stroy from '../assets/images/about/stroy_img.png';
 import team from '../assets/images/about/team.jpg';
 
+import helpIcon from '../assets/images/help_icon.png';
+import blog from '../assets/images/blog_icon.png';
+import careers from '../assets/images/career_icon.png';
+import developerArea from '../assets/images/developer_icon.png';
+
 import hd_dp from '../assets/images/hd_dp.jpg';
 const images = {
+    helpIcon,
+    blog,
+    careers,
+    developerArea,
     logo,
     logo1,
     ct_logo,

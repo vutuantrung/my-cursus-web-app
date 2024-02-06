@@ -409,7 +409,7 @@ input[type='text'] {
     }
 
     .wrapper__minify {
-        margin-left: 60px;
+        margin-left: 0;
     }
 }
 
@@ -3091,8 +3091,8 @@ i.icon8 {
 .chatbox_right {
     float: left;
     width: 100%;
-    border-left: 1px solid #efefef;
     height: 100%;
+    border-left: 1px solid #efefef;
 }
 
 .chat_header {

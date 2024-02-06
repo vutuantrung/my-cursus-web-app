@@ -1971,6 +1971,9 @@ i.icon1 {
 }
 
 .footer {
+    bottom: 0;
+    z-index: 10;
+    position: fixed;
     background: #333;
     width: 100%;
     padding: 0;
@@ -8090,4 +8093,12 @@ a.rmv-btn i {
     top: 35%;
     right: 13px;
     position: absolute;
+}
+
+.page-footer-padding {
+    padding-bottom: 170px !important;
+}
+
+.app-footer-padding {
+    padding-bottom: 260px !important;
 }

@@ -1,3 +1,4 @@
+import { IMAGES } from '../../../constants';
 
 function Footer() {
     return (
@@ -17,7 +18,7 @@ function Footer() {
                                 <li>
                                     <a href="index.html">
                                         <div className="footer_logo">
-                                            <img src="images/logo1.svg" alt="" />
+                                            <img src={IMAGES.logo1} alt="" />
                                         </div>
                                     </a>
                                 </li>

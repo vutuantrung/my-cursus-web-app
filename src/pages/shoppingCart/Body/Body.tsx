@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import { IMAGES } from '../../../constants';
 import AppFooter from '../../commons/Footer/AppFooter';
 
 const Body = () => {
     return (
-        <div className="wrapper _bg4586 _new89">
+        <div className="wrapper _bg4586 _new89 app-footer-padding">
             <div className="_215b15">
                 <div className="container">
                     <div className="row">
@@ -14,7 +15,7 @@ const Body = () => {
                                         <nav aria-label="breadcrumb">
                                             <ol className="breadcrumb">
                                                 <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
+                                                    <Link to="/">Home</Link>
                                                 </li>
                                                 <li className="breadcrumb-item active" aria-current="page">
                                                     Shopping Cart

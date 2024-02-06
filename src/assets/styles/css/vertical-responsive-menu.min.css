@@ -99,8 +99,8 @@
     right: 15px;
     height: 45px;
     line-height: 45px;
-    font-family: "Font Awesome 5 Free";
-    content: "\f0d7";
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0d7';
     font-weight: 900;
 }
 
@@ -117,15 +117,18 @@
 }
 
 .menu--link {
-    display: block;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu--link:hover,
@@ -161,7 +164,7 @@
     padding-left: 50px;
     padding-right: 16px;
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #333;
     text-decoration: none;
@@ -211,7 +214,7 @@
     }
 
     .vertical_nav__minify .menu--item__has_sub_menu .menu--link:after {
-        content: "";
+        content: '';
     }
 
     .vertical_nav__minify .menu--subitens__opened .menu--label,

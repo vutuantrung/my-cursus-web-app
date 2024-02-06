@@ -1,9 +1,9 @@
+import PageFooter from '../../commons/Footer/PageFooter';
 import CreateCoursSteps from './CreateCoursSteps';
-import Footer from './Footer';
 
 const Body = () => {
     return (
-        <div className="wrapper">
+        <div className="wrapper page-footer-padding">
             <div className="sa4d25">
                 <div className="container">
                     <div className="row">
@@ -18,13 +18,7 @@ const Body = () => {
                     </div>
                 </div>
             </div>
-            <footer className="footer mt-40">
-                <div className="container-fluid">
-                    <div className="row">
-                        <Footer />
-                    </div>
-                </div>
-            </footer>
+            <PageFooter />
         </div>
     );
 };

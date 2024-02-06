@@ -67,6 +67,8 @@ import Subscriptions from './pages/myInstructorProfileView/Subscriptions';
 import CertificateStartForm from './pages/certificateStartForm';
 import Help from './pages/help';
 import ReportHistory from './pages/reportHistory';
+import ContactUs from './pages/contactUs';
+import TermsOfUse from './pages/termsOfUse';
 
 const App = () => {
     return (
@@ -93,7 +95,9 @@ const App = () => {
                 <Route path="liveStreams/output/:id" element={<LiveOutput />} />
                 <Route path="coursDetails/:id" element={<CoursDetails />} />
                 <Route path="settings" element={<Settings />} />
+                <Route path="termsOfUse" element={<TermsOfUse />} />
                 <Route path="help" element={<Help />} />
+                <Route path="contactUs" element={<ContactUs />} />
                 <Route path="reportHistory" element={<ReportHistory />} />
                 <Route path="explore" element={<Explore />} />
                 <Route path="feedback" element={<Feedback />} />

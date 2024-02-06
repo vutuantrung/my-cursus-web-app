@@ -8,10 +8,10 @@ const AppLeftsideBar = () => {
                 <div className="left_section">
                     <ul>
                         <li className="menu--item">
-                            <a href="index.html" className="menu--link active" title="Home">
+                            <Link to="/" className="menu--link active" title="Home">
                                 <i className="uil uil-home-alt menu--icon"></i>
                                 <span className="menu--label">Home</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="menu--item">
                             <Link to="/liveStreams">
@@ -204,29 +204,44 @@ const AppLeftsideBar = () => {
                     <h6 className="left_title">SUBSCRIPTIONS</h6>
                     <ul>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${12345}`}>
-                                <div className="menu--link user_img">
-                                    <img src={IMAGES.avatar_instructor_0} alt="" />
-                                    Rock Smith
-                                    <div className="alrt_dot"></div>
-                                </div>
+                            <Link to={`/instructorProfile/${12345}`} className="menu--link user_img">
+                                <img src={IMAGES.avatar_instructor_0} alt="" />
+                                Rock Smith
+                                <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${54321}`}>
-                                <div className="menu--link user_img">
-                                    <img src={IMAGES.avatar_instructor_1} alt="" />
-                                    Jassica William
-                                    <div className="alrt_dot"></div>
-                                </div>
+                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                                <img src={IMAGES.avatar_instructor_1} alt="" />
+                                Jassica William
+                                <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/allInstructor`}>
-                                <div className="menu--link" title="Browse Instructors">
-                                    <i className="uil uil-plus-circle menu--icon"></i>
-                                    <span className="menu--label">Browse Instructors</span>
-                                </div>
+                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                                <img src={IMAGES.avatar_instructor_1} alt="" />
+                                Sukhwinder Singh
+                                <div className="alrt_dot"></div>
+                            </Link>
+                        </li>
+                        <li className="menu--item">
+                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                                <img src={IMAGES.avatar_instructor_1} alt="" />
+                                Neha Smith
+                                <div className="alrt_dot"></div>
+                            </Link>
+                        </li>
+                        <li className="menu--item">
+                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                                <img src={IMAGES.avatar_instructor_1} alt="" />
+                                Saloni Prabhakar
+                                <div className="alrt_dot"></div>
+                            </Link>
+                        </li>
+                        <li className="menu--item">
+                            <Link to={`/allInstructor`} className="menu--link" title="Browse Instructors">
+                                <i className="uil uil-plus-circle menu--icon"></i>
+                                <span className="menu--label">Browse Instructors</span>
                             </Link>
                         </li>
                     </ul>
@@ -234,27 +249,35 @@ const AppLeftsideBar = () => {
                 <div className="left_section pt-2">
                     <ul>
                         <li className="menu--item">
-                            <Link to="/settings" className="menu--link" title="Setting">
-                                <i className="uil uil-cog menu--icon"></i>
-                                <span className="menu--label">Setting</span>
+                            <Link to="/settings">
+                                <div className="menu--link" title="Setting">
+                                    <i className="uil uil-cog menu--icon"></i>
+                                    <span className="menu--label">Setting</span>
+                                </div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to="/help" className="menu--link" title="Help">
-                                <i className="uil uil-question-circle menu--icon"></i>
-                                <span className="menu--label">Help</span>
+                            <Link to="/help">
+                                <div className="menu--link" title="Help">
+                                    <i className="uil uil-question-circle menu--icon"></i>
+                                    <span className="menu--label">Help</span>
+                                </div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to="/reportHistory" className="menu--link" title="Report History">
-                                <i className="uil uil-windsock menu--icon"></i>
-                                <span className="menu--label">Report History</span>
+                            <Link to="/reportHistory">
+                                <div className="menu--link" title="Report History">
+                                    <i className="uil uil-windsock menu--icon"></i>
+                                    <span className="menu--label">Report History</span>
+                                </div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to="/feedback" className="menu--link" title="Send Feedback">
-                                <i className="uil uil-comment-alt-exclamation menu--icon"></i>
-                                <span className="menu--label">Send Feedback</span>
+                            <Link to="/feedback">
+                                <div className="menu--link" title="Send Feedback">
+                                    <i className="uil uil-comment-alt-exclamation menu--icon"></i>
+                                    <span className="menu--label">Send Feedback</span>
+                                </div>
                             </Link>
                         </li>
                     </ul>
@@ -262,28 +285,28 @@ const AppLeftsideBar = () => {
                 <div className="left_footer">
                     <ul>
                         <li>
-                            <a href="about_us.html">About</a>
+                            <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <a href="press.html">Press</a>
+                            <Link to="/press">Press</Link>
                         </li>
                         <li>
-                            <a href="contact_us.html">Contact Us</a>
+                            <Link to="/contactUs">Contact Us</Link>
                         </li>
                         <li>
-                            <a href="coming_soon.html">Advertise</a>
+                            <Link to="/commingSoon">Contact Us</Link>
                         </li>
                         <li>
-                            <a href="coming_soon.html">Developers</a>
+                            <Link to="/commingSoon">Developers</Link>
                         </li>
                         <li>
-                            <a href="terms_of_use.html">Copyright</a>
+                            <Link to="/termsOfUse">Copyright</Link>
                         </li>
                         <li>
-                            <a href="terms_of_use.html">Privacy Policy</a>
+                            <Link to="/termsOfUse">Privacy Policy</Link>
                         </li>
                         <li>
-                            <a href="terms_of_use.html">Terms</a>
+                            <Link to="/termsOfUse">Terms</Link>
                         </li>
                     </ul>
                     <div className="left_footer_content">
