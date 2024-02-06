@@ -1,1 +1,18 @@
-<svg id="SvgjsSvg1001" width="288" height="288" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs1002"></defs><g id="SvgjsG1008" transform="matrix(0.9167,0,0,0.9167,11.995200000000011,11.995200000000011)"><!--?xml version="1.0" encoding="UTF-8"?--><svg xmlns="http://www.w3.org/2000/svg" width="288" height="288" viewBox="0 0 8 8"><path d="M3 0v3H0v2h3v3h2V5h3V3H5V0H3z" fill="#ffffff" class="color000 svgShape"></path><metadata><rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:description about="https://iconscout.com/legal#licenses" dc:title="plus" dc:description="plus" dc:publisher="Iconscout" dc:date="2017-09-14" dc:format="image/svg+xml" dc:language="en"><dc:creator><rdf:bag><rdf:li>Useiconic</rdf:li></rdf:bag></dc:creator></rdf:description></rdf:rdf></metadata></svg></g></svg>
+<svg viewBox="0 -0.5 21 21" version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+	<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+	<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+	<g id="SVGRepo_iconCarrier">
+		<title>plus [#ffffff]</title>
+		<desc>Created with Sketch.</desc>
+		<defs></defs>
+		<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g id="Dribbble-Light-Preview" transform="translate(-379.000000, -240.000000)" fill="#ffffff">
+				<g id="icons" transform="translate(56.000000, 160.000000)">
+					<polygon id="plus-[#ffffff]" points="344 89 344 91 334.55 91 334.55 100 332.45 100 332.45 91 323 91 323 89 332.45 89 332.45 80 334.55 80 334.55 89"></polygon>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

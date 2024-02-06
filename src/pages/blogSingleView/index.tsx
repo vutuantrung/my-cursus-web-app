@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IMAGES } from '../../constants';
 import PageHeader from '../commons/Header/PageHeader';
 
@@ -16,10 +17,11 @@ const BlogSingleView = () => {
                                             <nav aria-label="breadcrumb">
                                                 <ol className="breadcrumb">
                                                     <li className="breadcrumb-item">
-                                                        <a href="index.html">Home</a>
+                                                        <Link to="/">Home</Link>
                                                     </li>
                                                     <li className="breadcrumb-item">
-                                                        <a href="our_blog.html">Our Blog</a>
+                                                        <Link to="/ourBlog">Our Blog</Link>
+                                                        {/* <a href="our_blog.html">Our Blog</a> */}
                                                     </li>
                                                     <li className="breadcrumb-item active" aria-current="page">
                                                         Single Blog View

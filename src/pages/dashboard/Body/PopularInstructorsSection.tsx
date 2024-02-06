@@ -1,5 +1,6 @@
 import { Instructor } from './components/Instructor';
 import { generateRandomNumber } from '../../../helpers/helpers';
+import { Link } from 'react-router-dom';
 
 export const PopularInstructorsSection = () => {
     const dumpData = [
@@ -119,9 +120,9 @@ export const PopularInstructorsSection = () => {
     return (
         <div className="section3125 mt-50">
             <h4 className="item_title">Popular Instructors</h4>
-            <a href="all_instructor.html" className="see150">
+            <Link to="allInstructors" className="see150">
                 See all
-            </a>
+            </Link>
             <div className="la5lo1">
                 <div className="owl-carousel top_instrutors owl-theme">
                     {dumpData.map((item) => {

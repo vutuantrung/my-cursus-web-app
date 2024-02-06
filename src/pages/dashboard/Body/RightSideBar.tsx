@@ -62,14 +62,9 @@ export const RightSideBar = () => {
                         </div>
                         <div className="live-content">
                             <p>Set up your channel and stream live to your students</p>
-                            <button
-                                className="live_link"
-                                onClick={() => {
-                                    console.log("window.location.href = 'add_streaming.html';");
-                                }}
-                            >
-                                Get Started
-                            </button>
+                            <Link to="/addStream">
+                                <button className="live_link">Get Started</button>
+                            </Link>
                             <span className="livinfo">Info : This feature only for 'Instructors'.</span>
                         </div>
                     </div>
@@ -77,6 +72,7 @@ export const RightSideBar = () => {
                 <div className="get1452">
                     <h4>Get personalized recommendations</h4>
                     <p>Answer a few questions for your top picks</p>
+
                     <button
                         className="Get_btn"
                         onClick={() => {

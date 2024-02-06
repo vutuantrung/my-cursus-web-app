@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IMAGES } from '../../constants';
 
 const Body = () => {
@@ -66,12 +67,9 @@ const Body = () => {
                                     <h1>Jump Into Course Creation</h1>
                                 </div>
                                 <div className="card_dash_right1">
-                                    <button
-                                        className="create_btn_dash"
-                                        onClick={() => "window.location.href = 'create_new_course.html';"}
-                                    >
-                                        Create Your Course
-                                    </button>
+                                    <Link to="/createNewCourse">
+                                        <button className="create_btn_dash">Create Your Course</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

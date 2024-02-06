@@ -78,7 +78,7 @@ const PurchasedCourses = () => {
                         <div className="col-md-9">
                             {courseDumpData.map((item) => {
                                 return (
-                                    <div className="fcrse_1 mt-30">
+                                    <div key={item.id} className="fcrse_1 mt-30">
                                         <Link to={`/coursDetails/${item.id}`}>
                                             <div className="hf_img">
                                                 <img src={item.thumbs} alt="" />

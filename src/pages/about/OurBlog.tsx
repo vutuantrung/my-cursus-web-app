@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const OurBlog = () => {
     return (
         <>
@@ -112,95 +114,95 @@ const OurBlog = () => {
                         </div>
                         <div className="col-lg-9 col-md-7">
                             <div className="blogbg_1 mt-50">
-                                <a href="blog_single_view.html" className="hf_img">
+                                <Link to="/blogSingleView/1234" className="hf_img">
                                     <img src="images/blog/img-1.jpg" alt="" />
                                     <div className="course-overlay"></div>
-                                </a>
+                                </Link>
                                 <div className="hs_content">
                                     <div className="vdtodt">
                                         <span className="vdt14">109k views</span>
                                         <span className="vdt14">March 10, 2020</span>
                                     </div>
-                                    <a href="blog_single_view.html" className="crse14s title900">
+                                    <Link to="/blogSingleView/1234" className="crse14s title900">
                                         Blog Title Here
-                                    </a>
+                                    </Link>
                                     <p className="blog_des">
                                         Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, iaculis eu nunc
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor,
                                         vitae fringilla quam interdum mollis arcu.
                                     </p>
-                                    <a href="blog_single_view.html" className="view-blog-link">
+                                    <Link to="/blogSingleView/1234" className="view-blog-link">
                                         Read More<i className="uil uil-arrow-right"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="blogbg_1 mt-30">
-                                <a href="blog_single_view.html" className="hf_img">
+                                <Link to="/blogSingleView/2222" className="hf_img">
                                     <img src="images/blog/img-2.jpg" alt="" />
                                     <div className="course-overlay"></div>
-                                </a>
+                                </Link>
                                 <div className="hs_content">
                                     <div className="vdtodt">
                                         <span className="vdt14">109k views</span>
                                         <span className="vdt14">March 10, 2020</span>
                                     </div>
-                                    <a href="blog_single_view.html" className="crse14s title900">
+                                    <Link to="/blogSingleView/2222" className="crse14s title900">
                                         Blog Title Here
-                                    </a>
+                                    </Link>
                                     <p className="blog_des">
                                         Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, iaculis eu nunc
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor
                                         interdum mollis arcu interdum mollis arcu.
                                     </p>
-                                    <a href="blog_single_view.html" className="view-blog-link">
+                                    <Link to="/blogSingleView/2222" className="view-blog-link">
                                         Read More<i className="uil uil-arrow-right"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="blogbg_1 mt-30">
-                                <a href="blog_single_view.html" className="hf_img">
+                                <Link to="/blogSingleView/3333" className="hf_img">
                                     <img src="images/blog/img-3.jpg" alt="" />
                                     <div className="course-overlay"></div>
-                                </a>
+                                </Link>
                                 <div className="hs_content">
                                     <div className="vdtodt">
                                         <span className="vdt14">109k views</span>
                                         <span className="vdt14">March 10, 2020</span>
                                     </div>
-                                    <a href="blog_single_view.html" className="crse14s title900">
+                                    <Link to="/blogSingleView/3333" className="crse14s title900">
                                         Blog Title Here
-                                    </a>
+                                    </Link>
                                     <p className="blog_des">
                                         Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, iaculis eu nunc
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor
                                         interdum mollis arcu.
                                     </p>
-                                    <a href="blog_single_view.html" className="view-blog-link">
+                                    <Link to="/blogSingleView/3333" className="view-blog-link">
                                         Read More<i className="uil uil-arrow-right"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="blogbg_1 mt-30">
-                                <a href="blog_single_view.html" className="hf_img">
+                                <Link to="/blogSingleView/4444" className="hf_img">
                                     <img src="images/blog/img-4.jpg" alt="" />
                                     <div className="course-overlay"></div>
-                                </a>
+                                </Link>
                                 <div className="hs_content">
                                     <div className="vdtodt">
                                         <span className="vdt14">109k views</span>
                                         <span className="vdt14">March 10, 2020</span>
                                     </div>
-                                    <a href="blog_single_view.html" className="crse14s title900">
+                                    <Link to="/blogSingleView/4444" className="crse14s title900">
                                         Blog Title Here
-                                    </a>
+                                    </Link>
                                     <p className="blog_des">
                                         Donec eget arcu vel mauris lacinia vestibulum id eu elit. Nam metus odio, iaculis eu nunc
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor
                                         interdum mollis arcu.
                                     </p>
-                                    <a href="blog_single_view.html" className="view-blog-link">
+                                    <Link to="/blogSingleView/4444" className="view-blog-link">
                                         Read More<i className="uil uil-arrow-right"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="main-p-pagination">

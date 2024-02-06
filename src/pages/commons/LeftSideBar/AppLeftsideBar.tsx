@@ -142,7 +142,7 @@ const AppLeftsideBar = () => {
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/applyJob">
+                                    <Link to="/applyJob/1111">
                                         <div className="sub_menu--link">Job Apply</div>
                                     </Link>
                                 </li>
@@ -234,30 +234,28 @@ const AppLeftsideBar = () => {
                 <div className="left_section pt-2">
                     <ul>
                         <li className="menu--item">
-                            <Link to="/settings">
-                                <div className="menu--link" title="Setting">
-                                    <i className="uil uil-cog menu--icon"></i>
-                                    <span className="menu--label">Setting</span>
-                                </div>
+                            <Link to="/settings" className="menu--link" title="Setting">
+                                <i className="uil uil-cog menu--icon"></i>
+                                <span className="menu--label">Setting</span>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="help.html" className="menu--link" title="Help">
+                            <Link to="/help" className="menu--link" title="Help">
                                 <i className="uil uil-question-circle menu--icon"></i>
                                 <span className="menu--label">Help</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="report_history.html" className="menu--link" title="Report History">
+                            <Link to="/reportHistory" className="menu--link" title="Report History">
                                 <i className="uil uil-windsock menu--icon"></i>
                                 <span className="menu--label">Report History</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="menu--item">
-                            <a href="feedback.html" className="menu--link" title="Send Feedback">
+                            <Link to="/feedback" className="menu--link" title="Send Feedback">
                                 <i className="uil uil-comment-alt-exclamation menu--icon"></i>
                                 <span className="menu--label">Send Feedback</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

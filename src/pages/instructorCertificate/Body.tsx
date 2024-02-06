@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IMAGES } from '../../constants';
 
 const Body = () => {
@@ -21,12 +22,9 @@ const Body = () => {
                                         <h1>Jump Into New Certificate</h1>
                                     </div>
                                     <div className="card_dash_right1">
-                                        <button
-                                            className="create_btn_dash"
-                                            onClick={() => "window.location.href = 'certification_center.html';"}
-                                        >
-                                            New Certificate
-                                        </button>
+                                        <Link to="/certificateCenter">
+                                            <button className="create_btn_dash">New Certificate</button>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="table-cerificate">

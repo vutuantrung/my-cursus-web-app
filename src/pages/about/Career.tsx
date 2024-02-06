@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Career = () => {
     return (
         <>
@@ -221,9 +223,9 @@ const Career = () => {
                                 <h4>Algorithm Engineer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <a href="apply_job.html" className="career_lnk5">
+                                    <Link to="applyJob/1111" className="career_lnk5">
                                         Learn More and Apply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -232,9 +234,9 @@ const Career = () => {
                                 <h4>Chief Technology Officer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <a href="apply_job.html" className="career_lnk5">
+                                    <Link to="applyJob/2222" className="career_lnk5">
                                         Learn More and Apply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -243,9 +245,9 @@ const Career = () => {
                                 <h4>Customer Growth & Marketing Analyst</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <a href="apply_job.html" className="career_lnk5">
+                                    <Link to="applyJob/3333" className="career_lnk5">
                                         Learn More and Apply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -254,9 +256,9 @@ const Career = () => {
                                 <h4>Data Engineer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <a href="apply_job.html" className="career_lnk5">
+                                    <Link to="applyJob/4444" className="career_lnk5">
                                         Learn More and Apply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -265,9 +267,9 @@ const Career = () => {
                                 <h4>iOS Developer - Edututs+ San Francisco, CA</h4>
                                 <span>San Francisco, CA</span>
                                 <div className="apply_job_link_right">
-                                    <a href="apply_job.html" className="career_lnk5">
+                                    <Link to="applyJob/5555" className="career_lnk5">
                                         Learn More and Apply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -276,9 +278,9 @@ const Career = () => {
                                 <h4>Senior UX Designer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <a href="apply_job.html" className="career_lnk5">
+                                    <Link to="applyJob/6666" className="career_lnk5">
                                         Learn More and Apply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,7 @@ import AppHeader from '../commons/Header/AppHeader';
 import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
 import Body from './Body';
 
-const AllInstructors = () => {
+const Help = () => {
     return (
         <>
             <AppHeader />
@@ -11,5 +11,4 @@ const AllInstructors = () => {
         </>
     );
 };
-
-export default AllInstructors;
+export default Help;

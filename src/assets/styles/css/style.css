@@ -7165,6 +7165,9 @@ a.rmv-btn i {
 
 .certi_icons {
     padding-top: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .certi_icons li {
@@ -7181,7 +7184,7 @@ a.rmv-btn i {
 }
 
 .edttslogo1 img {
-    width: 150px;
+    width: 130px;
 }
 
 .certi-btn {

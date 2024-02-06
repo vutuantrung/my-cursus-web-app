@@ -34,7 +34,7 @@ import Explore from './pages/explore';
 import CoursDetails from './pages/coursDetails';
 import SavedCourses from './pages/savedCourses';
 import InstructorProfile from './pages/instructorProfile';
-import AllInstructor from './pages/allInstructors';
+import AllInstructors from './pages/allInstructors';
 import CertificateCenter from './pages/certificateCenter';
 import CertificateFillForm from './pages/certificateFillForm';
 import CertificateTestView from './pages/certificateTestView';
@@ -64,6 +64,9 @@ import Discussions from './pages/myInstructorProfileView/Discussions';
 import MyCourses from './pages/myInstructorProfileView/MyCourses';
 import PurchasedCourses from './pages/myInstructorProfileView/PurchasedCourses';
 import Subscriptions from './pages/myInstructorProfileView/Subscriptions';
+import CertificateStartForm from './pages/certificateStartForm';
+import Help from './pages/help';
+import ReportHistory from './pages/reportHistory';
 
 const App = () => {
     return (
@@ -90,12 +93,15 @@ const App = () => {
                 <Route path="liveStreams/output/:id" element={<LiveOutput />} />
                 <Route path="coursDetails/:id" element={<CoursDetails />} />
                 <Route path="settings" element={<Settings />} />
+                <Route path="help" element={<Help />} />
+                <Route path="reportHistory" element={<ReportHistory />} />
                 <Route path="explore" element={<Explore />} />
                 <Route path="feedback" element={<Feedback />} />
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
 
                 <Route path="certificateCenter" element={<CertificateCenter />} />
+                <Route path="certificateStartForm" element={<CertificateStartForm />} />
                 <Route path="certificateFillForm" element={<CertificateFillForm />} />
                 <Route path="certificateTestView" element={<CertificateTestView />} />
                 <Route path="certificateTestResult" element={<CertificateTestResult />} />
@@ -106,8 +112,8 @@ const App = () => {
                 <Route path="paidMembership" element={<PaidMembership />} />
                 <Route path="checkoutMembership" element={<CheckoutMemberShip />} />
                 <Route path="invoice" element={<Invoice />} />
-                <Route path="applyJob" element={<ApplyJob />} />
-                <Route path="blogSingleView" element={<BlogSingleView />} />
+                <Route path="applyJob/:id" element={<ApplyJob />} />
+                <Route path="blogSingleView/:id" element={<BlogSingleView />} />
                 <Route path="addStream" element={<AddStreaming />} />
                 <Route path="searchResult" element={<SearchResult />} />
                 <Route path="thankyou" element={<Thankyou />} />
@@ -115,9 +121,9 @@ const App = () => {
                 <Route path="error404" element={<Error404 />} />
 
                 <Route path="savedCourses" element={<SavedCourses />} />
-                <Route path="allInstructor" element={<AllInstructor />} />
+                <Route path="allInstructors" element={<AllInstructors />} />
 
-                <Route path="instructorProfile/:id" element={<InstructorProfile />} />
+                <Route path="instructorProfile" element={<InstructorProfile />} />
                 <Route path="instructorAnalyics" element={<InstructorAnalyics />} />
                 <Route path="instructorMessages" element={<InstructorMessage />} />
                 <Route path="instructorDashboard" element={<InstructorDashboard />} />

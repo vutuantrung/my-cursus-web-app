@@ -3,6 +3,7 @@ import { generateRandomNumber } from '../../helpers/helpers';
 const Subscriptions = () => {
     const dumpData = [
         {
+            id: 1231,
             name: 'John Doe',
             avatar: `../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Wordpress & Plugin Tutor',
@@ -10,6 +11,7 @@ const Subscriptions = () => {
             numberCourses: '15',
         },
         {
+            id: 452,
             name: 'Kerstin Cable',
             avatar: `../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Language Learning Coach, Writer, Online Tutor',
@@ -17,6 +19,7 @@ const Subscriptions = () => {
             numberCourses: '11',
         },
         {
+            id: 7333,
             name: 'Jose Portilla',
             avatar: `../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Head of Data Science, Pierian Data Inc.',
@@ -24,6 +27,7 @@ const Subscriptions = () => {
             numberCourses: '25',
         },
         {
+            id: 222,
             name: 'Jose Martin',
             avatar: `../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
             className: 'Developer',
@@ -39,7 +43,7 @@ const Subscriptions = () => {
                     <div className="row">
                         {dumpData.map((item) => {
                             return (
-                                <div className="col-lg-3 col-md-4">
+                                <div key={item.id} className="col-lg-3 col-md-4">
                                     <div className="fcrse_1 mt-30">
                                         <div className="tutor_img">
                                             <a href="#">

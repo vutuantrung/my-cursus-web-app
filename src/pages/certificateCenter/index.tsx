@@ -1,6 +1,22 @@
+import { useEffect } from 'react';
 import PageHeader from '../commons/Header/PageHeader';
+import { Link } from 'react-router-dom';
+import { IMAGES } from '../../constants';
 
 const CertificateCenter = () => {
+    useEffect(() => {
+        ($('.ui .dropdown') as any).dropdown();
+        // === Model === //
+        ($('.ui .modal') as any).modal({ blurring: true }).modal('show');
+        // === Tab === //
+        ($('.menu .item') as any).tab();
+        // === checkbox Toggle === //
+        ($('.ui .checkbox') as any).checkbox();
+        // === Toggle === //
+        $('.enable .button').on('click', function () {
+            ($(this).nextAll('.checkbox') as any).checkbox('enable');
+        });
+    }, []);
     return (
         <>
             <PageHeader />
@@ -15,26 +31,23 @@ const CertificateCenter = () => {
                                     <ul className="certi_icons">
                                         <li>
                                             <a href="#" className="edttslogo">
-                                                <img src="images/logo1.svg" alt="" />
+                                                <img src={IMAGES.logo1} alt="" />
                                             </a>
                                         </li>
                                         <li>
                                             <div className="edttsplus">
-                                                <img src="images/cerificate_center/plus.svg" alt="" />
+                                                <img src={IMAGES.plus} alt="" />
                                             </div>
                                         </li>
                                         <li>
                                             <a href="#" className="edttslogo1">
-                                                <img src="images/cerificate_center/certicon.svg" alt="" />
+                                                <img src={IMAGES.certicon} alt="" />
                                             </a>
                                         </li>
                                     </ul>
-                                    <button
-                                        className="certi-btn"
-                                        onClick={() => "window.location.href = 'certification_start_form.html';"}
-                                    >
-                                        Start Certification
-                                    </button>
+                                    <Link to="/certificateStartForm">
+                                        <button className="certi-btn">Start Certification</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
