@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import AppHeader from '../commons/Header/AppHeader';
-import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
 import Body from './Body';
 
 const Explore = () => {
@@ -125,13 +123,7 @@ const Explore = () => {
         }
     }, []);
 
-    return (
-        <>
-            <AppHeader />
-            <AppLeftsideBar />
-            <Body />
-        </>
-    );
+    return <Body />;
 };
 
 export default Explore;

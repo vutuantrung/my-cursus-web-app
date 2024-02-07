@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES, IMAGES } from '../../../constants';
+import { NavLink } from 'react-router-dom';
 
 const AppLeftsideBar = () => {
     return (
@@ -8,26 +9,22 @@ const AppLeftsideBar = () => {
                 <div className="left_section">
                     <ul>
                         <li className="menu--item">
-                            <Link to="/" className="menu--link active" title="Home">
+                            <NavLink to="/" className="menu--link menu--label" title="Home">
                                 <i className="uil uil-home-alt menu--icon"></i>
-                                <span className="menu--label">Home</span>
-                            </Link>
+                                <span>Home</span>
+                            </NavLink>
                         </li>
                         <li className="menu--item">
-                            <Link to="/liveStreams">
-                                <div className="menu--link" title="Live Streams">
-                                    <i className="uil uil-kayak menu--icon"></i>
-                                    <span className="menu--label">Live Streams</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/liveStream" className="menu--link menu--label" title="Live Streams">
+                                <i className="uil uil-kayak menu--icon"></i>
+                                <span>Live Streams</span>
+                            </NavLink>
                         </li>
                         <li className="menu--item">
-                            <Link to="/explore">
-                                <div className="menu--link" title="Explore">
-                                    <i className="uil uil-search menu--icon"></i>
-                                    <span className="menu--label">Explore</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/explore" className="menu--link menu--label" title="Explore">
+                                <i className="uil uil-search menu--icon"></i>
+                                <span>Explore</span>
+                            </NavLink>
                         </li>
                         <li className="menu--item menu--item__has_sub_menu">
                             <label className="menu--link" title="Categories">
@@ -83,15 +80,13 @@ const AppLeftsideBar = () => {
                             </ul>
                         </li>
                         <li className="menu--item">
-                            <Link to="/savedCourses">
-                                <div className="menu--link" title="Saved Courses">
-                                    <i className="uil uil-heart-alt menu--icon"></i>
-                                    <span className="menu--label">Saved Courses</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/savedCourses" className="menu--link menu--label" title="Saved Courses">
+                                <i className="uil uil-heart-alt menu--icon"></i>
+                                <span>Saved Courses</span>
+                            </NavLink>
                         </li>
-                        <li className="menu--item  menu--item__has_sub_menu">
-                            <label className="menu--link" title="Pages">
+                        <li className="menu--item menu--item__has_sub_menu">
+                            <label className="menu--link menu--label" title="Pages">
                                 <i className="uil uil-file menu--icon"></i>
                                 <span className="menu--label">Pages</span>
                             </label>
@@ -167,7 +162,7 @@ const AppLeftsideBar = () => {
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/liveStreams/output/12345">
+                                    <Link to="/liveStream/output/12345">
                                         <div className="sub_menu--link">Live Stream View</div>
                                     </Link>
                                 </li>
@@ -204,81 +199,73 @@ const AppLeftsideBar = () => {
                     <h6 className="left_title">SUBSCRIPTIONS</h6>
                     <ul>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${12345}`} className="menu--link user_img">
+                            <Link to={`/instructorProfile/view/${12345}`} className="menu--link user_img">
                                 <img src={IMAGES.avatar_instructor_0} alt="" />
                                 Rock Smith
                                 <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                            <Link to={`/instructorProfile/view/${54321}`} className="menu--link user_img">
                                 <img src={IMAGES.avatar_instructor_1} alt="" />
                                 Jassica William
                                 <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                            <Link to={`/instructorProfile/view/${54321}`} className="menu--link user_img">
                                 <img src={IMAGES.avatar_instructor_1} alt="" />
                                 Sukhwinder Singh
                                 <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                            <Link to={`/instructorProfile/view/${54321}`} className="menu--link user_img">
                                 <img src={IMAGES.avatar_instructor_1} alt="" />
                                 Neha Smith
                                 <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/instructorProfile/${54321}`} className="menu--link user_img">
+                            <Link to={`/instructorProfile/view/${54321}`} className="menu--link user_img">
                                 <img src={IMAGES.avatar_instructor_1} alt="" />
                                 Saloni Prabhakar
                                 <div className="alrt_dot"></div>
                             </Link>
                         </li>
                         <li className="menu--item">
-                            <Link to={`/allInstructor`} className="menu--link" title="Browse Instructors">
+                            <NavLink to="/instructorProfile" className="menu--link menu--label" title="Browse Instructors">
                                 <i className="uil uil-plus-circle menu--icon"></i>
-                                <span className="menu--label">Browse Instructors</span>
-                            </Link>
+                                <span>Browse Instructors</span>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className="left_section pt-2">
                     <ul>
                         <li className="menu--item">
-                            <Link to="/settings">
-                                <div className="menu--link" title="Setting">
-                                    <i className="uil uil-cog menu--icon"></i>
-                                    <span className="menu--label">Setting</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/settings" className="menu--link menu--label" title="Setting">
+                                <i className="uil uil-cog menu--icon"></i>
+                                <span>Setting</span>
+                            </NavLink>
                         </li>
                         <li className="menu--item">
-                            <Link to="/help">
-                                <div className="menu--link" title="Help">
-                                    <i className="uil uil-question-circle menu--icon"></i>
-                                    <span className="menu--label">Help</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/help" className="menu--link menu--label" title="Help">
+                                <i className="uil uil-question-circle menu--icon"></i>
+                                <span>Help</span>
+                            </NavLink>
                         </li>
                         <li className="menu--item">
-                            <Link to="/reportHistory">
-                                <div className="menu--link" title="Report History">
-                                    <i className="uil uil-windsock menu--icon"></i>
-                                    <span className="menu--label">Report History</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/reportHistory" className="menu--link menu--label" title="Report History">
+                                <i className="uil uil-windsock menu--icon"></i>
+                                <span>Report History</span>
+                            </NavLink>
                         </li>
                         <li className="menu--item">
-                            <Link to="/feedback">
-                                <div className="menu--link" title="Send Feedback">
-                                    <i className="uil uil-comment-alt-exclamation menu--icon"></i>
-                                    <span className="menu--label">Send Feedback</span>
-                                </div>
-                            </Link>
+                            <NavLink to="/feedback" className="menu--link menu--label" title="Send Feedback">
+                                <i className="uil uil-comment-alt-exclamation menu--icon"></i>
+                                <span>Send Feedback</span>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

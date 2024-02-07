@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const LiveStreamItem = (item: any) => {
     return (
         <div className="item">
             <div className="stream_1">
-                <a href={`liveStreams/output/${item.id}`} className="stream_bg">
-                    {/* <img src={avatar} alt="" /> */}
+                <Link to={`/liveStream/output/${item.id}`} className="stream_bg">
                     <img src={item.avatar} alt="" />
                     <h4>{item.name}</h4>
                     {item.isLive && (
@@ -11,7 +12,7 @@ const LiveStreamItem = (item: any) => {
                             live<span></span>
                         </p>
                     )}
-                </a>
+                </Link>
             </div>
         </div>
     );

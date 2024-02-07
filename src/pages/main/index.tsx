@@ -1,16 +1,27 @@
+import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
+
 import { Body } from './Body';
 import AppHeader from '../commons/Header/AppHeader';
 import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
+import LiveStream from '../liveStreams';
+import Explore from '../explore';
+import SavedCourses from '../savedCourses';
+import AllInstructors from '../allInstructors';
+import Settings from '../settings';
+import Help from '../help';
+import ReportHistory from '../reportHistory';
+import Feedback from '../feedback';
+import LiveOutput from '../liveOutput';
+import InstructorProfile from '../instructorProfile';
 
 const Main = () => {
     useEffect(() => {
-        const navText = ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"];
         const carouselOptions = {
             loop: true,
             nav: true,
             dots: false,
-            navText: navText,
+            navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
         };
 
         ($('.ui .dropdown') as any).dropdown();
@@ -128,7 +139,22 @@ const Main = () => {
         <>
             <AppHeader />
             <AppLeftsideBar />
-            <Body />
+            <Routes>
+                <Route path="" Component={Body} />
+
+                <Route path="explore" Component={Explore} />
+                <Route path="savedCourses" Component={SavedCourses} />
+                <Route path="settings" Component={Settings} />
+                <Route path="help" Component={Help} />
+                <Route path="reportHistory" Component={ReportHistory} />
+                <Route path="feedback" Component={Feedback} />
+
+                <Route path="liveStream" Component={LiveStream} />
+                <Route path="liveStream/output/:id" Component={LiveOutput} />
+
+                <Route path="instructorProfile" Component={AllInstructors} />
+                <Route path="instructorProfile/view/:id" Component={InstructorProfile} />
+            </Routes>
         </>
     );
 };

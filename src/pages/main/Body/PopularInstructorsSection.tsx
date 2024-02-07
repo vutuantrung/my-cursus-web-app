@@ -120,7 +120,7 @@ export const PopularInstructorsSection = () => {
     return (
         <div className="section3125 mt-50">
             <h4 className="item_title">Popular Instructors</h4>
-            <Link to="allInstructors" className="see150">
+            <Link to="instructorProfile" className="see150">
                 See all
             </Link>
             <div className="la5lo1">

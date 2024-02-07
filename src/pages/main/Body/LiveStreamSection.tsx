@@ -1,5 +1,6 @@
 import LiveStreamItem from './components/LiveStreamItem';
 import { generateRandomNumber } from '../../../helpers/helpers';
+import { Link } from 'react-router-dom';
 
 export const LiveStreamSection = (props: any) => {
     const dumpData = [
@@ -61,9 +62,9 @@ export const LiveStreamSection = (props: any) => {
     return (
         <div className="section3125">
             <h4 className="item_title">Live Streams</h4>
-            <a href="live_streams.html" className="see150">
+            <Link to="liveStream" className="see150">
                 See all
-            </a>
+            </Link>
             <div className="la5lo1">
                 <div className="owl-carousel live_stream owl-theme">
                     {dumpData.map((item) => {

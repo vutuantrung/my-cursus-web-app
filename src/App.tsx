@@ -10,7 +10,6 @@ import './assets/styles/css/instructor-responsive.css';
 
 import 'semantic-ui-css/semantic.min.css';
 
-// import Dashboard from './pages/dashboard';
 import CreateNewCoursePage from './pages/newCourses';
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 import InstructorMessage from './pages/instructorMessage';
@@ -51,7 +50,6 @@ import AddStreaming from './pages/addStreaming';
 import SearchResult from './pages/searchResult';
 import Thankyou from './pages/thankyou';
 import CommingSoon from './pages/commingSoon';
-import { Error404 } from './pages/errors';
 import About from './pages/about';
 import OurBlog from './pages/about/OurBlog';
 import CompanyDetails from './pages/about/CompanyDetails';
@@ -70,12 +68,32 @@ import ReportHistory from './pages/reportHistory';
 import ContactUs from './pages/contactUs';
 import TermsOfUse from './pages/termsOfUse';
 import Main from './pages/main';
+import { Error404 } from './pages/errors';
+import { Body } from './pages/main/Body';
 
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index element={<Main />} />
+                <Route path="" element={<Main />}>
+                    <Route path="" element={<Body />} />
+
+                    <Route path="explore" element={<Explore />} />
+                    <Route path="savedCourses" element={<SavedCourses />} />
+                    <Route path="settings" element={<Settings />} />
+                    <Route path="help" element={<Help />} />
+                    <Route path="reportHistory" element={<ReportHistory />} />
+                    <Route path="feedback" element={<Feedback />} />
+
+                    <Route path="liveStream" element={<LiveStream />}>
+                        <Route path="output/:id" element={<LiveOutput />} />
+                    </Route>
+
+                    <Route path="instructorProfile" element={<AllInstructors />}>
+                        <Route path="view/:id" element={<InstructorProfile />} />
+                    </Route>
+                </Route>
+
                 <Route path="about" element={<About />}>
                     <Route path="aboutUs" element={<AboutUs />} />
                     <Route path="ourBlog" element={<OurBlog />} />
@@ -92,16 +110,10 @@ const App = () => {
                     <Route path="subscriptions" element={<Subscriptions />} />
                 </Route>
 
-                <Route path="liveStreams" element={<LiveStream />} />
-                <Route path="liveStreams/output/:id" element={<LiveOutput />} />
                 <Route path="coursDetails/:id" element={<CoursDetails />} />
-                <Route path="settings" element={<Settings />} />
                 <Route path="termsOfUse" element={<TermsOfUse />} />
-                <Route path="help" element={<Help />} />
                 <Route path="contactUs" element={<ContactUs />} />
-                <Route path="reportHistory" element={<ReportHistory />} />
-                <Route path="explore" element={<Explore />} />
-                <Route path="feedback" element={<Feedback />} />
+
                 <Route path="createNewCourse" element={<CreateNewCoursePage />} />
                 <Route path="shoppingCart" element={<ShoppingCart />} />
 
@@ -124,9 +136,6 @@ const App = () => {
                 <Route path="thankyou" element={<Thankyou />} />
                 <Route path="commingSoon" element={<CommingSoon />} />
                 <Route path="error404" element={<Error404 />} />
-
-                <Route path="savedCourses" element={<SavedCourses />} />
-                <Route path="allInstructors" element={<AllInstructors />} />
 
                 <Route path="instructorProfile" element={<InstructorProfile />} />
                 <Route path="instructorAnalyics" element={<InstructorAnalyics />} />

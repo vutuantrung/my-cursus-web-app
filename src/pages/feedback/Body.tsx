@@ -23,6 +23,7 @@ const Body = () => {
                                                 required
                                                 maxLength={64}
                                                 placeholder="Email address"
+                                                onChange={() => {}}
                                             />
                                         </div>
                                     </div>

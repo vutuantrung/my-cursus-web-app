@@ -116,7 +116,7 @@ const Body = () => {
                                             return (
                                                 <div key={item.id} className="col-md-3">
                                                     <div className="stream_1 mb-30">
-                                                        <Link to={`/liveStreams/output/${item.id}`}>
+                                                        <Link to={`/liveStream/output/${item.id}`}>
                                                             <div className="stream_bg">
                                                                 <img src={item.avatar} alt="" />
                                                                 <h4>{item.name}</h4>
