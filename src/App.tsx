@@ -10,7 +10,7 @@ import './assets/styles/css/instructor-responsive.css';
 
 import 'semantic-ui-css/semantic.min.css';
 
-import Dashboard from './pages/dashboard';
+// import Dashboard from './pages/dashboard';
 import CreateNewCoursePage from './pages/newCourses';
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 import InstructorMessage from './pages/instructorMessage';
@@ -69,12 +69,13 @@ import Help from './pages/help';
 import ReportHistory from './pages/reportHistory';
 import ContactUs from './pages/contactUs';
 import TermsOfUse from './pages/termsOfUse';
+import Main from './pages/main';
 
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index element={<Dashboard />} />
+                <Route index element={<Main />} />
                 <Route path="about" element={<About />}>
                     <Route path="aboutUs" element={<AboutUs />} />
                     <Route path="ourBlog" element={<OurBlog />} />

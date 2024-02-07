@@ -3,7 +3,7 @@ import { Body } from './Body';
 import AppHeader from '../commons/Header/AppHeader';
 import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
 
-const Dashboard = () => {
+const Main = () => {
     useEffect(() => {
         const navText = ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"];
         const carouselOptions = {
@@ -133,4 +133,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Main;
