@@ -14,6 +14,7 @@ var tid = setInterval(function () {
 
     var nav = document.querySelector('.vertical_nav');
     var wrapper = document.querySelector('.wrapper');
+    var footer = document.querySelector('.footer');
 
     var menu = document.getElementById('js-menu');
     var subnavs = menu.querySelectorAll('.menu--item__has_sub_menu');
@@ -30,6 +31,7 @@ var tid = setInterval(function () {
         nav.classList.toggle('vertical_nav__minify');
 
         wrapper.classList.toggle('wrapper__minify');
+        footer.classList.toggle('wrapper__minify');
 
         for (var j = 0; j < subnavs.length; j++) {
             subnavs[j].classList.remove('menu--subitens__opened');
