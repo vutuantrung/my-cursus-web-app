@@ -129,13 +129,13 @@ const Body = () => {
                                             <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">
                                                 <div className="fcrse_1 mt-30">
                                                     <div className="tutor_img">
-                                                        <Link to={`/instructorProfile/${item.id}`}>
+                                                        <Link to={`/instructorProfile/view/${item.id}`}>
                                                             <img src={item.avatar} alt="" />
                                                         </Link>
                                                     </div>
                                                     <div className="tutor_content_dt">
                                                         <div className="tutor150">
-                                                            <Link to={`/instructorProfile/${item.id}`}>
+                                                            <Link to={`/instructorProfile/view/${item.id}`}>
                                                                 <div className="tutor_name">{item.name}</div>
                                                             </Link>
                                                             <div className="mef78" title="Verify">

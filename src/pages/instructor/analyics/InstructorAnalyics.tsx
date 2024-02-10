@@ -1,6 +1,6 @@
-import PageFooter from '../commons/Footer/PageFooter';
+import PageFooter from '../../commons/Footer/PageFooter';
 
-const Body = () => {
+const InstructorAnalyics = () => {
     return (
         <>
             <div className="sa4d25">
@@ -242,4 +242,5 @@ const Body = () => {
         </>
     );
 };
-export default Body;
+
+export default InstructorAnalyics;

@@ -191,12 +191,12 @@ const AppHeader = () => {
                     </li>
                     <li className="ui dropdown">
                         <a href="#" className="opts_account" title="Account">
-                            <img src={IMAGES.hd_dp} alt="" />
+                            <img src={IMAGES.avatar} alt="" />
                         </a>
                         <div className="menu dropdown_account">
                             <div className="channel_my">
                                 <div className="profile_link">
-                                    <img src={IMAGES.hd_dp} alt="" />
+                                    <img src={IMAGES.avatar} alt="" />
                                     <div className="pd_content">
                                         <div className="rhte85">
                                             <h6>Joginder Singh</h6>
@@ -207,7 +207,7 @@ const AppHeader = () => {
                                         <span>gambol943@gmail.com</span>
                                     </div>
                                 </div>
-                                <Link to="myInstructorProfile" className="dp_link_12">
+                                <Link to="/myInstructorProfile" className="dp_link_12">
                                     View Instructor Profile
                                 </Link>
                             </div>
@@ -219,9 +219,9 @@ const AppHeader = () => {
                                     </span>
                                 </a>
                             </div>
-                            <a href="instructor_dashboard.html" className="item channel_item">
+                            <Link to="/instructor/dashboard" className="item channel_item">
                                 Cursus dashboard
-                            </a>
+                            </Link>
                             <a href="membership.html" className="item channel_item">
                                 Paid Memberships
                             </a>

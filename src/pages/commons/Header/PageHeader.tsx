@@ -31,6 +31,34 @@ const PageHeader = () => {
         if (night_mode_switch.current) {
             night_mode_switch.current.addEventListener('click', onNightModeSwitch);
         }
+
+        const headers = $('#accordion .accordion-header');
+        const contentAreas = $('#accordion .ui-accordion-content ').hide().first().show().end();
+        const expandLink = $('.accordion-expand-all');
+        // const inputPayment = $('input[name="paymentmethod"]');
+
+        // add the accordion functionality
+        headers.on('click', function () {
+            contentAreas.slideUp();
+            $(this).next().slideDown();
+            expandLink.text('Expand all').data('isAllOpen', false);
+            return false;
+        });
+
+        // hook up the expand/collapse all
+        expandLink.on('click', function () {
+            const isAllOpen = !$(this).data('isAllOpen');
+            // console.log({ isAllOpen: isAllOpen, contentAreas: contentAreas })
+            contentAreas[isAllOpen ? 'slideDown' : 'slideUp']();
+            expandLink.text(isAllOpen ? 'Collapse All' : 'Expand all').data('isAllOpen', isAllOpen);
+        });
+
+        // Payment Method Accordion
+        // inputPayment.on('click', function () {
+        //     const $value = $(this).attr('value');
+        //     $('.return-departure-dts').slideUp();
+        //     $('[data-method="' + $value + '"]').slideDown();
+        // });
     }, []);
     return (
         <header className="header clearfix">
@@ -38,6 +66,12 @@ const PageHeader = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="back_link">
+                            {/* <a href="/" className="hde151">
+                                Back To Cursus
+                            </a>
+                            <a href="/" className="hde152">
+                                Back
+                            </a> */}
                             <Link to="/">
                                 <div className="hde151">Back To Cursus</div>
                             </Link>
@@ -47,6 +81,12 @@ const PageHeader = () => {
                         </div>
                         <div className="ml_item">
                             <div className="main_logo main_logo15" id="logo">
+                                {/* <a href="/">
+                                    <img className="images/logo.svg" alt="" />
+                                </a>
+                                <a href="/">
+                                    <img className="logo-inverse" src={IMAGES.ct_logo} alt="" />
+                                </a> */}
                                 <Link to="/">
                                     <img src={IMAGES.logo} alt="" />
                                 </Link>
@@ -58,13 +98,13 @@ const PageHeader = () => {
                         <div className="header_right pr-0">
                             <ul>
                                 <li className="ui top right pointing dropdown">
-                                    <a href="#" className="opts_account">
-                                        <img src={IMAGES.hd_dp} alt="" />
+                                    <a href="##" className="opts_account">
+                                        <img src={IMAGES.avatar} alt="" />
                                     </a>
                                     <div className="menu dropdown_account">
                                         <div className="channel_my">
                                             <div className="profile_link">
-                                                <img src="images/hd_dp.jpg" alt="" />
+                                                <img src={IMAGES.avatar} alt="" />
                                                 <div className="pd_content">
                                                     <div className="rhte85">
                                                         <h6>Joginder Singh</h6>
@@ -87,12 +127,12 @@ const PageHeader = () => {
                                                 </span>
                                             </a>
                                         </div>
-                                        <a href="instructor_dashboard.html" className="item channel_item">
+                                        <Link to="/instructorDashboard" className="item channel_item">
                                             Cursus Dashboard
-                                        </a>
-                                        <a href="sign_in.html" className="item channel_item">
+                                        </Link>
+                                        <Link to="/signIn" className="item channel_item">
                                             Sign Out
-                                        </a>
+                                        </Link>
                                     </div>
                                 </li>
                             </ul>

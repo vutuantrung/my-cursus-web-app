@@ -1,29 +1,28 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './assets/styles/css/vertical-responsive-menu.min.css';
-import './assets/styles/css/style.css';
 import './assets/styles/css/jquery-steps.css';
-import './assets/styles/css/responsive.css';
+// import './assets/styles/css/responsive.css';
 import './assets/styles/css/night-mode.css';
-import './assets/styles/css/instructor-dashboard.css';
-import './assets/styles/css/instructor-responsive.css';
+// import './assets/styles/css/instructor-responsive.css';
+import './assets/styles/css/style.css';
 
 import 'semantic-ui-css/semantic.min.css';
 
 import CreateNewCoursePage from './pages/newCourses';
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
-import InstructorMessage from './pages/instructorMessage';
-import InstructorNotifications from './pages/notifications';
 
-import InstructorDashboard from './pages/instructorDashboard';
-import InstructorCourses from './pages/instructorCourses';
-import InstructorAnalyics from './pages/instructorAnalyics';
-import InstructorCertificate from './pages/instructorCertificate';
-import InstructorReviews from './pages/instructorReviews';
-import InstructorEarning from './pages/instructorEarning';
-import InstructorPayout from './pages/instructorPayout';
-import InstructorStatements from './pages/instructorStatements';
-import InstructorVerification from './pages/instructorVerification';
+// import InstructorMessage from './pages/instructorMessage';
+// import InstructorNotifications from './pages/notifications';
+// import InstructorDashboard from './pages/instructorDashboard';
+// import InstructorCourses from './pages/instructorCourses';
+// import InstructorAnalyics from './pages/instructorAnalyics';
+// import InstructorCertificate from './pages/instructorCertificate';
+// import InstructorReviews from './pages/instructorReviews';
+// import InstructorEarning from './pages/instructorEarning';
+// import InstructorPayout from './pages/instructorPayout';
+// import InstructorStatements from './pages/instructorStatements';
+// import InstructorVerification from './pages/instructorVerification';
 
 import Settings from './pages/settings';
 import Feedback from './pages/feedback';
@@ -55,7 +54,6 @@ import CompanyDetails from './pages/about/CompanyDetails';
 import Career from './pages/about/Career';
 import Press from './pages/about/Press';
 import AboutUs from './pages/about/AboutUs';
-import MyInstructorProfileView from './pages/myInstructorProfileView';
 import AboutMe from './pages/myInstructorProfileView/AboutMe';
 import Discussions from './pages/myInstructorProfileView/Discussions';
 import MyCourses from './pages/myInstructorProfileView/MyCourses';
@@ -69,6 +67,22 @@ import TermsOfUse from './pages/termsOfUse';
 import Main from './pages/main';
 import { Error404 } from './pages/errors';
 import { Body } from './pages/main/Body';
+
+import MyInstructorProfileView from './pages/myInstructorProfileView';
+
+import Instructor from './pages/instructor/main';
+import InstructorCreateCourse from './pages/instructor/createCourse/InstructorCreateCourse';
+import InstructorCourses from './pages/instructor/courses/InstructorCourses';
+import InstructorDashboard from './pages/instructor/dashboard/InstructorDashboard';
+import InstructorAnalyics from './pages/instructor/analyics/InstructorAnalyics';
+import InstructorMessages from './pages/instructor/messages/InstructorMessages';
+import InstructorNotifications from './pages/instructor/notifications/InstructorNotifications';
+import InstructorCertificates from './pages/instructor/certificates/InstructorCertificates';
+import InstructorReviews from './pages/instructor/reviews/InstructorReviews';
+import InstructorEarning from './pages/instructor/earning/InstructorEarning';
+import InstructorPayout from './pages/instructor/payout/InstructorPayout';
+import InstructorStatement from './pages/instructor/statement/InstructorStatement';
+import InstructorVerification from './pages/instructor/verification/InstructorVerification';
 
 const App = () => {
     return (
@@ -115,6 +129,21 @@ const App = () => {
                     <Route path="press" element={<Press />} />
                 </Route>
 
+                <Route path="instructor" element={<Instructor />}>
+                    <Route path="dashboard" element={<InstructorDashboard />} />
+                    <Route path="courses" element={<InstructorCourses />} />
+                    <Route path="analyics" element={<InstructorAnalyics />} />
+                    <Route path="createCourse" element={<InstructorCreateCourse />} />
+                    <Route path="messages" element={<InstructorMessages />} />
+                    <Route path="notifications" element={<InstructorNotifications />} />
+                    <Route path="certificates" element={<InstructorCertificates />} />
+                    <Route path="reviews" element={<InstructorReviews />} />
+                    <Route path="earning" element={<InstructorEarning />} />
+                    <Route path="payout" element={<InstructorPayout />} />
+                    <Route path="statement" element={<InstructorStatement />} />
+                    <Route path="verification" element={<InstructorVerification />} />
+                </Route>
+
                 <Route path="termsOfUse" element={<TermsOfUse />} />
                 <Route path="contactUs" element={<ContactUs />} />
 
@@ -141,18 +170,19 @@ const App = () => {
                 <Route path="commingSoon" element={<CommingSoon />} />
                 <Route path="error404" element={<Error404 />} />
 
-                <Route path="instructorProfile" element={<InstructorProfile />} />
-                <Route path="instructorAnalyics" element={<InstructorAnalyics />} />
-                <Route path="instructorMessages" element={<InstructorMessage />} />
-                <Route path="instructorDashboard" element={<InstructorDashboard />} />
-                <Route path="instructorCourses" element={<InstructorCourses />} />
-                <Route path="instructorReviews" element={<InstructorReviews />} />
-                <Route path="instructorEarning" element={<InstructorEarning />} />
-                <Route path="instructorPayout" element={<InstructorPayout />} />
-                <Route path="instructorVerification" element={<InstructorVerification />} />
-                <Route path="instructorStatements" element={<InstructorStatements />} />
-                <Route path="instructorCertificates" element={<InstructorCertificate />} />
-                <Route path="instructorNotifications" element={<InstructorNotifications />} />
+                {/* <Route path="instructorProfile" element={<InstructorProfile />} /> */}
+
+                {/* <Route path="instructorMessages" element={<InstructorMessage />} /> */}
+                {/* <Route path="instructorAnalyics" element={<InstructorAnalyics />} /> */}
+                {/* <Route path="instructorDashboard" element={<InstructorDashboard />} /> */}
+                {/* <Route path="instructorCourses" element={<InstructorCourses />} /> */}
+                {/* <Route path="instructorNotifications" element={<InstructorNotifications />} /> */}
+                {/* <Route path="instructorCertificates" element={<InstructorCertificate />} /> */}
+                {/* <Route path="instructorReviews" element={<InstructorReviews />} /> */}
+                {/* <Route path="instructorEarning" element={<InstructorEarning />} /> */}
+                {/* <Route path="instructorPayout" element={<InstructorPayout />} /> */}
+                {/* <Route path="instructor Statements" element={<InstructorStatements />} /> */}
+                {/* <Route path="instructorVerification" element={<InstructorVerification />} /> */}
             </Routes>
         </BrowserRouter>
     );

@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom';
-import { IMAGES } from '../../constants';
-import PageFooter from '../commons/Footer/PageFooter';
+import PageFooter from '../../commons/Footer/PageFooter';
+import { IMAGES } from '../../../constants';
 
-import '../../assets/styles/css/instructor-dashboard.css';
-import '../../assets/styles/css/instructor-responsive.css';
-
-const Body = () => {
+const InstructorDashboard = () => {
     return (
-        <div className="wrapper page-footer-padding">
+        <div>
             <div className="sa4d25">
                 <div className="container-fluid">
                     <div className="row">
@@ -375,4 +372,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default InstructorDashboard;

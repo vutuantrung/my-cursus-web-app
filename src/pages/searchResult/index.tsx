@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../commons/Header/PageHeader';
 import AppFooter from '../commons/Footer/AppFooter';
 import { generateRandomNumber } from '../../helpers/helpers';
-import { CoursItem } from '../main/Body/components/CoursItem';
+
+import '../../assets/styles/css/style.css';
 
 const SearchResult = () => {
     const topic = [
