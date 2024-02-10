@@ -1,4 +1,4 @@
-import { IMAGES } from '../../../constants';
+import { IMAGES } from '../../../../constants';
 
 function Footer() {
     return (

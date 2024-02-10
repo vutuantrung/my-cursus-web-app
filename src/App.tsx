@@ -9,9 +9,9 @@ import './assets/styles/css/style.css';
 
 import 'semantic-ui-css/semantic.min.css';
 
-import CreateNewCoursePage from './pages/newCourses';
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 
+// import CreateNewCoursePage from './pages/newCourses';
 // import InstructorMessage from './pages/instructorMessage';
 // import InstructorNotifications from './pages/notifications';
 // import InstructorDashboard from './pages/instructorDashboard';
@@ -147,7 +147,7 @@ const App = () => {
                 <Route path="termsOfUse" element={<TermsOfUse />} />
                 <Route path="contactUs" element={<ContactUs />} />
 
-                <Route path="createNewCourse" element={<CreateNewCoursePage />} />
+                {/* <Route path="createNewCourse" element={<CreateNewCoursePage />} /> */}
                 <Route path="shoppingCart" element={<ShoppingCart />} />
 
                 <Route path="certificateCenter" element={<CertificateCenter />} />
@@ -171,7 +171,6 @@ const App = () => {
                 <Route path="error404" element={<Error404 />} />
 
                 {/* <Route path="instructorProfile" element={<InstructorProfile />} /> */}
-
                 {/* <Route path="instructorMessages" element={<InstructorMessage />} /> */}
                 {/* <Route path="instructorAnalyics" element={<InstructorAnalyics />} /> */}
                 {/* <Route path="instructorDashboard" element={<InstructorDashboard />} /> */}

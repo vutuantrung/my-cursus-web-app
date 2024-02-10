@@ -1,6 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-// import PageHeader from '../commons/Header/PageHeader';
-// import PageLeftsideBar from '../commons/LeftSideBar/PageLeftsideBar';
 import LeftsideBar from './LeftsideBar';
 import AppHeader from '../commons/Header/AppHeader';
 
