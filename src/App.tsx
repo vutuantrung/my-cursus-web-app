@@ -95,6 +95,16 @@ const App = () => {
                     </Route>
 
                     <Route path="coursDetails/:id" element={<CoursDetails />} />
+
+                    <Route path="myInstructorProfile" element={<MyInstructorProfileView />}>
+                        <Route path="aboutMe" element={<AboutMe />} />
+                        <Route path="discussions" element={<Discussions />} />
+                        <Route path="myCourses" element={<MyCourses />} />
+                        <Route path="purchasedCourses" element={<PurchasedCourses />} />
+                        <Route path="subscriptions" element={<Subscriptions />} />
+                    </Route>
+
+                    <Route path="addStream" element={<AddStreaming />} />
                 </Route>
 
                 <Route path="about" element={<About />}>
@@ -103,14 +113,6 @@ const App = () => {
                     <Route path="companyDetails" element={<CompanyDetails />} />
                     <Route path="career" element={<Career />} />
                     <Route path="press" element={<Press />} />
-                </Route>
-
-                <Route path="myInstructorProfile" element={<MyInstructorProfileView />}>
-                    <Route path="aboutMe" element={<AboutMe />} />
-                    <Route path="discussions" element={<Discussions />} />
-                    <Route path="myCourses" element={<MyCourses />} />
-                    <Route path="purchasedCourses" element={<PurchasedCourses />} />
-                    <Route path="subscriptions" element={<Subscriptions />} />
                 </Route>
 
                 <Route path="termsOfUse" element={<TermsOfUse />} />
@@ -133,7 +135,7 @@ const App = () => {
                 <Route path="invoice" element={<Invoice />} />
                 <Route path="applyJob/:id" element={<ApplyJob />} />
                 <Route path="blogSingleView/:id" element={<BlogSingleView />} />
-                <Route path="addStream" element={<AddStreaming />} />
+
                 <Route path="searchResult" element={<SearchResult />} />
                 <Route path="thankyou" element={<Thankyou />} />
                 <Route path="commingSoon" element={<CommingSoon />} />

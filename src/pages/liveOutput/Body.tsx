@@ -1,6 +1,88 @@
+import { useEffect } from 'react';
 import AppFooter from '../commons/Footer/AppFooter';
+import { Link } from 'react-router-dom';
+import { generateRandomNumber } from '../../helpers/helpers';
+import { IMAGES } from '../../constants';
 
 const Body = () => {
+    const dumpData = [
+        {
+            id: 12723,
+            isLive: true,
+            name: 'John Doe',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 8435,
+            isLive: true,
+            name: 'Jassica',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 72334,
+            isLive: true,
+            name: 'Edututs+',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 72315,
+            isLive: true,
+            name: 'Joginder Singh',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 6231,
+            isLive: true,
+            name: 'Zoena',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 5625,
+            isLive: true,
+            name: 'Ridhima',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 72317,
+            isLive: true,
+            name: 'Albert Dua',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 87314,
+            isLive: true,
+            name: 'Amritpal',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+        {
+            id: 12161,
+            isLive: true,
+            name: 'Jimmy',
+            avatar: `../../assets/images/test/avatar_instructor/${generateRandomNumber(1, 25)}.jpg`,
+        },
+    ];
+
+    useEffect(() => {
+        const carouselOptions = {
+            loop: true,
+            nav: true,
+            dots: false,
+            navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
+        };
+        // Home Live Stream
+        ($('.live_stream') as any).owlCarousel({
+            ...carouselOptions,
+            items: 10,
+            margin: 10,
+            responsive: {
+                0: { items: 2 },
+                600: { items: 3 },
+                1000: { items: 3 },
+                1200: { items: 5 },
+                1400: { items: 6 },
+            },
+        });
+    }, []);
     return (
         <>
             <div className="sa4d25">
@@ -10,8 +92,11 @@ const Body = () => {
                             <div className="section3125">
                                 <div className="live1452">
                                     <iframe
-                                        src="https://www.youtube.com/embed/EEIk7gwjgIM?autoplay=1"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        width="560"
+                                        height="315"
+                                        src="https://www.youtube.com/embed/QKC7EXV9w08?si=5t_zocZ5NlAjL7C5"
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowFullScreen
                                     ></iframe>
                                 </div>
@@ -19,7 +104,7 @@ const Body = () => {
                                     <div className="user_dt_left">
                                         <div className="live_user_dt">
                                             <div className="user_img5">
-                                                <img src="images/left-imgs/img-4.jpg" alt="" />
+                                                <img src={IMAGES.avatar} alt="" />
                                             </div>
                                             <div className="user_cntnt">
                                                 <h4>Jassica William</h4>
@@ -30,25 +115,25 @@ const Body = () => {
                                     <div className="user_dt_right">
                                         <ul>
                                             <li>
-                                                <a href="#" className="lkcm152">
+                                                <a href="##" className="lkcm152">
                                                     <i className="uil uil-eye"></i>
                                                     <span>1452</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" className="lkcm152">
+                                                <a href="##" className="lkcm152">
                                                     <i className="uil uil-thumbs-up"></i>
                                                     <span>100</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" className="lkcm152">
+                                                <a href="##" className="lkcm152">
                                                     <i className="uil uil-thumbs-down"></i>
                                                     <span>20</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" className="lkcm152">
+                                                <a href="##" className="lkcm152">
                                                     <i className="uil uil-share-alt"></i>
                                                     <span>9</span>
                                                 </a>
@@ -113,110 +198,29 @@ const Body = () => {
                         <div className="col-md-12">
                             <div className="section3125 mb-15 mt-20">
                                 <h4 className="item_title">Live Streams</h4>
-                                <a href="live_streams.html" className="see150">
+                                <Link to="/liveStream" className="see150">
                                     See all
-                                </a>
+                                </Link>
                                 <div className="la5lo1">
                                     <div className="owl-carousel live_stream owl-theme">
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-1.jpg" alt="" />
-                                                    <h4>John Doe</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-2.jpg" alt="" />
-                                                    <h4>Jassica</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-9.jpg" alt="" />
-                                                    <h4>Edututs+</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-3.jpg" alt="" />
-                                                    <h4>Joginder Singh</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-4.jpg" alt="" />
-                                                    <h4>Zoena</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-5.jpg" alt="" />
-                                                    <h4>Albert Dua</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-6.jpg" alt="" />
-                                                    <h4>Ridhima</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-7.jpg" alt="" />
-                                                    <h4>Amritpal</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="stream_1">
-                                                <a href="live_output.html" className="stream_bg">
-                                                    <img src="images/left-imgs/img-8.jpg" alt="" />
-                                                    <h4>Jimmy</h4>
-                                                    <p>
-                                                        live<span></span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        {dumpData.map((item) => {
+                                            return (
+                                                <div key={item.id} className="item">
+                                                    <div className="stream_1">
+                                                        <Link to={`/liveStream/output/${item.id}`}></Link>
+                                                        <a href="live_output.html" className="stream_bg">
+                                                            <img src={item.avatar} alt="" />
+                                                            <h4>{item.name}</h4>
+                                                            {item.isLive && (
+                                                                <p>
+                                                                    live<span></span>
+                                                                </p>
+                                                            )}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>

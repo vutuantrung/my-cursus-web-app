@@ -17,6 +17,13 @@ import InstructorProfile from '../instructorProfile';
 import CoursDetails from '../coursDetails';
 
 import { useEffect, useState } from 'react';
+import MyInstructorProfileView from '../myInstructorProfileView';
+import AboutMe from '../myInstructorProfileView/AboutMe';
+import Discussions from '../myInstructorProfileView/Discussions';
+import MyCourses from '../myInstructorProfileView/MyCourses';
+import PurchasedCourses from '../myInstructorProfileView/PurchasedCourses';
+import Subscriptions from '../myInstructorProfileView/Subscriptions';
+import AddStreaming from '../addStreaming';
 
 const Main = () => {
     const [docState, setDocState] = useState('');
@@ -101,6 +108,16 @@ const Main = () => {
                     <Route path="instructorProfile/view/:id" Component={InstructorProfile} />
 
                     <Route path="coursDetails/:id" Component={CoursDetails} />
+
+                    <Route path="addStream" Component={AddStreaming} />
+
+                    <Route path="myInstructorProfile" Component={MyInstructorProfileView}>
+                        <Route path="aboutMe" Component={AboutMe} />
+                        <Route path="discussions" Component={Discussions} />
+                        <Route path="myCourses" Component={MyCourses} />
+                        <Route path="purchasedCourses" Component={PurchasedCourses} />
+                        <Route path="subscriptions" Component={Subscriptions} />
+                    </Route>
                 </Routes>
             </div>
         </>

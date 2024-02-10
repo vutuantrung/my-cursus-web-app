@@ -1,8 +1,186 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../commons/Header/PageHeader';
 import AppFooter from '../commons/Footer/AppFooter';
+import { generateRandomNumber } from '../../helpers/helpers';
+import { CoursItem } from '../main/Body/components/CoursItem';
 
 const SearchResult = () => {
+    const topic = [
+        { name: 'SEO', count: 428 },
+        { name: 'PHP', count: 1526 },
+        { name: 'Wordpress Pro', count: 452 },
+        { name: 'WooCommerce', count: 161 },
+        { name: 'Bootstrap', count: 1265 },
+        { name: 'Web Development', count: 7123 },
+        { name: 'Web Design', count: 1261 },
+        { name: 'Digital Marketing', count: 121 },
+        { name: 'E-commerce', count: 612 },
+        { name: 'Wordpress Themes', count: 1218 },
+        { name: 'Wordpress Plugins', count: 1125 },
+        { name: 'Wordpress Hosting', count: 2912 },
+        { name: 'Elementor', count: 712 },
+        { name: 'Wordpress for Ecommerce', count: 6123 },
+    ];
+    const levels = [
+        { name: 'All Levels', count: 5102 },
+        { name: 'Beginner', count: 3151 },
+        { name: 'Intermediate', count: 1412 },
+        { name: 'Expert', count: 539 },
+    ];
+    const languages = [
+        { name: 'English', count: 610 },
+        { name: 'Español', count: 215 },
+        { name: 'Português', count: 265 },
+        { name: '日本語', count: 511 },
+        { name: 'Deutsch', count: 151 },
+        { name: 'Français', count: 216 },
+        { name: 'Türkçe', count: 11 },
+        { name: 'हिन्दी', count: 8 },
+        { name: 'Italiano', count: 167 },
+        { name: 'Polski', count: 123 },
+        { name: 'ภาษาไทย', count: 61 },
+        { name: 'Română', count: 119 },
+        { name: 'Telugu', count: 2 },
+        { name: 'मराठी', count: 12 },
+    ];
+    const prices = [
+        { name: 'Paid', count: 5122 },
+        { name: 'Free', count: 3112 },
+    ];
+    const features = [
+        { name: 'Captions', count: 1215 },
+        { name: 'Quizzes', count: 211 },
+        { name: 'Coding Exercises', count: 623 },
+        { name: 'Practice Tests', count: 1112 },
+    ];
+    const ratings = [
+        { name: '5.0 & up', stars: 5, count: 1251 },
+        { name: '4.0 & up', stars: 4, count: 2151 },
+        { name: '3.0 & up', stars: 3, count: 3512 },
+        { name: '2.0 & up', stars: 2, count: 4122 },
+    ];
+    const videoDurations = [
+        { name: '0-2 Hours', count: 8121 },
+        { name: '3-6 Hours', count: 6241 },
+        { name: '7-18 Hours', count: 3121 },
+        { name: '19+ Hours', count: 621 },
+    ];
+    const closeCaptions = [
+        { name: 'English', count: 5121 },
+        { name: 'Español', count: 1242 },
+        { name: 'Português', count: 121 },
+        { name: '日本語', count: 3411 },
+        { name: 'Deutsch', count: 152 },
+        { name: 'Français', count: 512 },
+        { name: 'Türkçe', count: 6 },
+        { name: 'हिन्दी', count: 12 },
+    ];
+    const dumpData = [
+        {
+            id: 15123,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Complete Python Bootcamp: Go from zero to hero in Python 3',
+            tag: 'Web Development | Python',
+            author: 'John Doe',
+            price: '$10',
+            point: 4.5,
+            views: '5M',
+            length: '25 hours',
+            createdDate: '15 days',
+        },
+        {
+            id: 1267,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'The Complete JavaScript Course 2020: Build Real Projects!',
+            tag: 'Development | JavaScript',
+            author: 'Jassica William',
+            price: '$10',
+            point: 4.5,
+            views: '109k',
+            length: '25 hours',
+            createdDate: '15 days',
+        },
+        {
+            id: 612,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Beginning C++ Programming - From Beginner to Beyond',
+            tag: 'Development | C++',
+            author: 'Joginder Singh',
+            price: '$13',
+            point: 4.5,
+            views: '1M',
+            length: '12 hours',
+            createdDate: '18 days',
+        },
+        {
+            id: 1281,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'The Complete Digital Marketing Course - 12 Courses in 1',
+            tag: 'Digital Marketing | Marketing',
+            author: 'Poonam Verma',
+            price: '$12',
+            point: 5,
+            views: '153k',
+            length: '16 hours',
+            createdDate: '18 days',
+        },
+        {
+            id: 9452,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Microsoft Excel - Excel from Beginner to Advanced',
+            tag: 'Office Productivity | Excel',
+            author: 'Rock William',
+            price: '$6',
+            point: 4.5,
+            views: '53K',
+            length: '1.5 hours',
+            createdDate: '14 days',
+        },
+        {
+            id: 11111,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'Angular 8 - The Complete Guide (2020 Edition)',
+            tag: 'Development | Angular',
+            author: 'John Doe',
+            price: '$6',
+            point: 5,
+            views: '253K',
+            length: '15 hours',
+            createdDate: '10 days',
+        },
+        {
+            id: 83111,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'WordPress for Beginners: Create a Website Step by Step',
+            tag: 'Design | Wordpress',
+            author: 'Sabnam Singh',
+            price: '$18',
+            point: 5,
+            views: '109k',
+            length: '5.4 hours',
+            createdDate: '15 days',
+        },
+        {
+            id: 6666,
+            isFeaturedCours: true,
+            thumbs: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
+            name: 'CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)',
+            tag: 'Design | CSS',
+            author: 'Jashanpreet Singh',
+            price: '$10',
+            point: 4,
+            views: '196k',
+            length: '23 hours',
+            createdDate: '1 month',
+        },
+    ];
     return (
         <>
             <PageHeader />
@@ -92,214 +270,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                SEO<span className="filter__counter">(428)</span>
-                                                                            </label>
+                                                                {topic.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Php<span className="filter__counter">(1526)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Wordpress Pro
-                                                                                <span className="filter__counter">(428)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                WooCommerce
-                                                                                <span className="filter__counter">(958)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Bootstrap
-                                                                                <span className="filter__counter">(748)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Web Development
-                                                                                <span className="filter__counter">(2256)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Web Design
-                                                                                <span className="filter__counter">(4859)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Digital Marketing
-                                                                                <span className="filter__counter">(2458)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                E-commerce
-                                                                                <span className="filter__counter">(1245)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Wordpress Themes
-                                                                                <span className="filter__counter">(5879)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Wordpress Plugins
-                                                                                <span className="filter__counter">(2654)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Wordpress Hosting
-                                                                                <span className="filter__counter">(1485)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Elementor
-                                                                                <span className="filter__counter">(3658)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Wordpress for Ecommerce
-                                                                                <span className="filter__counter">(5894)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -312,7 +303,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapseTwo"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapseTwo"
                                                         >
@@ -329,66 +320,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                All Levels
-                                                                                <span className="filter__counter">(5000)</span>
-                                                                            </label>
+                                                                {levels.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Beginner
-                                                                                <span className="filter__counter">(3517)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Intermediate
-                                                                                <span className="filter__counter">(1560)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Expert
-                                                                                <span className="filter__counter">(240)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -401,7 +353,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapseThree"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapseThree"
                                                         >
@@ -418,215 +370,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                English
-                                                                                <span className="filter__counter">(500)</span>
-                                                                            </label>
+                                                                {languages.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Español
-                                                                                <span className="filter__counter">(250)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Português
-                                                                                <span className="filter__counter">(270)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                日本語
-                                                                                <span className="filter__counter">(190)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Deutsch
-                                                                                <span className="filter__counter">(120)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Français
-                                                                                <span className="filter__counter">(105)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Türkçe
-                                                                                <span className="filter__counter">(90)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                हिन्दी
-                                                                                <span className="filter__counter">(80)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Italiano
-                                                                                <span className="filter__counter">(178)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Polski
-                                                                                <span className="filter__counter">(50)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                ภาษาไทย
-                                                                                <span className="filter__counter">(27)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Română
-                                                                                <span className="filter__counter">(157)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Telugu
-                                                                                <span className="filter__counter">(110)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                मराठी<span className="filter__counter">(50)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -639,7 +403,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapsefour"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapsefour"
                                                         >
@@ -656,35 +420,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Paid
-                                                                                <span className="filter__counter">(3000)</span>
-                                                                            </label>
+                                                                {prices.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Free<span className="filter__counter">(50)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -697,7 +453,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapsefive"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapsefive"
                                                         >
@@ -714,66 +470,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Captions
-                                                                                <span className="filter__counter">(4780)</span>
-                                                                            </label>
+                                                                {features.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Quizzes
-                                                                                <span className="filter__counter">(890)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Coding Exercises
-                                                                                <span className="filter__counter">(350)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Practice Tests
-                                                                                <span className="filter__counter">(1050)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -786,7 +503,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapsesix"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapsesix"
                                                         >
@@ -804,72 +521,28 @@ const SearchResult = () => {
                                                         <div className="ui form">
                                                             <div className="grouped fields">
                                                                 <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label className="rating_filter">
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                5.0 &amp; up
-                                                                                <span className="filter__counter">(5000)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label className="rating_filter">
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                4.0 &amp; up
-                                                                                <span className="filter__counter">(2500)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label className="rating_filter">
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                3.0 &amp; up
-                                                                                <span className="filter__counter">(1500)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label className="rating_filter">
-                                                                                <i className="uil uil-star"></i>
-                                                                                <i className="uil uil-star"></i>
-                                                                                2.0 &amp; up
-                                                                                <span className="filter__counter">(122)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
+                                                                    {ratings.map((item) => {
+                                                                        return (
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label className="rating_filter">
+                                                                                        {[...Array(item.stars)].map((_) => (
+                                                                                            <i className="uil uil-star"></i>
+                                                                                        ))}
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        );
+                                                                    })}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -883,7 +556,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapseseven"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapseseven"
                                                         >
@@ -900,66 +573,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                0-2 Hours
-                                                                                <span className="filter__counter">(500)</span>
-                                                                            </label>
+                                                                {videoDurations.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                3-6 Hours
-                                                                                <span className="filter__counter">(150)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                7-18 Hours
-                                                                                <span className="filter__counter">(90)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                19+ Hours
-                                                                                <span className="filter__counter">(25)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -972,7 +606,7 @@ const SearchResult = () => {
                                                             className="collapsed"
                                                             data-toggle="collapse"
                                                             data-target="#collapseeight"
-                                                            href="#"
+                                                            href="##"
                                                             aria-expanded="false"
                                                             aria-controls="collapseeight"
                                                         >
@@ -989,141 +623,27 @@ const SearchResult = () => {
                                                     <div className="panel-body">
                                                         <div className="ui form">
                                                             <div className="grouped fields">
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                English
-                                                                                <span className="filter__counter">(300)</span>
-                                                                            </label>
+                                                                {closeCaptions.map((item) => {
+                                                                    return (
+                                                                        <div key={item.name} className="ui form checkbox_sign">
+                                                                            <div className="inline field">
+                                                                                <div className="ui checkbox mncheck">
+                                                                                    <input
+                                                                                        type="checkbox"
+                                                                                        tabIndex={0}
+                                                                                        className="hidden"
+                                                                                    />
+                                                                                    <label>
+                                                                                        {item.name}
+                                                                                        <span className="filter__counter">
+                                                                                            ({item.count})
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Español
-                                                                                <span className="filter__counter">(210)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Português
-                                                                                <span className="filter__counter">(170)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Italiano
-                                                                                <span className="filter__counter">(174)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Français
-                                                                                <span className="filter__counter">(120)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Polski
-                                                                                <span className="filter__counter">(130)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Deutsch
-                                                                                <span className="filter__counter">(30)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                Bahasa Indonesia
-                                                                                <span className="filter__counter">(20)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="ui form checkbox_sign">
-                                                                    <div className="inline field">
-                                                                        <div className="ui checkbox mncheck">
-                                                                            <input
-                                                                                type="checkbox"
-                                                                                tabIndex={0}
-                                                                                className="hidden"
-                                                                            />
-                                                                            <label>
-                                                                                ภาษาไทย
-                                                                                <span className="filter__counter">(10)</span>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1137,227 +657,72 @@ const SearchResult = () => {
                                 <div className="_14d25 mb-20">
                                     <div className="row">
                                         <div className="col-md-12">
-                                            <h4 className="mhs_title">5 Results</h4>
-                                            <div className="fcrse_1">
-                                                <a href="course_detail_view.html" className="hf_img">
-                                                    <img src="images/courses/img-1.jpg" alt="" />
-                                                    <div className="course-overlay">
-                                                        <div className="badge_seller">Bestseller</div>
-                                                        <div className="crse_reviews">
-                                                            <i className="uil uil-star"></i>4.5
-                                                        </div>
-                                                        <span className="play_btn1">
-                                                            <i className="uil uil-play"></i>
-                                                        </span>
-                                                        <div className="crse_timer">25 hours</div>
-                                                    </div>
-                                                </a>
-                                                <div className="hs_content">
-                                                    <div className="eps_dots eps_dots10 more_dropdown">
-                                                        <a href="#">
-                                                            <i className="uil uil-ellipsis-v"></i>
-                                                        </a>
-                                                        <div className="dropdown-content">
-                                                            <span>
-                                                                <i className="uil uil-share-alt"></i>Share
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-heart"></i>Save
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-ban"></i>Not Interested
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-windsock"></i>Report
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="vdtodt">
-                                                        <span className="vdt14">109k views</span>
-                                                        <span className="vdt14">15 days ago</span>
-                                                    </div>
-                                                    <a href="course_detail_view.html" className="crse14s title900">
-                                                        Complete Python Bootcamp: Go from zero to hero in Python 3
-                                                    </a>
-                                                    <a href="#" className="crse-cate">
-                                                        Web Development | Python
-                                                    </a>
-                                                    <div className="auth1lnkprce">
-                                                        <p className="cr1fot">
-                                                            By <a href="#">John Doe</a>
-                                                        </p>
-                                                        <div className="prce142">$10</div>
-                                                        <button className="shrt-cart-btn" title="cart">
-                                                            <i className="uil uil-shopping-cart-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="fcrse_1 mt-30">
-                                                <a href="course_detail_view.html" className="hf_img">
-                                                    <img src="images/courses/img-2.jpg" alt="" />
-                                                    <div className="course-overlay">
-                                                        <div className="badge_seller">Bestseller</div>
-                                                        <div className="crse_reviews">
-                                                            <i className="uil uil-star"></i>4.5
-                                                        </div>
-                                                        <span className="play_btn1">
-                                                            <i className="uil uil-play"></i>
-                                                        </span>
-                                                        <div className="crse_timer">28 hours</div>
-                                                    </div>
-                                                </a>
-                                                <div className="hs_content">
-                                                    <div className="eps_dots eps_dots10 more_dropdown">
-                                                        <a href="#">
-                                                            <i className="uil uil-ellipsis-v"></i>
-                                                        </a>
-                                                        <div className="dropdown-content">
-                                                            <span>
-                                                                <i className="uil uil-share-alt"></i>Share
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-heart"></i>Save
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-ban"></i>Not Interested
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-windsock"></i>Report
-                                                            </span>
+                                            <h4 className="mhs_title">{dumpData.length} Results</h4>
+                                            {dumpData.map((item) => {
+                                                return (
+                                                    <div key={item.id} className="fcrse_1 mt-30">
+                                                        <Link to={`/coursDetails/${item.id}`}>
+                                                            <div className="hf_img">
+                                                                <img src={item.thumbs} alt="" />
+                                                                <div className="course-overlay">
+                                                                    <div className="badge_seller">Bestseller</div>
+                                                                    {item.point && (
+                                                                        <div className="crse_reviews">
+                                                                            <i className="uil uil-star"></i>
+                                                                            {item.point}
+                                                                        </div>
+                                                                    )}
+                                                                    <span className="play_btn1">
+                                                                        <i className="uil uil-play"></i>
+                                                                    </span>
+                                                                    <div className="crse_timer">{item.length}</div>
+                                                                </div>
+                                                            </div>
+                                                        </Link>
+                                                        <div className="hs_content">
+                                                            <div className="eps_dots eps_dots10 more_dropdown">
+                                                                <a href="##">
+                                                                    <i className="uil uil-ellipsis-v"></i>
+                                                                </a>
+                                                                <div className="dropdown-content">
+                                                                    <span>
+                                                                        <i className="uil uil-share-alt"></i>Share
+                                                                    </span>
+                                                                    <span>
+                                                                        <i className="uil uil-heart"></i>Save
+                                                                    </span>
+                                                                    <span>
+                                                                        <i className="uil uil-ban"></i>Not Interested
+                                                                    </span>
+                                                                    <span>
+                                                                        <i className="uil uil-windsock"></i>Report
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div className="vdtodt">
+                                                                <span className="vdt14">{item.views} views</span>
+                                                                <span className="vdt14">{item.createdDate} ago</span>
+                                                            </div>
+                                                            <Link to={`/coursDetails/${item.id}`}>
+                                                                <div className="crse14s title900">{item.name}</div>
+                                                            </Link>
+                                                            <a href="##" className="crse-cate">
+                                                                {item.tag}
+                                                            </a>
+                                                            <div className="purchased_badge">Purchased</div>
+                                                            <div className="auth1lnkprce">
+                                                                <p className="cr1fot">
+                                                                    By <a href="##">{item.author}</a>
+                                                                </p>
+                                                                <div className="prce142">{item.price}</div>
+                                                                <button className="shrt-cart-btn" title="cart">
+                                                                    <i className="uil uil-shopping-cart-alt"></i>
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div className="vdtodt">
-                                                        <span className="vdt14">5M views</span>
-                                                        <span className="vdt14">15 days ago</span>
-                                                    </div>
-                                                    <a href="course_detail_view.html" className="crse14s title900">
-                                                        The Complete JavaScript Course 2020: Build Real Projects!
-                                                    </a>
-                                                    <a href="#" className="crse-cate">
-                                                        Development | JavaScript
-                                                    </a>
-                                                    <div className="auth1lnkprce">
-                                                        <p className="cr1fot">
-                                                            By <a href="#">Jassica William</a>
-                                                        </p>
-                                                        <div className="prce142">$5</div>
-                                                        <button className="shrt-cart-btn" title="cart">
-                                                            <i className="uil uil-shopping-cart-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="fcrse_1 mt-30">
-                                                <a href="course_detail_view.html" className="hf_img">
-                                                    <img src="images/courses/img-3.jpg" alt="" />
-                                                    <div className="course-overlay">
-                                                        <div className="badge_seller">Bestseller</div>
-                                                        <div className="crse_reviews">
-                                                            <i className="uil uil-star"></i>4.5
-                                                        </div>
-                                                        <span className="play_btn1">
-                                                            <i className="uil uil-play"></i>
-                                                        </span>
-                                                        <div className="crse_timer">12 hours</div>
-                                                    </div>
-                                                </a>
-                                                <div className="hs_content">
-                                                    <div className="eps_dots eps_dots10 more_dropdown">
-                                                        <a href="#">
-                                                            <i className="uil uil-ellipsis-v"></i>
-                                                        </a>
-                                                        <div className="dropdown-content">
-                                                            <span>
-                                                                <i className="uil uil-share-alt"></i>Share
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-heart"></i>Save
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-ban"></i>Not Interested
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-windsock"></i>Report
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="vdtodt">
-                                                        <span className="vdt14">1M views</span>
-                                                        <span className="vdt14">18 days ago</span>
-                                                    </div>
-                                                    <a href="course_detail_view.html" className="crse14s title900">
-                                                        Beginning C++ Programming - From Beginner to Beyond
-                                                    </a>
-                                                    <a href="#" className="crse-cate">
-                                                        Development | C++
-                                                    </a>
-                                                    <div className="auth1lnkprce">
-                                                        <p className="cr1fot">
-                                                            By <a href="#">Joginder Singh</a>
-                                                        </p>
-                                                        <div className="prce142">$13</div>
-                                                        <button className="shrt-cart-btn" title="cart">
-                                                            <i className="uil uil-shopping-cart-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="fcrse_1 mt-30">
-                                                <a href="course_detail_view.html" className="hf_img">
-                                                    <img src="images/courses/img-4.jpg" alt="" />
-                                                    <div className="course-overlay">
-                                                        <div className="badge_seller">Bestseller</div>
-                                                        <div className="crse_reviews">
-                                                            <i className="uil uil-star"></i>5.0
-                                                        </div>
-                                                        <span className="play_btn1">
-                                                            <i className="uil uil-play"></i>
-                                                        </span>
-                                                        <div className="crse_timer">1 hours</div>
-                                                    </div>
-                                                </a>
-                                                <div className="hs_content">
-                                                    <div className="eps_dots eps_dots10 more_dropdown">
-                                                        <a href="#">
-                                                            <i className="uil uil-ellipsis-v"></i>
-                                                        </a>
-                                                        <div className="dropdown-content">
-                                                            <span>
-                                                                <i className="uil uil-share-alt"></i>Share
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-heart"></i>Save
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-ban"></i>Not Interested
-                                                            </span>
-                                                            <span>
-                                                                <i className="uil uil-windsock"></i>Report
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="vdtodt">
-                                                        <span className="vdt14">153k views</span>
-                                                        <span className="vdt14">3 months ago</span>
-                                                    </div>
-                                                    <a href="course_detail_view.html" className="crse14s title900">
-                                                        The Complete Digital Marketing Course - 12 Courses in 1
-                                                    </a>
-                                                    <a href="#" className="crse-cate">
-                                                        Digital Marketing | Marketing
-                                                    </a>
-                                                    <div className="auth1lnkprce">
-                                                        <p className="cr1fot">
-                                                            By <a href="#">Poonam Verma</a>
-                                                        </p>
-                                                        <div className="prce142">$12</div>
-                                                        <button className="shrt-cart-btn" title="cart">
-                                                            <i className="uil uil-shopping-cart-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                );
+                                            })}
                                             <div className="main-loader mt-50">
                                                 <div className="spinner">
                                                     <div className="bounce1"></div>

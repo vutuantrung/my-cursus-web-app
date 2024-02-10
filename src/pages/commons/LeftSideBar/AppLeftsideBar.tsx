@@ -180,7 +180,7 @@ const AppLeftsideBar = () => {
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/career">
+                                    <Link to="about/career">
                                         <div className="sub_menu--link">Career</div>
                                     </Link>
                                 </li>
@@ -190,7 +190,7 @@ const AppLeftsideBar = () => {
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/ourBlog">
+                                    <Link to="about/ourBlog">
                                         <div className="sub_menu--link">Our Blog</div>
                                     </Link>
                                 </li>

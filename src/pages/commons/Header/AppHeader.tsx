@@ -207,9 +207,9 @@ const AppHeader = () => {
                                         <span>gambol943@gmail.com</span>
                                     </div>
                                 </div>
-                                <a href="my_instructor_profile_view.html" className="dp_link_12">
+                                <Link to="myInstructorProfile" className="dp_link_12">
                                     View Instructor Profile
-                                </a>
+                                </Link>
                             </div>
                             <div className="night_mode_switch__btn">
                                 <a href="###" id="night-mode" className="btn-night-mode" ref={night_mode_switch}>
@@ -225,15 +225,15 @@ const AppHeader = () => {
                             <a href="membership.html" className="item channel_item">
                                 Paid Memberships
                             </a>
-                            <a href="setting.html" className="item channel_item">
+                            <Link to="settings" className="item channel_item">
                                 Setting
-                            </a>
-                            <a href="help.html" className="item channel_item">
+                            </Link>
+                            <Link to="help" className="item channel_item">
                                 Help
-                            </a>
-                            <a href="feedback.html" className="item channel_item">
+                            </Link>
+                            <Link to="feedback" className="item channel_item">
                                 Send Feedback
-                            </a>
+                            </Link>
                             <a href="sign_in.html" className="item channel_item">
                                 Sign Out
                             </a>

@@ -6,10 +6,11 @@ import PurchasedCourses from './PurchasedCourses';
 import Subscriptions from './Subscriptions';
 import { Link } from 'react-router-dom';
 import AppFooter from '../commons/Footer/AppFooter';
+import { IMAGES } from '../../constants';
 
 const Body = () => {
     return (
-        <div className="wrapper _bg4586 app-footer-padding">
+        <>
             {/* <!-- Profile --> */}
             <div className="_216b01">
                 <div className="container-fluid">
@@ -18,15 +19,15 @@ const Body = () => {
                             <div className="section3125 rpt145">
                                 <div className="row">
                                     <div className="col-lg-7">
-                                        <a href="#" className="_216b22">
+                                        {/* <a href="#" className="_216b22">
                                             <span>
                                                 <i className="uil uil-cog"></i>
                                             </span>
                                             Setting
-                                        </a>
+                                        </a> */}
                                         <div className="dp_dt150">
                                             <div className="img148">
-                                                <img src="images/hd_dp.jpg" alt="" />
+                                                <img src={IMAGES.avatar} alt="" />
                                             </div>
                                             <div className="prfledt1">
                                                 <h2>Joginder Singh</h2>
@@ -118,7 +119,7 @@ const Body = () => {
                             <div className="course_tabs">
                                 <nav>
                                     <div className="nav nav-tabs tab_crse" id="nav-tab" role="tablist">
-                                        <NavLink to="aboutMe" className="nav-item nav-link">
+                                        <NavLink defaultValue={'aboutMe'} to="aboutMe" className="nav-item nav-link">
                                             About
                                         </NavLink>
                                         <NavLink to="discussions" className="nav-item nav-link">
@@ -162,7 +163,7 @@ const Body = () => {
 
             {/* <!-- Footer --> */}
             <AppFooter />
-        </div>
+        </>
     );
 };
 export default Body;

@@ -75,9 +75,9 @@ const PageHeader = () => {
                                                     <span>gambol943@gmail.com</span>
                                                 </div>
                                             </div>
-                                            <a href="my_instructor_profile_view.html" className="dp_link_12">
+                                            <Link to="myInstructorProfile" className="dp_link_12">
                                                 View Instructor Profile
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="night_mode_switch__btn">
                                             <a href="###" id="night-mode" className="btn-night-mode" ref={night_mode_switch}>

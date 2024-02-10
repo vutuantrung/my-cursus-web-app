@@ -2,7 +2,7 @@ import AppFooter from '../commons/Footer/AppFooter';
 
 const Body = () => {
     return (
-        <div className="wrapper app-footer-padding">
+        <>
             <div className="sa4d25">
                 <div className="container-fluid">
                     <div className="row justify-content-md-center">
@@ -122,7 +122,7 @@ const Body = () => {
                 </div>
             </div>
             <AppFooter />
-        </div>
+        </>
     );
 };
 
