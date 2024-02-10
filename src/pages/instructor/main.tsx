@@ -6,7 +6,6 @@ import AppHeader from '../commons/Header/AppHeader';
 
 import InstructorDashboard from './dashboard/InstructorDashboard';
 import InstructorCourses from './courses/InstructorCourses';
-import InstructorAnalyics from '../instructorAnalyics';
 import InstructorCreateCourse from './createCourse/InstructorCreateCourse';
 import InstructorMessages from './messages/InstructorMessages';
 import InstructorNotifications from './notifications/InstructorNotifications';
@@ -16,6 +15,7 @@ import InstructorEarning from './earning/InstructorEarning';
 import InstructorPayout from './payout/InstructorPayout';
 import InstructorStatement from './statement/InstructorStatement';
 import InstructorVerification from './verification/InstructorVerification';
+import InstructorAnalyics from './analyics/InstructorAnalyics';
 
 const Instructor = () => {
     return (
