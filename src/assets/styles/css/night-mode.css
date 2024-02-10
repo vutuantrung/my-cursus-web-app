@@ -777,6 +777,10 @@ Night Mood
     background: #333;
 }
 
+.night-mode .help_topic {
+    background: #333;
+}
+
 .night-mode .ttl121 .breadcrumb {
     background-color: #333 !important;
 }
@@ -1316,7 +1320,7 @@ Night Mood
     color: #fff;
 }
 
-.night-mode ._215v12 {
+.night-mode .help_question {
     background: #313131;
 }
 

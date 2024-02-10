@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ICONS } from '../../../../constants';
 
 export const Instructor = (item: any) => {
@@ -39,15 +40,15 @@ export const Instructor = (item: any) => {
         <div className="item">
             <div className="fcrse_1 mb-20">
                 <div className="tutor_img">
-                    <a href="instructor_profile_view.html">
+                    <Link to={`/instructorProfile/view/${item.id}`}>
                         <img src={item.avatar} alt="avatar" />
-                    </a>
+                    </Link>
                 </div>
                 <div className="tutor_content_dt">
                     <div className="tutor150">
-                        <a href="instructor_profile_view.html" className="tutor_name">
+                        <Link to={`/instructorProfile/view/${item.id}`} className="tutor_name">
                             {item.name}
-                        </a>
+                        </Link>
                         <div className="mef78" title="Verify">
                             <img src={ICONS.check_circle} alt="" style={{ width: '20px', height: '20px', marginLeft: '5px' }} />
                         </div>

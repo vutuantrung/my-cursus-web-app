@@ -110,7 +110,7 @@ const Body = () => {
         },
     ];
     return (
-        <div className="wrapper app-footer-padding">
+        <>
             <div className="sa4d25">
                 <div className="container-fluid">
                     <div className="row">
@@ -139,7 +139,7 @@ const Body = () => {
                                         <h4 className="mhs_title">Saved Courses</h4>
                                         {courseDumpData.map((item) => {
                                             return (
-                                                <div className="fcrse_1 mt-30">
+                                                <div key={item.id} className="fcrse_1 mt-30">
                                                     <Link to={`/coursDetails/${item.id}`}>
                                                         <div className="hf_img">
                                                             <img src={item.thumbs} alt="" />
@@ -202,7 +202,7 @@ const Body = () => {
                 </div>
             </div>
             <AppFooter />
-        </div>
+        </>
     );
 };
 

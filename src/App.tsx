@@ -33,7 +33,6 @@ import Explore from './pages/explore';
 import CoursDetails from './pages/coursDetails';
 import SavedCourses from './pages/savedCourses';
 import InstructorProfile from './pages/instructorProfile';
-import AllInstructors from './pages/allInstructors';
 import CertificateCenter from './pages/certificateCenter';
 import CertificateFillForm from './pages/certificateFillForm';
 import CertificateTestView from './pages/certificateTestView';
@@ -86,12 +85,16 @@ const App = () => {
                     <Route path="feedback" element={<Feedback />} />
 
                     <Route path="liveStream" element={<LiveStream />}>
+                        {/* <Route path="all" element={<LiveOutput />} /> */}
                         <Route path="output/:id" element={<LiveOutput />} />
                     </Route>
 
-                    <Route path="instructorProfile" element={<AllInstructors />}>
+                    <Route path="instructorProfile">
+                        <Route path="all" element={<InstructorProfile />} />
                         <Route path="view/:id" element={<InstructorProfile />} />
                     </Route>
+
+                    <Route path="coursDetails/:id" element={<CoursDetails />} />
                 </Route>
 
                 <Route path="about" element={<About />}>
@@ -110,7 +113,6 @@ const App = () => {
                     <Route path="subscriptions" element={<Subscriptions />} />
                 </Route>
 
-                <Route path="coursDetails/:id" element={<CoursDetails />} />
                 <Route path="termsOfUse" element={<TermsOfUse />} />
                 <Route path="contactUs" element={<ContactUs />} />
 

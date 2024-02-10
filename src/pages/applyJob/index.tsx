@@ -145,6 +145,7 @@ const ApplyJob = () => {
                                                 required
                                                 maxLength={64}
                                                 placeholder="Full Name"
+                                                onChange={() => {}}
                                             />
                                         </div>
                                     </div>
@@ -159,6 +160,7 @@ const ApplyJob = () => {
                                                 required
                                                 maxLength={64}
                                                 placeholder="Email Address"
+                                                onChange={() => {}}
                                             />
                                         </div>
                                     </div>
@@ -173,6 +175,7 @@ const ApplyJob = () => {
                                                 required
                                                 maxLength={12}
                                                 placeholder="Phone Number"
+                                                onChange={() => {}}
                                             />
                                         </div>
                                     </div>
@@ -210,6 +213,7 @@ const ApplyJob = () => {
                                                     required
                                                     maxLength={64}
                                                     placeholder="LinkedIn URL"
+                                                    onChange={() => {}}
                                                 />
                                             </div>
                                         </div>
@@ -224,6 +228,7 @@ const ApplyJob = () => {
                                                     required
                                                     maxLength={64}
                                                     placeholder="Twitter URL"
+                                                    onChange={() => {}}
                                                 />
                                             </div>
                                         </div>
@@ -238,6 +243,7 @@ const ApplyJob = () => {
                                                     required
                                                     maxLength={64}
                                                     placeholder="Portfolio URL"
+                                                    onChange={() => {}}
                                                 />
                                             </div>
                                         </div>
@@ -252,6 +258,7 @@ const ApplyJob = () => {
                                                     required
                                                     maxLength={64}
                                                     placeholder="Other Website URL"
+                                                    onChange={() => {}}
                                                 />
                                             </div>
                                         </div>

@@ -148,7 +148,7 @@ const AboutUs = () => {
                                     Ut tempus ipsum sagittis neque cursus euismod. Vivamus luctus elementum tortor, ac aliquet
                                     dolor vehicula et.
                                 </p>
-                                <a href="#" className="crer_btn_link">
+                                <a href="###" className="crer_btn_link">
                                     Join Our Team
                                 </a>
                             </div>

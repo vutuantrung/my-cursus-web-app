@@ -1,6 +1,31 @@
 import { Link } from 'react-router-dom';
+import { IMAGES } from '../../constants';
+import { useEffect } from 'react';
+import { generateRandomNumber } from '../../helpers/helpers';
 
 const Career = () => {
+    useEffect(() => {
+        const carouselOptions = {
+            loop: true,
+            nav: true,
+            dots: false,
+            navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
+        };
+
+        // features Careers
+        ($('.feature_careers') as any).owlCarousel({
+            ...carouselOptions,
+            items: 4,
+            margin: 20,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                1000: { items: 1 },
+                1200: { items: 1 },
+                1400: { items: 1 },
+            },
+        });
+    });
     return (
         <>
             <div className="_215zd5">
@@ -12,13 +37,14 @@ const Career = () => {
                                     src="https://www.youtube.com/embed/TKnufs85hXk"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
+                                    title="test"
                                 ></iframe>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="title484">
                                 <h2>Working at Cursus</h2>
-                                <img className="line-title" src="images/line.svg" alt="" />
+                                <img className="line-title" src={IMAGES.line} alt="" />
                                 <p>
                                     Phasellus ex mauris, rhoncus quis posuere sit amet, ultricies nec lorem. Vivamus vestibulum
                                     porta urna, in placerat lectus facilisis sit amet. Vestibulum non mauris augue. Maecenas arcu
@@ -44,7 +70,13 @@ const Career = () => {
                                             <div className="item">
                                                 <div className="career_item">
                                                     <div className="career_item_img">
-                                                        <img src="images/about/career-1.jpg" alt="" />
+                                                        <img
+                                                            src={`../assets/images/test/avatar_instructor/${generateRandomNumber(
+                                                                1,
+                                                                25
+                                                            )}.jpg`}
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <h4>We are learners</h4>
                                                     <p>
@@ -59,7 +91,13 @@ const Career = () => {
                                             <div className="item">
                                                 <div className="career_item">
                                                     <div className="career_item_img">
-                                                        <img src="images/about/career-2.jpg" alt="" />
+                                                        <img
+                                                            src={`../assets/images/test/avatar_instructor/${generateRandomNumber(
+                                                                1,
+                                                                25
+                                                            )}.jpg`}
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <h4>We are navigators</h4>
                                                     <p>
@@ -74,7 +112,13 @@ const Career = () => {
                                             <div className="item">
                                                 <div className="career_item">
                                                     <div className="career_item_img">
-                                                        <img src="images/about/career-3.jpg" alt="" />
+                                                        <img
+                                                            src={`../assets/images/test/avatar_instructor/${generateRandomNumber(
+                                                                1,
+                                                                25
+                                                            )}.jpg`}
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <h4>We are global</h4>
                                                     <p>
@@ -89,7 +133,13 @@ const Career = () => {
                                             <div className="item">
                                                 <div className="career_item">
                                                     <div className="career_item_img">
-                                                        <img src="images/about/career-4.jpg" alt="" />
+                                                        <img
+                                                            src={`../assets/images/test/avatar_instructor/${generateRandomNumber(
+                                                                1,
+                                                                25
+                                                            )}.jpg`}
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <h4>We make an impact</h4>
                                                     <p>
@@ -119,7 +169,7 @@ const Career = () => {
                                     Cursus culture is something special, and to complement and support that culture we have some
                                     amazing benefits.
                                 </p>
-                                <img className="line-title" src="images/line.svg" alt="" />
+                                <img className="line-title" src={IMAGES.line} alt="" />
                             </div>
                         </div>
                         <div className="col-lg-3  col-sm-6">
@@ -215,7 +265,7 @@ const Career = () => {
                                     Cursus is a fast growing company and we're expanding both our Punjab office and international
                                     offices.
                                 </p>
-                                <img className="line-title" src="images/line.svg" alt="" />
+                                <img className="line-title" src={IMAGES.line} alt="" />
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -223,7 +273,7 @@ const Career = () => {
                                 <h4>Algorithm Engineer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <Link to="applyJob/1111" className="career_lnk5">
+                                    <Link to="/applyJob/1111" className="career_lnk5">
                                         Learn More and Apply
                                     </Link>
                                 </div>
@@ -234,7 +284,7 @@ const Career = () => {
                                 <h4>Chief Technology Officer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <Link to="applyJob/2222" className="career_lnk5">
+                                    <Link to="/applyJob/2222" className="career_lnk5">
                                         Learn More and Apply
                                     </Link>
                                 </div>
@@ -245,7 +295,7 @@ const Career = () => {
                                 <h4>Customer Growth & Marketing Analyst</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <Link to="applyJob/3333" className="career_lnk5">
+                                    <Link to="/applyJob/3333" className="career_lnk5">
                                         Learn More and Apply
                                     </Link>
                                 </div>
@@ -256,7 +306,7 @@ const Career = () => {
                                 <h4>Data Engineer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <Link to="applyJob/4444" className="career_lnk5">
+                                    <Link to="/applyJob/4444" className="career_lnk5">
                                         Learn More and Apply
                                     </Link>
                                 </div>
@@ -267,7 +317,7 @@ const Career = () => {
                                 <h4>iOS Developer - Edututs+ San Francisco, CA</h4>
                                 <span>San Francisco, CA</span>
                                 <div className="apply_job_link_right">
-                                    <Link to="applyJob/5555" className="career_lnk5">
+                                    <Link to="/applyJob/5555" className="career_lnk5">
                                         Learn More and Apply
                                     </Link>
                                 </div>
@@ -278,7 +328,7 @@ const Career = () => {
                                 <h4>Senior UX Designer</h4>
                                 <span>India</span>
                                 <div className="apply_job_link_right">
-                                    <Link to="applyJob/6666" className="career_lnk5">
+                                    <Link to="/applyJob/6666" className="career_lnk5">
                                         Learn More and Apply
                                     </Link>
                                 </div>

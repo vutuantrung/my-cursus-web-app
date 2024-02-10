@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import { Body } from './Body';
+
 import AppHeader from '../commons/Header/AppHeader';
 import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
 import LiveStream from '../liveStreams';
@@ -14,147 +14,95 @@ import ReportHistory from '../reportHistory';
 import Feedback from '../feedback';
 import LiveOutput from '../liveOutput';
 import InstructorProfile from '../instructorProfile';
+import CoursDetails from '../coursDetails';
+
+import { useEffect, useState } from 'react';
 
 const Main = () => {
+    const [docState, setDocState] = useState('');
+
     useEffect(() => {
-        const carouselOptions = {
-            loop: true,
-            nav: true,
-            dots: false,
-            navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
-        };
-
-        ($('.ui .dropdown') as any).dropdown();
-        // === Model === //
-        ($('.ui .modal') as any).modal({ blurring: true }).modal('show');
-        // === Tab === //
-        ($('.menu .item') as any).tab();
-        // === checkbox Toggle === //
-        ($('.ui .checkbox') as any).checkbox();
-        // === Toggle === //
-        $('.enable .button').on('click', function () {
-            ($(this).nextAll('.checkbox') as any).checkbox('enable');
-        });
-
-        // Home Live Stream
-        ($('.live_stream') as any).owlCarousel({
-            ...carouselOptions,
-            items: 10,
-            margin: 10,
-            responsive: {
-                0: { items: 2 },
-                600: { items: 3 },
-                1000: { items: 3 },
-                1200: { items: 5 },
-                1400: { items: 6 },
-            },
-        });
-        // Featured Courses home
-        ($('.featured_courses') as any).owlCarousel({
-            ...carouselOptions,
-            items: 10,
-            margin: 20,
-            responsive: {
-                0: { items: 1 },
-                600: { items: 2 },
-                1000: { items: 1 },
-                1200: { items: 2 },
-                1400: { items: 3 },
-            },
-        });
-        // Featured Courses home
-        ($('.top_instrutors') as any).owlCarousel({
-            ...carouselOptions,
-            items: 10,
-            margin: 20,
-            responsive: {
-                0: { items: 1 },
-                600: { items: 2 },
-                1000: { items: 1 },
-                1200: { items: 2 },
-                1400: { items: 3 },
-            },
-        });
-        // Student Says
-        ($('.Student_says') as any).owlCarousel({
-            ...carouselOptions,
-            items: 10,
-            margin: 30,
-            responsive: {
-                0: { items: 1 },
-                600: { items: 2 },
-                1000: { items: 2 },
-                1200: { items: 3 },
-                1400: { items: 3 },
-            },
-        });
-        // features Careers
-        ($('.feature_careers') as any).owlCarousel({
-            ...carouselOptions,
-            items: 4,
-            margin: 20,
-            responsive: {
-                0: { items: 1 },
-                600: { items: 1 },
-                1000: { items: 1 },
-                1200: { items: 1 },
-                1400: { items: 1 },
-            },
-        });
-        /*Floating Code for Iframe Start*/
-        if (
-            $(
-                'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
-            ).length > 0
-        ) {
-            /*Wrap (all code inside div) all vedio code inside div*/
-            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap(
-                "<div class='iframe-parent-class'></div>"
-            );
-            /*main code of each (particular) vedio*/
-            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
-                /*Floating js Start*/
-                const windows = $(window);
-                const iframeWrap = $(this).parent();
-                const iframe = $(this);
-                const iframeHeight = iframe.outerHeight();
-                windows.on('scroll', function () {
-                    const windowScrollTop = windows.scrollTop();
-                    const iframeBottom = iframeHeight! + iframeWrap.offset()!.top;
-
-                    if (windowScrollTop! > iframeBottom) {
-                        iframeWrap.height(iframeHeight!);
-                        iframe.addClass('stuck');
-                        $('.scrolldown').css({ display: 'none' });
-                    } else {
-                        iframeWrap.height('auto');
-                        iframe.removeClass('stuck');
-                    }
-                });
-                /*Floating js End*/
-            });
+        // console.log('every time here', document.readyState);
+        if (document.readyState === 'complete') {
+            setDocState(document.readyState);
+        } else {
+            document.onreadystatechange = () => {
+                // console.log('doc state changed', document.readyState);
+                setDocState(document.readyState);
+            };
         }
     }, []);
+
+    useEffect(() => {
+        // console.log('main useEffect', document.readyState, docState);
+        if (docState === 'complete') {
+            // console.log('gonna set ....');
+
+            const querySelector = document.querySelector.bind(document);
+            const nav = document.querySelector('.vertical_nav');
+            const wrapper = document.querySelector('.wrapper');
+            const menu = document.getElementById('js-menu');
+            const subnavs = menu!.querySelectorAll('.menu--item__has_sub_menu');
+
+            // Toggle menu click
+            (querySelector('.toggle_menu') as any).onclick = function () {
+                nav!.classList.toggle('vertical_nav__opened');
+                wrapper!.classList.toggle('toggle-content');
+            };
+
+            // Minify menu on menu_minifier click
+            (querySelector('.collapse_menu') as any).onclick = function () {
+                nav!.classList.toggle('vertical_nav__minify');
+                wrapper!.classList.toggle('wrapper__minify');
+
+                for (let j = 0; j < subnavs.length; j++) {
+                    subnavs[j].classList.remove('menu--subitens__opened');
+                }
+            };
+
+            // Open Sub Menu
+            for (let i = 0; i < subnavs.length; i++) {
+                if (subnavs[i].classList.contains('menu--item__has_sub_menu')) {
+                    (subnavs[i].querySelector('.menu--link') as any).addEventListener(
+                        'click',
+                        function (e: any) {
+                            for (let j = 0; j < subnavs.length; j++) {
+                                if (e.target.offsetParent !== subnavs[j]) {
+                                    subnavs[j].classList.remove('menu--subitens__opened');
+                                }
+                            }
+                            e.target.offsetParent.classList.toggle('menu--subitens__opened');
+                        },
+                        false
+                    );
+                }
+            }
+        }
+    }, [docState]);
     return (
         <>
             <AppHeader />
             <AppLeftsideBar />
-            <Routes>
-                <Route path="" Component={Body} />
+            <div className="wrapper app-footer-padding">
+                <Routes>
+                    <Route path="" Component={Body} />
 
-                <Route path="explore" Component={Explore} />
-                <Route path="savedCourses" Component={SavedCourses} />
-                <Route path="settings" Component={Settings} />
-                <Route path="help" Component={Help} />
-                <Route path="reportHistory" Component={ReportHistory} />
-                <Route path="feedback" Component={Feedback} />
+                    <Route path="explore" Component={Explore} />
+                    <Route path="savedCourses" Component={SavedCourses} />
+                    <Route path="settings" Component={Settings} />
+                    <Route path="help" Component={Help} />
+                    <Route path="reportHistory" Component={ReportHistory} />
+                    <Route path="feedback" Component={Feedback} />
 
-                <Route path="liveStream" Component={LiveStream} />
-                <Route path="liveStream/output/:id" Component={LiveOutput} />
+                    <Route path="liveStream" Component={LiveStream} />
+                    <Route path="liveStream/output/:id" Component={LiveOutput} />
 
-                <Route path="instructorProfile" Component={AllInstructors} />
-                <Route path="instructorProfile/view/:id" Component={InstructorProfile} />
-            </Routes>
+                    <Route path="instructorProfile/all" Component={AllInstructors} />
+                    <Route path="instructorProfile/view/:id" Component={InstructorProfile} />
+
+                    <Route path="coursDetails/:id" Component={CoursDetails} />
+                </Routes>
+            </div>
         </>
     );
 };

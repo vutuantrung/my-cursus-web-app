@@ -30,7 +30,7 @@ const Press = () => {
                                     <li>
                                         <div className="help_link">
                                             <p>Learn More</p>
-                                            <a href="#">Cursus Help Center</a>
+                                            <a href="###">Cursus Help Center</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -40,7 +40,7 @@ const Press = () => {
                             <div className="press_news">
                                 <h2>Cursus in the News</h2>
                                 <p>
-                                    For media interviews and inquiries, please send an email to <a href="#">press@cursus.com</a>
+                                    For media interviews and inquiries, please send an email to <a href="###">press@cursus.com</a>
                                 </p>
                                 <div className="press_item mt-35">
                                     <div className="vdtopress">March 10, 2020</div>
@@ -50,7 +50,7 @@ const Press = () => {
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor,
                                         vitae fringilla quam...
                                     </p>
-                                    <a href="#" className="press_dt_view">
+                                    <a href="###" className="press_dt_view">
                                         Read More<i className="uil uil-angle-double-right"></i>
                                     </a>
                                 </div>
@@ -62,7 +62,7 @@ const Press = () => {
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor,
                                         vitae fringilla quam...
                                     </p>
-                                    <a href="#" className="press_dt_view">
+                                    <a href="###" className="press_dt_view">
                                         Read More<i className="uil uil-angle-double-right"></i>
                                     </a>
                                 </div>
@@ -74,11 +74,11 @@ const Press = () => {
                                         et, interdum mollis arcu. Pellentesque viverra faucibus diam. In sit amet laoreet dolor,
                                         vitae fringilla quam...
                                     </p>
-                                    <a href="#" className="press_dt_view">
+                                    <a href="###" className="press_dt_view">
                                         Read More<i className="uil uil-angle-double-right"></i>
                                     </a>
                                 </div>
-                                <a href="#" className="allnews_btn">
+                                <a href="###" className="allnews_btn">
                                     See More News
                                 </a>
                             </div>
@@ -88,35 +88,35 @@ const Press = () => {
                                 <p>For Release from Cursus </p>
                                 <div className="press_item mt-35">
                                     <div className="vdtopress">March 10, 2020</div>
-                                    <a href="#" className="press_title">
+                                    <a href="###" className="press_title">
                                         Press Release Title
                                     </a>
                                 </div>
                                 <div className="press_item mt-20">
                                     <div className="vdtopress">March 10, 2020</div>
-                                    <a href="#" className="press_title mb-0">
+                                    <a href="###" className="press_title mb-0">
                                         Press Release Title
                                     </a>
                                 </div>
                                 <div className="press_item mt-20">
                                     <div className="vdtopress">March 10, 2020</div>
-                                    <a href="#" className="press_title mb-0">
+                                    <a href="###" className="press_title mb-0">
                                         Press Release Title
                                     </a>
                                 </div>
                                 <div className="press_item mt-20">
                                     <div className="vdtopress">March 10, 2020</div>
-                                    <a href="#" className="press_title mb-0">
+                                    <a href="###" className="press_title mb-0">
                                         Press Release Title
                                     </a>
                                 </div>
                                 <div className="press_item mt-20">
                                     <div className="vdtopress">March 10, 2020</div>
-                                    <a href="#" className="press_title mb-0">
+                                    <a href="###" className="press_title mb-0">
                                         Press Release Title
                                     </a>
                                 </div>
-                                <a href="#" className="allnews_btn">
+                                <a href="###" className="allnews_btn">
                                     See More Press Releases
                                 </a>
                             </div>

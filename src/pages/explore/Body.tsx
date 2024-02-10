@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
 import { generateRandomNumber } from '../../helpers/helpers';
 import AppFooter from '../commons/Footer/AppFooter';
+import { useEffect } from 'react';
 
 const Body = () => {
+    const carouselOptions = {
+        loop: true,
+        nav: true,
+        dots: false,
+        navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
+    };
     const streamDumpData = [
         {
             name: 'John Doe',
@@ -101,7 +108,6 @@ const Body = () => {
             isLive: true,
         },
     ];
-
     const courseDumpData = [
         {
             id: 123412,
@@ -209,8 +215,76 @@ const Body = () => {
         },
     ];
 
+    useEffect(() => {
+        console.log('main body useEffect');
+        ($('.live_stream') as any).owlCarousel({
+            ...carouselOptions,
+            items: 10,
+            margin: 10,
+            responsive: {
+                0: { items: 2 },
+                600: { items: 3 },
+                1000: { items: 3 },
+                1200: { items: 5 },
+                1400: { items: 6 },
+            },
+        });
+        // Featured Courses home
+        ($('.featured_courses') as any).owlCarousel({
+            ...carouselOptions,
+            items: 10,
+            margin: 20,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 1 },
+                1200: { items: 2 },
+                1400: { items: 3 },
+            },
+        });
+        // Featured Courses home
+        ($('.top_instrutors') as any).owlCarousel({
+            ...carouselOptions,
+            items: 10,
+            margin: 20,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 1 },
+                1200: { items: 2 },
+                1400: { items: 3 },
+            },
+        });
+        // Student Says
+        ($('.Student_says') as any).owlCarousel({
+            ...carouselOptions,
+            items: 10,
+            margin: 30,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 2 },
+                1200: { items: 3 },
+                1400: { items: 3 },
+            },
+        });
+        // features Careers
+        ($('.feature_careers') as any).owlCarousel({
+            ...carouselOptions,
+            items: 4,
+            margin: 20,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                1000: { items: 1 },
+                1200: { items: 1 },
+                1400: { items: 1 },
+            },
+        });
+    });
+
     return (
-        <div className="wrapper app-footer-padding">
+        <>
             <div className="sa4d25">
                 <div className="container-fluid">
                     <div className="row">
@@ -348,7 +422,7 @@ const Body = () => {
                 </div>
             </div>
             <AppFooter />
-        </div>
+        </>
     );
 };
 

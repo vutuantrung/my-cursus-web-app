@@ -2,8 +2,8 @@ import AppFooter from '../commons/Footer/AppFooter';
 
 const Body = () => {
     return (
-        <div className="wrapper _bg4586 app-footer-padding">
-            <div className="_215v12">
+        <>
+            <div className="help_question">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12">
@@ -32,7 +32,7 @@ const Body = () => {
                     </div>
                 </div>
             </div>
-            <div className="_215b15">
+            <div className="help_topic">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -70,7 +70,7 @@ const Body = () => {
                     </div>
                 </div>
             </div>
-            <div className="_215b17">
+            <div className="help_frequency_quesiton">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12">
@@ -315,7 +315,7 @@ const Body = () => {
                 </div>
             </div>
             <AppFooter />
-        </div>
+        </>
     );
 };
 

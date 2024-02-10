@@ -33,7 +33,7 @@ const Body = () => {
         });
     }, []);
     return (
-        <div className="wrapper _bg4586 app-footer-padding">
+        <>
             <div className="_215b01">
                 <div className="container-fluid">
                     <div className="row">
@@ -675,7 +675,7 @@ const Body = () => {
                                             </div>
                                             <div id="accordion" className="ui-accordion ui-widget ui-helper-reset">
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -780,7 +780,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -875,7 +875,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -1037,7 +1037,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -1164,7 +1164,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -1353,7 +1353,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -1559,7 +1559,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -1760,7 +1760,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -1999,7 +1999,7 @@ const Body = () => {
                                                     </div>
                                                 </div>
                                                 <a
-                                                    href="javascript:void(0)"
+                                                    href="#"
                                                     className="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
                                                 >
                                                     <div className="section-header-left">
@@ -2508,7 +2508,7 @@ const Body = () => {
                 </div>
             </div>
             <AppFooter />
-        </div>
+        </>
     );
 };
 

@@ -2824,6 +2824,14 @@ i.icon2 {
     margin-bottom: 17px;
 }
 
+.help_topic {
+    float: left;
+    width: 100%;
+    padding: 20px 0 0;
+    background: #fff;
+    margin-bottom: 17px;
+}
+
 .course_tabs {
     float: left;
     width: 100%;
@@ -2866,7 +2874,11 @@ i.icon2 {
 }
 
 ._215b17 {
-    float: left;
+    /* float: left; */
+    width: 100%;
+}
+
+.help_frequency_quesiton {
     width: 100%;
 }
 
@@ -4673,7 +4685,7 @@ a.rmv-btn i {
 
 /* --- Help Page --- */
 
-._215v12 {
+.help_question {
     float: left;
     width: 100%;
     padding: 80px 0;
@@ -4681,7 +4693,7 @@ a.rmv-btn i {
     position: relative;
 }
 
-._215v12:before {
+.help_question:before {
     content: '';
     background: url(https://cdna.iconscout.com/img/fafbb5d.svg) no-repeat bottom;
     left: 0;

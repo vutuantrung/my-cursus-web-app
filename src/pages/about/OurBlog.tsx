@@ -33,22 +33,22 @@ const OurBlog = () => {
                                         <div className="collapse" id="collapse1">
                                             <ul className="category-card">
                                                 <li>
-                                                    <a href="#" className="category-item1 active">
+                                                    <a href="##" className="category-item1 active">
                                                         All
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         Students
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         Instructors
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         Ideas & Opinions
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         Edututs+ News
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         Social Innovation
                                                     </a>
                                                 </li>
@@ -67,16 +67,16 @@ const OurBlog = () => {
                                         <div className="collapse" id="collapse2">
                                             <ul className="category-card">
                                                 <li>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         January 2020
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         February 2020
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         March 2020
                                                     </a>
-                                                    <a href="#" className="category-item1">
+                                                    <a href="##" className="category-item1">
                                                         April 2020
                                                     </a>
                                                 </li>
@@ -106,7 +106,7 @@ const OurBlog = () => {
                                     <li>
                                         <div className="help_link">
                                             <p>Learn More</p>
-                                            <a href="#">Cursus Help Center</a>
+                                            <a href="##">Cursus Help Center</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -209,32 +209,32 @@ const OurBlog = () => {
                                 <nav aria-label="Page navigation example">
                                     <ul className="pagination">
                                         <li className="page-item disabled">
-                                            <a className="page-link" href="#" aria-label="Previous">
+                                            <a className="page-link" href="##" aria-label="Previous">
                                                 PREV
                                             </a>
                                         </li>
                                         <li className="page-item">
-                                            <a className="page-link active" href="#">
+                                            <a className="page-link active" href="##">
                                                 1
                                             </a>
                                         </li>
                                         <li className="page-item">
-                                            <a className="page-link" href="#">
+                                            <a className="page-link" href="##">
                                                 2
                                             </a>
                                         </li>
                                         <li className="page-item">
-                                            <a className="page-link" href="#">
+                                            <a className="page-link" href="##">
                                                 ...
                                             </a>
                                         </li>
                                         <li className="page-item">
-                                            <a className="page-link" href="#">
+                                            <a className="page-link" href="##">
                                                 24
                                             </a>
                                         </li>
                                         <li className="page-item">
-                                            <a className="page-link" href="#" aria-label="Next">
+                                            <a className="page-link" href="##" aria-label="Next">
                                                 NEXT
                                             </a>
                                         </li>

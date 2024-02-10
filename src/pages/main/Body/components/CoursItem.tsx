@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export const CoursItem = (item: any) => {
     return (
         <div className="item">
             <div className="fcrse_1 mb-20">
-                <a href="course_detail_view.html" className="fcrse_img">
+                <Link to={`coursDetails/${item.id}`} className="fcrse_img">
                     <img src={item.theme} alt="" />
                     <div className="course-overlay">
                         {item.isFeaturedCours && (
@@ -19,7 +21,7 @@ export const CoursItem = (item: any) => {
                         </span>
                         <div className="crse_timer">{item.length}</div>
                     </div>
-                </a>
+                </Link>
                 <div className="fcrse_content">
                     <div className="eps_dots more_dropdown">
                         <a href="#">
@@ -44,9 +46,9 @@ export const CoursItem = (item: any) => {
                         <span className="vdt14">{item.views} views</span>
                         <span className="vdt14">{item.createdDate} ago</span>
                     </div>
-                    <a href="course_detail_view.html" className="crse14s">
+                    <Link to={`coursDetails/${item.id}`} className="crse14s">
                         {item.name}
-                    </a>
+                    </Link>
                     <a href="#" className="crse-cate">
                         {item.tag}
                     </a>

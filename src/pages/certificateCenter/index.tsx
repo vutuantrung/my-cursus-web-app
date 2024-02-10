@@ -75,6 +75,7 @@ const CertificateCenter = () => {
                                                 required
                                                 maxLength={10}
                                                 placeholder="# Number"
+                                                onChange={() => {}}
                                             />
                                         </div>
                                     </div>
@@ -91,6 +92,7 @@ const CertificateCenter = () => {
                                                 required
                                                 maxLength={64}
                                                 placeholder="Full Name"
+                                                onChange={() => {}}
                                             />
                                         </div>
                                     </div>
