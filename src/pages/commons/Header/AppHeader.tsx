@@ -16,7 +16,6 @@ const AppHeader = () => {
 
     useEffect(() => {
         ($('.ui.dropdown') as any).dropdown();
-
         // === Model === //
         ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
         // === Tab === //
@@ -30,6 +29,40 @@ const AppHeader = () => {
 
         if (night_mode_switch.current) {
             night_mode_switch.current.addEventListener('click', onNightModeSwitch);
+        }
+
+        /*Floating Code for Iframe Start*/
+        if (
+            $(
+                'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
+            ).length > 0
+        ) {
+            /*Wrap (all code inside div) all vedio code inside div*/
+            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap(
+                "<div class='iframe-parent-class'></div>"
+            );
+            /*main code of each (particular) vedio*/
+            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
+                /*Floating js Start*/
+                const windows = $(window);
+                const iframeWrap = $(this).parent();
+                const iframe = $(this);
+                const iframeHeight = iframe.outerHeight();
+                windows.on('scroll', function () {
+                    const windowScrollTop = windows.scrollTop();
+                    const iframeBottom = iframeHeight! + iframeWrap.offset()!.top;
+
+                    if (windowScrollTop! > iframeBottom) {
+                        iframeWrap.height(iframeHeight!);
+                        iframe.addClass('stuck');
+                        $('.scrolldown').css({ display: 'none' });
+                    } else {
+                        iframeWrap.height('auto');
+                        iframe.removeClass('stuck');
+                    }
+                });
+                /*Floating js End*/
+            });
         }
     }, []);
 
@@ -83,7 +116,7 @@ const AppHeader = () => {
             <div className="header_right">
                 <ul>
                     <li>
-                        <Link to="/createNewCourse">
+                        <Link to="/instructor/createCourse">
                             <div className="upload_btn" title="Create New Course">
                                 Create New Course
                             </div>
@@ -98,7 +131,7 @@ const AppHeader = () => {
                         </Link>
                     </li>
                     <li className="ui dropdown">
-                        <a href="#" className="option_links" title="Messages">
+                        <a href="##" className="option_links" title="Messages">
                             <i className="uil uil-envelope-alt"></i>
                             <span className="noti_count">4</span>
                         </a>
@@ -133,7 +166,7 @@ const AppHeader = () => {
                                     </div>
                                 </div>
                             </a>
-                            <Link to="/instructorMessages">
+                            <Link to="/instructor/messages">
                                 <div className="vbm_btn">
                                     View All <i className="uil uil-arrow-right"></i>
                                 </div>
@@ -141,7 +174,7 @@ const AppHeader = () => {
                         </div>
                     </li>
                     <li className="ui dropdown">
-                        <a href="#" className="option_links" title="Notifications">
+                        <a href="##" className="option_links" title="Notifications">
                             <i className="uil uil-bell"></i>
                             <span className="noti_count">3</span>
                         </a>
@@ -182,7 +215,7 @@ const AppHeader = () => {
                                     </div>
                                 </div>
                             </a>
-                            <Link to="/instructorNotifications">
+                            <Link to="/instructor/notifications">
                                 <div className="vbm_btn">
                                     View All <i className="uil uil-arrow-right"></i>
                                 </div>
@@ -222,21 +255,21 @@ const AppHeader = () => {
                             <Link to="/instructor/dashboard" className="item channel_item">
                                 Cursus dashboard
                             </Link>
-                            <a href="membership.html" className="item channel_item">
+                            <Link to="/paidMembership" className="item channel_item">
                                 Paid Memberships
-                            </a>
-                            <Link to="settings" className="item channel_item">
+                            </Link>
+                            <Link to="/settings" className="item channel_item">
                                 Setting
                             </Link>
-                            <Link to="help" className="item channel_item">
+                            <Link to="/help" className="item channel_item">
                                 Help
                             </Link>
-                            <Link to="feedback" className="item channel_item">
+                            <Link to="/feedback" className="item channel_item">
                                 Send Feedback
                             </Link>
-                            <a href="sign_in.html" className="item channel_item">
+                            <Link to="/signIn" className="item channel_item">
                                 Sign Out
-                            </a>
+                            </Link>
                         </div>
                     </li>
                 </ul>

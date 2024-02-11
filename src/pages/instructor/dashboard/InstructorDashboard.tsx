@@ -1,8 +1,64 @@
 import { Link } from 'react-router-dom';
 import PageFooter from '../../commons/Footer/PageFooter';
 import { IMAGES } from '../../../constants';
+import { useEffect } from 'react';
 
 const InstructorDashboard = () => {
+    useEffect(() => {
+        // Featured Courses home
+        ($('.courses_performance') as any).owlCarousel({
+            items: 10,
+            loop: false,
+            margin: 30,
+            nav: true,
+            dots: false,
+            navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1,
+                },
+                1000: {
+                    items: 1,
+                },
+                1200: {
+                    items: 1,
+                },
+                1400: {
+                    items: 1,
+                },
+            },
+        });
+
+        // Latest News Dashboard
+        ($('.edututs_news') as any).owlCarousel({
+            items: 10,
+            loop: false,
+            margin: 30,
+            nav: true,
+            dots: false,
+            navText: ["<i class='uil uil-angle-left'></i>", "<i class='uil uil-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1,
+                },
+                1000: {
+                    items: 1,
+                },
+                1200: {
+                    items: 1,
+                },
+                1400: {
+                    items: 1,
+                },
+            },
+        });
+    }, []);
     return (
         <div>
             <div className="sa4d25">

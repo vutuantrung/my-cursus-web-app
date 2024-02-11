@@ -67,3 +67,6 @@ export default function CreateCoursSteps() {
         </div>
     );
 }
+
+// ui hj145 dropdown cntry152 prompt srch_explore
+// ui hj145 dropdown cntry152 prompt srch_explore selection

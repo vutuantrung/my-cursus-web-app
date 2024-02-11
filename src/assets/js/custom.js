@@ -2,20 +2,12 @@
 import $ from 'jquery';
 
 $('.ui.dropdown').dropdown();
-
 // === Model === //
-$('.ui.modal')
-    .modal({
-        blurring: true,
-    })
-    .modal('show');
-
+$('.ui.modal').modal({ blurring: true }).modal('show');
 // === Tab === //
 $('.menu .item').tab();
-
 // === checkbox Toggle === //
 $('.ui.checkbox').checkbox();
-
 // === Toggle === //
 $('.enable.button').on('click', function () {
     $(this).nextAll('.checkbox').checkbox('enable');
@@ -47,7 +39,6 @@ $('.live_stream').owlCarousel({
         },
     },
 });
-
 // Featured Courses home
 $('.featured_courses').owlCarousel({
     items: 10,
@@ -74,7 +65,6 @@ $('.featured_courses').owlCarousel({
         },
     },
 });
-
 // Featured Courses home
 $('.top_instrutors').owlCarousel({
     items: 10,
@@ -101,7 +91,6 @@ $('.top_instrutors').owlCarousel({
         },
     },
 });
-
 // Student Says
 $('.Student_says').owlCarousel({
     items: 10,
@@ -128,7 +117,6 @@ $('.Student_says').owlCarousel({
         },
     },
 });
-
 // features Careers
 $('.feature_careers').owlCarousel({
     items: 4,
@@ -173,7 +161,7 @@ if (
         const iframeWrap = $(this).parent();
         const iframe = $(this);
         const iframeHeight = iframe.outerHeight();
-        const iframeElement = iframe.get(0);
+        // const iframeElement = iframe.get(0);
         windows.on('scroll', function () {
             const windowScrollTop = windows.scrollTop();
             const iframeBottom = iframeHeight + iframeWrap.offset().top;

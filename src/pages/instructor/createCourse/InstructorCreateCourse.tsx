@@ -1,7 +1,42 @@
+import { useEffect, useState } from 'react';
 import PageFooter from '../../commons/Footer/PageFooter';
 import CreateCoursSteps from './Body/CreateCoursSteps';
 
 const InstructorCreateCourse = () => {
+    const [docState, setDocState] = useState('');
+
+    useEffect(() => {
+        if (document.readyState === 'complete') {
+            setDocState(document.readyState);
+        } else {
+            document.onreadystatechange = () => {
+                setDocState(document.readyState);
+            };
+        }
+    }, []);
+
+    useEffect(() => {
+        if (docState === 'complete') {
+            ($('.ui.dropdown') as any).dropdown();
+            // === Model === //
+            ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
+            // === Tab === //
+            ($('.menu .item') as any).tab();
+            // === checkbox Toggle === //
+            ($('.ui.checkbox') as any).checkbox();
+            // === Toggle === //
+            $('.enable.button').on('click', function () {
+                ($(this).nextAll('.checkbox') as any).checkbox('enable');
+            });
+
+            ($('#add-course-tab') as any).steps({
+                onFinish: function () {
+                    alert('Wizard Completed');
+                },
+            });
+        }
+    }, [docState]);
+
     return (
         <>
             <div className="sa4d25">

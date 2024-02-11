@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 
 function GeneralInfoSteps() {
     return (
@@ -246,3 +246,6 @@ function GeneralInfoSteps() {
 }
 
 export default GeneralInfoSteps;
+
+//ui hj145 dropdown cntry152 prompt srch_explore
+//ui hj145 dropdown cntry152 prompt srch_explore selection

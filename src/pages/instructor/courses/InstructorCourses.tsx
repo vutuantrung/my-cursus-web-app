@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageFooter from '../../commons/Footer/PageFooter';
+import { IMAGES } from '../../../constants';
 
 const InstructorCourses = () => {
     return (
@@ -19,7 +20,7 @@ const InstructorCourses = () => {
                                     <h1>Jump Into Course Creation</h1>
                                 </div>
                                 <div className="card_dash_right1">
-                                    <Link to="/createNewCourse">
+                                    <Link to="/instructor/createCourse">
                                         <button className="create_btn_dash">Create Your Course</button>
                                     </Link>
                                 </div>
@@ -574,7 +575,7 @@ const InstructorCourses = () => {
                                         aria-labelledby="pills-promotions-tab"
                                     >
                                         <div className="promotion_tab mb-10">
-                                            <img src="images/dashboard/promotion.svg" alt="" />
+                                            <img src={IMAGES.promotion} alt="" />
                                             <h4>Baby promotion plan is activated!</h4>
                                             <p>By activating promotion plans you can improve course views and sales.</p>
                                             <button className="plan_link_btn" onClick={() => "window.location.href = '#';"}>

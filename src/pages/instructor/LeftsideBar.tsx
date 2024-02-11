@@ -8,7 +8,7 @@ const LeftsideBar = () => {
                 <div className="left_section">
                     <ul>
                         <li className="menu--item">
-                            <NavLink to="dashboard">
+                            <NavLink to="dashboard" className="menu--link menu--label">
                                 <div id="instructor_dashboard_page_lsb" className="menu--link" title="Dashboard">
                                     <i className="uil uil-apps menu--icon"></i>
                                     <span className="menu--label">Dashboard</span>
@@ -16,7 +16,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="courses">
+                            <NavLink to="courses" className="menu--link menu--label">
                                 <div id="instructor_courses_page_lsb" className="menu--link" title="Courses">
                                     <i className="uil uil-book-alt menu--icon"></i>
                                     <span className="menu--label">Courses</span>
@@ -24,7 +24,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="analyics">
+                            <NavLink to="analyics" className="menu--link menu--label">
                                 <div id="instructor_analyics_page_lsb" className="menu--link" title="Analyics">
                                     <i className="uil uil-analysis menu--icon"></i>
                                     <span className="menu--label">Analyics</span>
@@ -32,7 +32,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="createCourse">
+                            <NavLink to="createCourse" className="menu--link menu--label">
                                 <div id="create_new_course_page_lsb" className="menu--link" title="Create Course">
                                     <i className="uil uil-plus-circle menu--icon"></i>
                                     <span className="menu--label">Create Course</span>
@@ -40,7 +40,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="messages">
+                            <NavLink to="messages" className="menu--link menu--label">
                                 <div id="instructor_messages_page_lsb" className="menu--link" title="Messages">
                                     <i className="uil uil-comments menu--icon"></i>
                                     <span className="menu--label">Messages</span>
@@ -48,7 +48,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="notifications">
+                            <NavLink to="notifications" className="menu--link menu--label">
                                 <div id="instructor_notifications_page_lsb" className="menu--link" title="Notifications">
                                     <i className="uil uil-bell menu--icon"></i>
                                     <span className="menu--label">Notifications</span>
@@ -56,7 +56,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="certificates">
+                            <NavLink to="certificates" className="menu--link menu--label">
                                 <div id="instructor_my_certificates_page_lsb" className="menu--link" title="My Certificates">
                                     <i className="uil uil-award menu--icon"></i>
                                     <span className="menu--label">My Certificates</span>
@@ -64,7 +64,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="reviews">
+                            <NavLink to="reviews" className="menu--link menu--label">
                                 <div id="instructor_all_reviews_page_lsb" className="menu--link" title="Reviews">
                                     <i className="uil uil-star menu--icon"></i>
                                     <span className="menu--label">Reviews</span>
@@ -72,7 +72,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="earning">
+                            <NavLink to="earning" className="menu--link menu--label">
                                 <div id="instructor_earning_page_lsb" className="menu--link" title="Earning">
                                     <i className="uil uil-dollar-sign menu--icon"></i>
                                     <span className="menu--label">Earning</span>
@@ -80,7 +80,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="payout">
+                            <NavLink to="payout" className="menu--link menu--label">
                                 <div id="instructor_payout_page_lsb" className="menu--link" title="Payout">
                                     <i className="uil uil-wallet menu--icon"></i>
                                     <span className="menu--label">Payout</span>
@@ -88,7 +88,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="statement">
+                            <NavLink to="statement" className="menu--link menu--label">
                                 <div id="instructor_statements_page_lsb" className="menu--link" title="Statements">
                                     <i className="uil uil-file-alt menu--icon"></i>
                                     <span className="menu--label">Statements</span>
@@ -96,7 +96,7 @@ const LeftsideBar = () => {
                             </NavLink>
                         </li>
                         <li className="menu--item">
-                            <NavLink to="verification">
+                            <NavLink to="verification" className="menu--link menu--label">
                                 <div id="instructor_verification_page_lsb" className="menu--link" title="Verification">
                                     <i className="uil uil-check-circle menu--icon"></i>
                                     <span className="menu--label">Verification</span>

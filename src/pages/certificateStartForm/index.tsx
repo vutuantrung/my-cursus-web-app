@@ -1,20 +1,20 @@
 import { useEffect } from 'react';
-import { IMAGES } from '../../constants';
-import PageHeader from '../commons/Header/PageHeader';
 import { Link } from 'react-router-dom';
+
+import PageHeader from '../commons/Header/PageHeader';
 import AppFooter from '../commons/Footer/AppFooter';
 
 const CertificateStartForm = () => {
     useEffect(() => {
-        ($('.ui .dropdown') as any).dropdown();
+        ($('.ui.dropdown') as any).dropdown();
         // === Model === //
-        ($('.ui .modal') as any).modal({ blurring: true }).modal('show');
+        ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
         // === Tab === //
         ($('.menu .item') as any).tab();
         // === checkbox Toggle === //
-        ($('.ui .checkbox') as any).checkbox();
+        ($('.ui.checkbox') as any).checkbox();
         // === Toggle === //
-        $('.enable .button').on('click', function () {
+        $('.enable.button').on('click', function () {
             ($(this).nextAll('.checkbox') as any).checkbox('enable');
         });
     }, []);

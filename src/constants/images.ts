@@ -21,6 +21,7 @@ import verified_account from '../assets/images/verified-account.svg';
 import line from '../assets/images/line.svg';
 import stroy from '../assets/images/about/stroy_img.png';
 import team from '../assets/images/about/team.jpg';
+import promotion from '../assets/images/dashboard/promotion.svg';
 
 import helpIcon from '../assets/images/help_icon.png';
 import blog from '../assets/images/blog_icon.png';
@@ -49,6 +50,7 @@ const images = {
     avatar_instructor_0,
     avatar_instructor_1,
     verified_account,
+    promotion,
     line,
     stroy,
     team,

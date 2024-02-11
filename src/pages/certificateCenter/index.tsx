@@ -6,15 +6,15 @@ import AppFooter from '../commons/Footer/AppFooter';
 
 const CertificateCenter = () => {
     useEffect(() => {
-        ($('.ui .dropdown') as any).dropdown();
+        ($('.ui.dropdown') as any).dropdown();
         // === Model === //
-        ($('.ui .modal') as any).modal({ blurring: true }).modal('show');
+        ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
         // === Tab === //
         ($('.menu .item') as any).tab();
         // === checkbox Toggle === //
-        ($('.ui .checkbox') as any).checkbox();
+        ($('.ui.checkbox') as any).checkbox();
         // === Toggle === //
-        $('.enable .button').on('click', function () {
+        $('.enable.button').on('click', function () {
             ($(this).nextAll('.checkbox') as any).checkbox('enable');
         });
     }, []);

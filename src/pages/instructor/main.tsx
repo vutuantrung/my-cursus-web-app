@@ -2,6 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import LeftsideBar from './LeftsideBar';
 import AppHeader from '../commons/Header/AppHeader';
 
+import '../../assets/styles/css/instructor-responsive.css';
+import '../../assets/styles/css/instructor-dashboard.css';
+
 import InstructorDashboard from './dashboard/InstructorDashboard';
 import InstructorCourses from './courses/InstructorCourses';
 import InstructorCreateCourse from './createCourse/InstructorCreateCourse';

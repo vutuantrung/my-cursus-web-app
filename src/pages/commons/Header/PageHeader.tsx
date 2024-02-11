@@ -16,7 +16,6 @@ const PageHeader = () => {
 
     useEffect(() => {
         ($('.ui.dropdown') as any).dropdown();
-
         // === Model === //
         ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
         // === Tab === //

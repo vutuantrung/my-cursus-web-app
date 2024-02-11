@@ -1,56 +1,9 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES, IMAGES } from '../../../constants';
 import { NavLink } from 'react-router-dom';
-import { useEffect } from 'react';
 import { generateRandomNumber } from '../../../helpers/helpers';
 
 const AppLeftsideBar = () => {
-    useEffect(() => {
-        // ($('.ui .dropdown') as any).dropdown();
-        // // === Model === //
-        // ($('.ui .modal') as any).modal({ blurring: true }).modal('show');
-        // // === Tab === //
-        // ($('.menu .item') as any).tab();
-        // // === checkbox Toggle === //
-        // ($('.ui .checkbox') as any).checkbox();
-        // // === Toggle === //
-        // $('.enable .button').on('click', function () {
-        //     ($(this).nextAll('.checkbox') as any).checkbox('enable');
-        // });
-
-        if (
-            $(
-                'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
-            ).length > 0
-        ) {
-            /*Wrap (all code inside div) all vedio code inside div*/
-            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap(
-                "<div class='iframe-parent-class'></div>"
-            );
-            /*main code of each (particular) vedio*/
-            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
-                /*Floating js Start*/
-                const windows = $(window);
-                const iframeWrap = $(this).parent();
-                const iframe = $(this);
-                const iframeHeight = iframe.outerHeight();
-                windows.on('scroll', function () {
-                    const windowScrollTop = windows.scrollTop();
-                    const iframeBottom = iframeHeight! + iframeWrap.offset()!.top;
-
-                    if (windowScrollTop! > iframeBottom) {
-                        iframeWrap.height(iframeHeight!);
-                        iframe.addClass('stuck');
-                        $('.scrolldown').css({ display: 'none' });
-                    } else {
-                        iframeWrap.height('auto');
-                        iframe.removeClass('stuck');
-                    }
-                });
-                /*Floating js End*/
-            });
-        }
-    }, []);
     return (
         <nav className="vertical_nav">
             <div className="left_section menu_left" id="js-menu">
