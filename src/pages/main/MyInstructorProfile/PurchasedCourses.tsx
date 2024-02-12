@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { generateRandomNumber } from '../../helpers/helpers';
+import { generateRandomNumber } from '../../../helpers/helpers';
 
 const PurchasedCourses = () => {
     const courseDumpData = [

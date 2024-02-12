@@ -11,14 +11,19 @@ import 'semantic-ui-css/semantic.min.css';
 
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 
-import Settings from './pages/settings';
-import Feedback from './pages/feedback';
-import LiveStream from './pages/liveStreams';
-import LiveOutput from './pages/liveOutput';
-import Explore from './pages/explore';
-import CoursDetails from './pages/coursDetails';
-import SavedCourses from './pages/savedCourses';
-import InstructorProfile from './pages/instructorProfile';
+import Help from './pages/main/Help/Help';
+import Settings from './pages/main/Settings/Settings';
+
+import Explore from './pages/main/Explore/Explore';
+import SavedCourses from './pages/main/SavedCourses/SavedCourses';
+import ReportHistory from './pages/main/ReportHistory/ReportHistory';
+import Feedback from './pages/main/Feedback/Feedback';
+import LiveStream from './pages/main/LiveStream/LiveStream';
+import LiveOutput from './pages/main/LiveStream/LiveOutput';
+import AllInstructors from './pages/main/InstructorProfile/AllInstructors';
+
+import CoursDetails from './pages/main/CourseDetails';
+import InstructorProfile from './pages/main/InstructorProfile/InstructorProfile';
 import CertificateCenter from './pages/certificateCenter';
 import CertificateFillForm from './pages/certificateFillForm';
 import CertificateTestView from './pages/certificateTestView';
@@ -41,21 +46,19 @@ import CompanyDetails from './pages/about/CompanyDetails';
 import Career from './pages/about/Career';
 import Press from './pages/about/Press';
 import AboutUs from './pages/about/AboutUs';
-import AboutMe from './pages/myInstructorProfileView/AboutMe';
-import Discussions from './pages/myInstructorProfileView/Discussions';
-import MyCourses from './pages/myInstructorProfileView/MyCourses';
-import PurchasedCourses from './pages/myInstructorProfileView/PurchasedCourses';
-import Subscriptions from './pages/myInstructorProfileView/Subscriptions';
+import AboutMe from './pages/main/MyInstructorProfile/AboutMe';
+import Discussions from './pages/main/MyInstructorProfile/Discussions';
+import MyCourses from './pages/main/MyInstructorProfile/MyCourses';
+import PurchasedCourses from './pages/main/MyInstructorProfile/PurchasedCourses';
+import Subscriptions from './pages/main/MyInstructorProfile/Subscriptions';
 import CertificateStartForm from './pages/certificateStartForm';
-import Help from './pages/help';
-import ReportHistory from './pages/reportHistory';
 import ContactUs from './pages/contactUs';
 import TermsOfUse from './pages/termsOfUse';
 import Main from './pages/main';
 import { Error404 } from './pages/errors';
 import { Body } from './pages/main/Body';
 
-import MyInstructorProfileView from './pages/myInstructorProfileView';
+import MyInstructorProfileView from './pages/main/MyInstructorProfile';
 
 import Instructor from './pages/instructor/main';
 import InstructorCreateCourse from './pages/instructor/createCourse/InstructorCreateCourse';
@@ -70,8 +73,29 @@ import InstructorEarning from './pages/instructor/earning/InstructorEarning';
 import InstructorPayout from './pages/instructor/payout/InstructorPayout';
 import InstructorStatement from './pages/instructor/statement/InstructorStatement';
 import InstructorVerification from './pages/instructor/verification/InstructorVerification';
+import { useEffect, useState } from 'react';
 
 const App = () => {
+    const [docState, setDocState] = useState('');
+
+    useEffect(() => {
+        if (document.readyState === 'complete') {
+            setDocState(document.readyState);
+        } else {
+            document.onreadystatechange = () => {
+                setDocState(document.readyState);
+            };
+        }
+    }, []);
+
+    useEffect(() => {
+        if (docState === 'complete') {
+            const nightModeActivated = localStorage.getItem('gmtNightMode');
+            if (nightModeActivated) {
+                document.documentElement.className += ' night-mode';
+            }
+        }
+    }, [docState]);
     return (
         <BrowserRouter>
             <Routes>
@@ -86,12 +110,11 @@ const App = () => {
                     <Route path="feedback" element={<Feedback />} />
 
                     <Route path="liveStream" element={<LiveStream />}>
-                        {/* <Route path="all" element={<LiveOutput />} /> */}
                         <Route path="output/:id" element={<LiveOutput />} />
                     </Route>
 
                     <Route path="instructorProfile">
-                        <Route path="all" element={<InstructorProfile />} />
+                        <Route path="all" element={<AllInstructors />} />
                         <Route path="view/:id" element={<InstructorProfile />} />
                     </Route>
 

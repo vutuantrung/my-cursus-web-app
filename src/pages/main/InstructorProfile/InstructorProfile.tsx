@@ -1,7 +1,7 @@
-import { IMAGES } from '../../constants';
-import AppFooter from '../commons/Footer/AppFooter';
+import { IMAGES } from '../../../constants';
+import AppFooter from '../../commons/Footer/AppFooter';
 
-const Body = () => {
+const InstructorProfile = () => {
     return (
         <>
             <div className="_216b01">
@@ -751,4 +751,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default InstructorProfile;

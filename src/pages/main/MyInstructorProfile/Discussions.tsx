@@ -1,5 +1,5 @@
-import { IMAGES } from '../../constants';
-import { generateRandomNumber } from '../../helpers/helpers';
+import { IMAGES } from '../../../constants';
+import { generateRandomNumber } from '../../../helpers/helpers';
 
 const Discussions = () => {
     return (

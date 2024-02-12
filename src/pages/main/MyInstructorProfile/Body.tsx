@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import { NavLink, Route, Routes } from 'react-router-dom';
+
+import { IMAGES } from '../../../constants';
 import AboutMe from './AboutMe';
 import Discussions from './Discussions';
 import MyCourses from './MyCourses';
 import PurchasedCourses from './PurchasedCourses';
 import Subscriptions from './Subscriptions';
-import { Link } from 'react-router-dom';
-import AppFooter from '../commons/Footer/AppFooter';
-import { IMAGES } from '../../constants';
+import AppFooter from '../../commons/Footer/AppFooter';
 
 const Body = () => {
     return (

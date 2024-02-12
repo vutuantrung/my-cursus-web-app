@@ -18,16 +18,6 @@ const InstructorCreateCourse = () => {
     useEffect(() => {
         if (docState === 'complete') {
             ($('.ui.dropdown') as any).dropdown();
-            // === Model === //
-            ($('.ui.modal') as any).modal({ blurring: true }).modal('show');
-            // === Tab === //
-            ($('.menu .item') as any).tab();
-            // === checkbox Toggle === //
-            ($('.ui.checkbox') as any).checkbox();
-            // === Toggle === //
-            $('.enable.button').on('click', function () {
-                ($(this).nextAll('.checkbox') as any).checkbox('enable');
-            });
 
             ($('#add-course-tab') as any).steps({
                 onFinish: function () {

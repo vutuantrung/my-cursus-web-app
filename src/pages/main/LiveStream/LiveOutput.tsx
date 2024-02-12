@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
-import AppFooter from '../commons/Footer/AppFooter';
 import { Link } from 'react-router-dom';
-import { generateRandomNumber } from '../../helpers/helpers';
-import { IMAGES } from '../../constants';
+import { useEffect } from 'react';
 
-const Body = () => {
+import { IMAGES } from '../../../constants';
+import { generateRandomNumber } from '../../../helpers/helpers';
+import AppFooter from '../../commons/Footer/AppFooter';
+
+const LiveOutput = () => {
     const dumpData = [
         {
             id: 12723,
@@ -233,4 +234,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default LiveOutput;

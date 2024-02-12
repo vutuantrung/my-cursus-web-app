@@ -1,4 +1,4 @@
-import AppFooter from '../commons/Footer/AppFooter';
+import AppFooter from '../../commons/Footer/AppFooter';
 
 const Body = () => {
     return (

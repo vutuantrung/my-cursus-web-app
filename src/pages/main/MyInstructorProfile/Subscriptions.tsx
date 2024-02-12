@@ -1,4 +1,4 @@
-import { generateRandomNumber } from '../../helpers/helpers';
+import { generateRandomNumber } from '../../../helpers/helpers';
 
 const Subscriptions = () => {
     const dumpData = [

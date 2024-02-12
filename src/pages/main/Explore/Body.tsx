@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { generateRandomNumber } from '../../helpers/helpers';
-import AppFooter from '../commons/Footer/AppFooter';
+import { generateRandomNumber } from '../../../helpers/helpers';
+import AppFooter from '../../commons/Footer/AppFooter';
 import { useEffect } from 'react';
 
 const Body = () => {

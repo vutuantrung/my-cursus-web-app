@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { COUNTRIES } from '../../constants';
-import AppFooter from '../commons/Footer/AppFooter';
+import AppFooter from '../../commons/Footer/AppFooter';
+import { COUNTRIES } from '../../../constants';
 
 const Body = () => {
     useEffect(() => {

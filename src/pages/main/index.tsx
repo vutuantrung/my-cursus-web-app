@@ -4,26 +4,26 @@ import { Body } from './Body';
 
 import AppHeader from '../commons/Header/AppHeader';
 import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
-import LiveStream from '../liveStreams';
-import Explore from '../explore';
-import SavedCourses from '../savedCourses';
-import AllInstructors from '../allInstructors';
-import Settings from '../settings';
-import Help from '../help';
-import ReportHistory from '../reportHistory';
-import Feedback from '../feedback';
-import LiveOutput from '../liveOutput';
-import InstructorProfile from '../instructorProfile';
-import CoursDetails from '../coursDetails';
+import LiveStream from './LiveStream/LiveStream';
+import Explore from './Explore/Explore';
+import SavedCourses from './SavedCourses/SavedCourses';
+import Settings from './Settings/Settings';
+import Help from './Help/Help';
+import ReportHistory from './ReportHistory/ReportHistory';
+import Feedback from './Feedback/Feedback';
+import InstructorProfile from './InstructorProfile/InstructorProfile';
+import CoursDetails from './CourseDetails';
 
 import { useEffect, useState } from 'react';
-import MyInstructorProfileView from '../myInstructorProfileView';
-import AboutMe from '../myInstructorProfileView/AboutMe';
-import Discussions from '../myInstructorProfileView/Discussions';
-import MyCourses from '../myInstructorProfileView/MyCourses';
-import PurchasedCourses from '../myInstructorProfileView/PurchasedCourses';
-import Subscriptions from '../myInstructorProfileView/Subscriptions';
+import MyInstructorProfileView from './MyInstructorProfile';
+import AboutMe from './MyInstructorProfile/AboutMe';
+import Discussions from './MyInstructorProfile/Discussions';
+import MyCourses from './MyInstructorProfile/MyCourses';
+import PurchasedCourses from './MyInstructorProfile/PurchasedCourses';
+import Subscriptions from './MyInstructorProfile/Subscriptions';
 import AddStreaming from '../addStreaming';
+import LiveOutput from './LiveStream/LiveOutput';
+import AllInstructors from './InstructorProfile/AllInstructors';
 
 const Main = () => {
     const [docState, setDocState] = useState('');
