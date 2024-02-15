@@ -1,4 +1,4 @@
-import PageFooter from '../../../commons/Footer/PageFooter';
+import PageFooter from '../../../../Layouts/PageFooter';
 import CreateCoursSteps from './CreateCoursSteps';
 
 const Body = () => {

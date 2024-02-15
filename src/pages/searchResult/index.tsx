@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import PageHeader from '../commons/Header/PageHeader';
-import AppFooter from '../commons/Footer/AppFooter';
+
 import { generateRandomNumber } from '../../helpers/helpers';
 
 import '../../assets/styles/css/style.css';
+import PageHeader from '../../Layouts/PageHeader';
+import AppFooter from '../../Layouts/AppFooter';
 
 const SearchResult = () => {
     const topic = [

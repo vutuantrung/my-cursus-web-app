@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { IMAGES } from '../../../constants';
+import { IMAGES } from '../constants';
 
 const AppFooter = () => {
     return (

@@ -1,5 +1,5 @@
+import PageFooter from '../../../Layouts/PageFooter';
 import { IMAGES } from '../../../constants';
-import PageFooter from '../../commons/Footer/PageFooter';
 
 const InstructorNotifications = () => {
     return (

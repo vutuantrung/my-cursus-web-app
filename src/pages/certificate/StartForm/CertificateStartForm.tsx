@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-import PageHeader from '../commons/Header/PageHeader';
-import AppFooter from '../commons/Footer/AppFooter';
+import PageHeader from '../../../Layouts/PageHeader';
+import AppFooter from '../../../Layouts/AppFooter';
 
 const CertificateStartForm = () => {
     useEffect(() => {

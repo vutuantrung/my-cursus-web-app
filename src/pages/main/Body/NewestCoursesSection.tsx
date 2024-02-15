@@ -1,4 +1,3 @@
-import { IMAGES } from '../../../constants';
 import { generateRandomNumber } from '../../../helpers/helpers';
 import { CoursItem } from './components/CoursItem';
 

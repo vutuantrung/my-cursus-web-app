@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import AppFooter from '../../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 import { COUNTRIES } from '../../../constants';
 
 const Body = () => {

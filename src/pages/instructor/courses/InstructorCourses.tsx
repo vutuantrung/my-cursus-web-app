@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import PageFooter from '../../commons/Footer/PageFooter';
 import { IMAGES } from '../../../constants';
+import PageFooter from '../../../Layouts/PageFooter';
 
 const InstructorCourses = () => {
     return (

@@ -1,13 +1,14 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import 'semantic-ui-css/semantic.min.css';
+
+import './assets/styles/css/style.css';
 import './assets/styles/css/vertical-responsive-menu.min.css';
 import './assets/styles/css/jquery-steps.css';
 import './assets/styles/css/responsive.css';
-import './assets/styles/css/night-mode.css';
 // import './assets/styles/css/instructor-responsive.css';
-import './assets/styles/css/style.css';
-
-import 'semantic-ui-css/semantic.min.css';
+import './assets/styles/css/night-mode.css';
 
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 
@@ -20,23 +21,19 @@ import ReportHistory from './pages/main/ReportHistory/ReportHistory';
 import Feedback from './pages/main/Feedback/Feedback';
 import LiveStream from './pages/main/LiveStream/LiveStream';
 import LiveOutput from './pages/main/LiveStream/LiveOutput';
-import AllInstructors from './pages/main/InstructorProfile/AllInstructors';
+import AddStream from './pages/main/LiveStream/AddStream';
 
 import CoursDetails from './pages/main/CourseDetails';
-import InstructorProfile from './pages/main/InstructorProfile/InstructorProfile';
-import CertificateCenter from './pages/certificateCenter';
-import CertificateFillForm from './pages/certificateFillForm';
-import CertificateTestView from './pages/certificateTestView';
-import CertificateTestResult from './pages/certificateTestResult';
+
 import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
 import SignUpSteps from './pages/signUpSteps';
+
 import PaidMembership from './pages/paidMembership';
 import CheckoutMemberShip from './pages/checkoutMembership';
 import Invoice from './pages/invoice';
 import ApplyJob from './pages/applyJob';
 import BlogSingleView from './pages/blogSingleView';
-import AddStreaming from './pages/addStreaming';
 import SearchResult from './pages/searchResult';
 import Thankyou from './pages/thankyou';
 import CommingSoon from './pages/commingSoon';
@@ -51,15 +48,13 @@ import Discussions from './pages/main/MyInstructorProfile/Discussions';
 import MyCourses from './pages/main/MyInstructorProfile/MyCourses';
 import PurchasedCourses from './pages/main/MyInstructorProfile/PurchasedCourses';
 import Subscriptions from './pages/main/MyInstructorProfile/Subscriptions';
-import CertificateStartForm from './pages/certificateStartForm';
-import ContactUs from './pages/contactUs';
+import ContactUs from './pages/contactUs/ContactUs';
 import TermsOfUse from './pages/termsOfUse';
 import Main from './pages/main';
 import { Error404 } from './pages/errors';
 import { Body } from './pages/main/Body';
 
-import MyInstructorProfileView from './pages/main/MyInstructorProfile';
-
+import AllInstructors from './pages/main/InstructorProfile/AllInstructors';
 import Instructor from './pages/instructor/main';
 import InstructorCreateCourse from './pages/instructor/createCourse/InstructorCreateCourse';
 import InstructorCourses from './pages/instructor/courses/InstructorCourses';
@@ -73,7 +68,14 @@ import InstructorEarning from './pages/instructor/earning/InstructorEarning';
 import InstructorPayout from './pages/instructor/payout/InstructorPayout';
 import InstructorStatement from './pages/instructor/statement/InstructorStatement';
 import InstructorVerification from './pages/instructor/verification/InstructorVerification';
-import { useEffect, useState } from 'react';
+import InstructorProfile from './pages/main/InstructorProfile/InstructorProfile';
+
+import MyInstructorProfileView from './pages/main/MyInstructorProfile';
+import CertificateCenter from './pages/certificate/CertificateCenter';
+import CertificateStartForm from './pages/certificate/StartForm/CertificateStartForm';
+import CertificateFillForm from './pages/certificate/FillForm/CertificateFillForm';
+import CertificateTestView from './pages/certificate/TestView/CertificateTestView';
+import CertificateTestResult from './pages/certificate/TestResult/CertificateTestResult';
 
 const App = () => {
     const [docState, setDocState] = useState('');
@@ -111,6 +113,7 @@ const App = () => {
 
                     <Route path="liveStream" element={<LiveStream />}>
                         <Route path="output/:id" element={<LiveOutput />} />
+                        <Route path="add" element={<AddStream />} />
                     </Route>
 
                     <Route path="instructorProfile">
@@ -127,8 +130,6 @@ const App = () => {
                         <Route path="purchasedCourses" element={<PurchasedCourses />} />
                         <Route path="subscriptions" element={<Subscriptions />} />
                     </Route>
-
-                    <Route path="addStream" element={<AddStreaming />} />
                 </Route>
 
                 <Route path="about" element={<About />}>

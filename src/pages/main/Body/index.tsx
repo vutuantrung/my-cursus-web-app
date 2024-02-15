@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { LiveStreamSection } from './LiveStreamSection';
 import { FeatureCoursesSection } from './FeatureCoursesSection';
 import { NewestCoursesSection } from './NewestCoursesSection';
@@ -5,8 +7,7 @@ import { GuildsSection } from './GuildsSection';
 import { PopularInstructorsSection } from './PopularInstructorsSection';
 import { RightSideBar } from './RightSideBar';
 import { StudentThoughtsSection } from './StudentThoughtsSection';
-import { useEffect } from 'react';
-import AppFooter from '../../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 
 export const Body = () => {
     useEffect(() => {

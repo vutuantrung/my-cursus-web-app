@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import LeftsideBar from './LeftsideBar';
-import AppHeader from '../commons/Header/AppHeader';
 
 import '../../assets/styles/css/instructor-responsive.css';
 import '../../assets/styles/css/instructor-dashboard.css';
@@ -17,6 +16,7 @@ import InstructorPayout from './payout/InstructorPayout';
 import InstructorStatement from './statement/InstructorStatement';
 import InstructorVerification from './verification/InstructorVerification';
 import InstructorAnalyics from './analyics/InstructorAnalyics';
+import AppHeader from '../../Layouts/AppHeader';
 
 const Instructor = () => {
     return (

@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { IMAGES } from '../../../constants';
 import { generateRandomNumber } from '../../../helpers/helpers';
-import AppFooter from '../../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 
 const LiveOutput = () => {
     const dumpData = [
@@ -95,7 +95,7 @@ const LiveOutput = () => {
                                     <iframe
                                         width="560"
                                         height="315"
-                                        src="https://www.youtube.com/embed/QKC7EXV9w08?si=5t_zocZ5NlAjL7C5"
+                                        src="https://www.youtube.com/embed/34Na4j8AVgA?si=5zzQUKQorF6hFn5A"
                                         title="YouTube video player"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowFullScreen
@@ -208,8 +208,8 @@ const LiveOutput = () => {
                                             return (
                                                 <div key={item.id} className="item">
                                                     <div className="stream_1">
-                                                        <Link to={`/liveStream/output/${item.id}`}></Link>
-                                                        <a href="live_output.html" className="stream_bg">
+                                                        <Link to={`/liveStream/output/${item.id}`} className="stream_bg">
+                                                            {/* <a href="live_output.html" className="stream_bg"> */}
                                                             <img src={item.avatar} alt="" />
                                                             <h4>{item.name}</h4>
                                                             {item.isLive && (
@@ -217,7 +217,8 @@ const LiveOutput = () => {
                                                                     live<span></span>
                                                                 </p>
                                                             )}
-                                                        </a>
+                                                            {/* </a> */}
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             );

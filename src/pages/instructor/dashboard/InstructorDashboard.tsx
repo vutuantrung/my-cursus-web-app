@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import PageFooter from '../../commons/Footer/PageFooter';
 import { IMAGES } from '../../../constants';
 import { useEffect } from 'react';
+import PageFooter from '../../../Layouts/PageFooter';
 
 const InstructorDashboard = () => {
     useEffect(() => {

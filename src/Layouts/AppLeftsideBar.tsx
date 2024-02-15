@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { CATEGORIES, IMAGES } from '../../../constants';
 import { NavLink } from 'react-router-dom';
-import { generateRandomNumber } from '../../../helpers/helpers';
+
+import { CATEGORIES, IMAGES } from '../constants';
+import { generateRandomNumber } from '../helpers/helpers';
 
 const AppLeftsideBar = () => {
     return (
@@ -168,7 +169,7 @@ const AppLeftsideBar = () => {
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/addStream" className="sub_menu--link">
+                                    <Link to="/liveStream/add" className="sub_menu--link">
                                         Add live Stream
                                     </Link>
                                 </li>

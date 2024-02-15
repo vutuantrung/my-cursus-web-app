@@ -1,4 +1,4 @@
-import PageHeader from '../commons/Header/PageHeader';
+import PageHeader from '../../Layouts/PageHeader';
 import Body from './Body';
 
 const TermsOfUse = () => {

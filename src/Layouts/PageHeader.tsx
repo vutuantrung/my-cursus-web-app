@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
-import { IMAGES } from '../../../constants';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+
+import { IMAGES } from '../constants';
 
 const PageHeader = () => {
     const night_mode_switch = useRef<HTMLAnchorElement>(null);

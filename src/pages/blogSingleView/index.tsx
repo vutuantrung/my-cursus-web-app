@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import PageHeader from '../commons/Header/PageHeader';
-import AppFooter from '../commons/Footer/AppFooter';
+import PageHeader from '../../Layouts/PageHeader';
+import AppFooter from '../../Layouts/AppFooter';
 
 const BlogSingleView = () => {
     return (
@@ -20,7 +20,7 @@ const BlogSingleView = () => {
                                                         <Link to="/">Home</Link>
                                                     </li>
                                                     <li className="breadcrumb-item">
-                                                        <Link to="/ourBlog">Our Blog</Link>
+                                                        <Link to="/about/ourBlog">Our Blog</Link>
                                                     </li>
                                                     <li className="breadcrumb-item active" aria-current="page">
                                                         Single Blog View

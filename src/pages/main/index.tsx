@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 
 import { Body } from './Body';
 
-import AppHeader from '../commons/Header/AppHeader';
-import AppLeftsideBar from '../commons/LeftSideBar/AppLeftsideBar';
 import LiveStream from './LiveStream/LiveStream';
 import Explore from './Explore/Explore';
 import SavedCourses from './SavedCourses/SavedCourses';
@@ -21,9 +19,11 @@ import Discussions from './MyInstructorProfile/Discussions';
 import MyCourses from './MyInstructorProfile/MyCourses';
 import PurchasedCourses from './MyInstructorProfile/PurchasedCourses';
 import Subscriptions from './MyInstructorProfile/Subscriptions';
-import AddStreaming from '../addStreaming';
 import LiveOutput from './LiveStream/LiveOutput';
 import AllInstructors from './InstructorProfile/AllInstructors';
+import AddStream from './LiveStream/AddStream';
+import AppHeader from '../../Layouts/AppHeader';
+import AppLeftsideBar from '../../Layouts/AppLeftsideBar';
 
 const Main = () => {
     const [docState, setDocState] = useState('');
@@ -105,13 +105,12 @@ const Main = () => {
 
                     <Route path="liveStream" Component={LiveStream} />
                     <Route path="liveStream/output/:id" Component={LiveOutput} />
+                    <Route path="liveStream/add" Component={AddStream} />
 
                     <Route path="instructorProfile/all" Component={AllInstructors} />
                     <Route path="instructorProfile/view/:id" Component={InstructorProfile} />
 
                     <Route path="coursDetails/:id" Component={CoursDetails} />
-
-                    <Route path="addStream" Component={AddStreaming} />
 
                     <Route path="myInstructorProfile" Component={MyInstructorProfileView}>
                         <Route path="aboutMe" Component={AboutMe} />

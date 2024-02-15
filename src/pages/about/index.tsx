@@ -1,12 +1,12 @@
 import { Route, NavLink, Routes } from 'react-router-dom';
-import PageHeader from '../commons/Header/PageHeader';
 
 import AboutUs from './AboutUs';
 import OurBlog from './OurBlog';
 import Career from './Career';
 import Press from './Press';
 import CompanyDetails from './CompanyDetails';
-import AppFooter from '../commons/Footer/AppFooter';
+import PageHeader from '../../Layouts/PageHeader';
+import AppFooter from '../../Layouts/AppFooter';
 
 const About = () => {
     return (

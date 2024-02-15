@@ -1,6 +1,6 @@
-import AppFooter from '../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 
-const Body = () => {
+const AddStream = () => {
     return (
         <>
             <div className="sa4d25">
@@ -126,4 +126,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default AddStream;

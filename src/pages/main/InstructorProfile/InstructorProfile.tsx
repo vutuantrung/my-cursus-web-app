@@ -1,5 +1,5 @@
+import AppFooter from '../../../Layouts/AppFooter';
 import { IMAGES } from '../../../constants';
-import AppFooter from '../../commons/Footer/AppFooter';
 
 const InstructorProfile = () => {
     return (

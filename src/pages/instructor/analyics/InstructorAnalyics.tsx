@@ -1,4 +1,4 @@
-import PageFooter from '../../commons/Footer/PageFooter';
+import PageFooter from '../../../Layouts/PageFooter';
 
 const InstructorAnalyics = () => {
     return (

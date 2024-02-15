@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import AppFooter from '../commons/Footer/AppFooter';
+import AppFooter from '../../Layouts/AppFooter';
 
 const Body = () => {
     return (

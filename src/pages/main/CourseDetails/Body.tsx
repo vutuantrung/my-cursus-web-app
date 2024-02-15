@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { IMAGES } from '../../../constants';
-import AppFooter from '../../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 
 const Body = () => {
     useEffect(() => {

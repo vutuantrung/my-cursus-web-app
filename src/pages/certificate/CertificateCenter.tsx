@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import PageHeader from '../commons/Header/PageHeader';
 import { Link } from 'react-router-dom';
 import { IMAGES } from '../../constants';
-import AppFooter from '../commons/Footer/AppFooter';
+import PageHeader from '../../Layouts/PageHeader';
+import AppFooter from '../../Layouts/AppFooter';
 
 const CertificateCenter = () => {
     useEffect(() => {

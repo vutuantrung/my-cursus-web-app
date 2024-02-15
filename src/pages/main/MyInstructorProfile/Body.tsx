@@ -7,7 +7,7 @@ import Discussions from './Discussions';
 import MyCourses from './MyCourses';
 import PurchasedCourses from './PurchasedCourses';
 import Subscriptions from './Subscriptions';
-import AppFooter from '../../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 
 const Body = () => {
     return (

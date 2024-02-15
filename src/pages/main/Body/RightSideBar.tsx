@@ -62,7 +62,7 @@ export const RightSideBar = () => {
                         </div>
                         <div className="live-content">
                             <p>Set up your channel and stream live to your students</p>
-                            <Link to="/addStream">
+                            <Link to="/liveStream/add">
                                 <button className="live_link">Get Started</button>
                             </Link>
                             <span className="livinfo">Info : This feature only for 'Instructors'.</span>

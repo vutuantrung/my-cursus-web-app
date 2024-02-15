@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { generateRandomNumber } from '../../../helpers/helpers';
-import AppFooter from '../../commons/Footer/AppFooter';
+import AppFooter from '../../../Layouts/AppFooter';
 
 const AllInstructors = () => {
     const dumpData = [

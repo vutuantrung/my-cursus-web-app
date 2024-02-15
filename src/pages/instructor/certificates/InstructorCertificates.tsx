@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import PageFooter from '../../commons/Footer/PageFooter';
+import PageFooter from '../../../Layouts/PageFooter';
 
 const InstructorCertificates = () => {
     return (

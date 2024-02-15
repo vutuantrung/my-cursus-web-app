@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import PageFooter from '../../commons/Footer/PageFooter';
 import CreateCoursSteps from './Body/CreateCoursSteps';
+import PageFooter from '../../../Layouts/PageFooter';
 
 const InstructorCreateCourse = () => {
     const [docState, setDocState] = useState('');
