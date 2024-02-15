@@ -123,11 +123,9 @@ const AppHeader = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/shoppingCart">
-                            <div className="option_links" title="cart">
-                                <i className="uil uil-shopping-cart-alt"></i>
-                                <span className="noti_count">2</span>
-                            </div>
+                        <Link to="/shoppingCart" className="option_links" title="Cart">
+                            <i className="uil uil-shopping-cart-alt"></i>
+                            <span className="noti_count">2</span>
                         </Link>
                     </li>
                     <li className="ui dropdown">

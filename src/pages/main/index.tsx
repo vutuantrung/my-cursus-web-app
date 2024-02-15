@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import { Body } from './Body';
 
@@ -14,7 +15,6 @@ import Feedback from './Feedback/Feedback';
 import InstructorProfile from './InstructorProfile/InstructorProfile';
 import CoursDetails from './CourseDetails';
 
-import { useEffect, useState } from 'react';
 import MyInstructorProfileView from './MyInstructorProfile';
 import AboutMe from './MyInstructorProfile/AboutMe';
 import Discussions from './MyInstructorProfile/Discussions';
@@ -28,22 +28,24 @@ import AllInstructors from './InstructorProfile/AllInstructors';
 const Main = () => {
     const [docState, setDocState] = useState('');
 
+    console.log('document.onreadystatechange:', document.readyState);
+
     useEffect(() => {
-        // console.log('every time here', document.readyState);
+        console.log(document.readyState);
         if (document.readyState === 'complete') {
             setDocState(document.readyState);
         } else {
-            document.onreadystatechange = () => {
-                // console.log('doc state changed', document.readyState);
+            setTimeout(() => {
+                console.log(document.readyState);
                 setDocState(document.readyState);
-            };
+            }, 1000);
         }
     }, []);
 
     useEffect(() => {
         // console.log('main useEffect', document.readyState, docState);
         if (docState === 'complete') {
-            // console.log('gonna set ....');
+            console.log('gonna set ....');
 
             const querySelector = document.querySelector.bind(document);
             const nav = document.querySelector('.vertical_nav');

@@ -30,7 +30,7 @@ const AppLeftsideBar = () => {
                         <li className="menu--item menu--item__has_sub_menu">
                             <label className="menu--link" title="Categories">
                                 <i className="uil uil-layers menu--icon"></i>
-                                <span className="menu--label">Categories</span>
+                                <span>Categories</span>
                             </label>
                             <ul className="sub_menu">
                                 {CATEGORIES.map((item) => {
@@ -47,36 +47,36 @@ const AppLeftsideBar = () => {
                         <li className="menu--item  menu--item__has_sub_menu">
                             <label className="menu--link" title="Tests">
                                 <i className="uil uil-clipboard-alt menu--icon"></i>
-                                <span className="menu--label">Tests</span>
+                                <span>Tests</span>
                             </label>
                             <ul className="sub_menu">
                                 <li className="sub_menu--item">
-                                    <Link to="/certificateCenter">
-                                        <div className="sub_menu--link">Certification Center</div>
+                                    <Link to="/certificateCenter" className="sub_menu--link">
+                                        Certification Center
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/certificateFillForm">
-                                        <div className="sub_menu--link">Certification Fill Form</div>
+                                    <Link to="/certificateFillForm" className="sub_menu--link">
+                                        Certification Fill Form
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/certificateTestView">
-                                        <div className="sub_menu--link">Test View</div>
+                                    <Link to="/certificateTestView" className="sub_menu--link">
+                                        Test View
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/certificateTestResult">
-                                        <div className="sub_menu--link">Test Result</div>
+                                    <Link to="/certificateTestResult" className="sub_menu--link">
+                                        Test Result
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <a
-                                        href="http://www.gambolthemes.net/html-items/edututs+/Instructor_Dashboard/my_certificates.html"
+                                    <Link
+                                        to="http://www.gambolthemes.net/html-items/edututs+/Instructor_Dashboard/my_certificates.html"
                                         className="sub_menu--link"
                                     >
                                         My Certification
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </li>
@@ -89,107 +89,107 @@ const AppLeftsideBar = () => {
                         <li className="menu--item menu--item__has_sub_menu">
                             <label className="menu--link menu--label" title="Pages">
                                 <i className="uil uil-file menu--icon"></i>
-                                <span className="menu--label">Pages</span>
+                                <span>Pages</span>
                             </label>
                             <ul className="sub_menu">
                                 <li className="sub_menu--item">
-                                    <Link to="/about">
-                                        <div className="sub_menu--link">About</div>
+                                    <Link to="/about" className="sub_menu--link">
+                                        About
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/signIn">
-                                        <div className="sub_menu--link">Sign In</div>
+                                    <Link to="/signIn" className="sub_menu--link">
+                                        Sign In
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/signUp">
-                                        <div className="sub_menu--link">Sign Up</div>
+                                    <Link to="/signUp" className="sub_menu--link">
+                                        Sign Up
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/signUpSteps">
-                                        <div className="sub_menu--link">Sign Up Steps</div>
+                                    <Link to="/signUpSteps" className="sub_menu--link">
+                                        Sign Up Steps
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/paidMembership">
-                                        <div className="sub_menu--link">Paid Membership</div>
+                                    <Link to="/paidMembership" className="sub_menu--link">
+                                        Paid Membership
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/coursDetails/12345">
-                                        <div className="sub_menu--link">Course Detail View</div>
+                                    <Link to="/coursDetails/12345" className="sub_menu--link">
+                                        Course Detail View
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/checkoutMembership">
-                                        <div className="sub_menu--link">Checkout</div>
+                                    <Link to="/checkoutMembership" className="sub_menu--link">
+                                        Checkout
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/invoice">
-                                        <div className="sub_menu--link">Invoice</div>
+                                    <Link to="/invoice" className="sub_menu--link">
+                                        Invoice
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="about/career">
-                                        <div className="sub_menu--link">Career</div>
+                                    <Link to="about/career" className="sub_menu--link">
+                                        Career
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/applyJob/1111">
-                                        <div className="sub_menu--link">Job Apply</div>
+                                    <Link to="/applyJob/1111" className="sub_menu--link">
+                                        Job Apply
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="about/ourBlog">
-                                        <div className="sub_menu--link">Our Blog</div>
+                                    <Link to="about/ourBlog" className="sub_menu--link">
+                                        Our Blog
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/blogSingleView">
-                                        <div className="sub_menu--link">Blog Detail View</div>
+                                    <Link to="/blogSingleView" className="sub_menu--link">
+                                        Blog Detail View
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/companyDetails">
-                                        <div className="sub_menu--link">Company Details</div>
+                                    <Link to="/companyDetails" className="sub_menu--link">
+                                        Company Details
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/press">
-                                        <div className="sub_menu--link">Press</div>
+                                    <Link to="/press" className="sub_menu--link">
+                                        Press
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/liveStream/output/12345">
-                                        <div className="sub_menu--link">Live Stream View</div>
+                                    <Link to="/liveStream/output/12345" className="sub_menu--link">
+                                        Live Stream View
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/addStream">
-                                        <div className="sub_menu--link">Add live Stream</div>
+                                    <Link to="/addStream" className="sub_menu--link">
+                                        Add live Stream
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/searchResult">
-                                        <div className="sub_menu--link">Search Result</div>
+                                    <Link to="/searchResult" className="sub_menu--link">
+                                        Search Result
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/thankyou">
-                                        <div className="sub_menu--link">Thank You</div>
+                                    <Link to="/thankyou" className="sub_menu--link">
+                                        Thank You
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/commingSoon">
-                                        <div className="sub_menu--link">Coming Soon</div>
+                                    <Link to="/commingSoon" className="sub_menu--link">
+                                        Coming Soon
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
-                                    <Link to="/error404">
-                                        <div className="sub_menu--link">Error 404</div>
+                                    <Link to="/error404" className="sub_menu--link">
+                                        Error 404
                                     </Link>
                                 </li>
                             </ul>

@@ -65,27 +65,15 @@ const PageHeader = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="back_link">
-                            {/* <a href="/" className="hde151">
-                                Back To Cursus
-                            </a>
-                            <a href="/" className="hde152">
-                                Back
-                            </a> */}
-                            <Link to="/">
+                            <Link to="/" className="hde151">
                                 <div className="hde151">Back To Cursus</div>
                             </Link>
-                            <Link to="/">
+                            <Link to="/" className="hde152">
                                 <div className="hde152">Back</div>
                             </Link>
                         </div>
                         <div className="ml_item">
                             <div className="main_logo main_logo15" id="logo">
-                                {/* <a href="/">
-                                    <img className="images/logo.svg" alt="" />
-                                </a>
-                                <a href="/">
-                                    <img className="logo-inverse" src={IMAGES.ct_logo} alt="" />
-                                </a> */}
                                 <Link to="/">
                                     <img src={IMAGES.logo} alt="" />
                                 </Link>

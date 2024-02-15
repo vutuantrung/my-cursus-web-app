@@ -467,7 +467,7 @@ header {
 }
 
 .main_logo {
-    float: left;
+    /* float: left; */
     width: 135px;
     margin-left: 20px;
 }
