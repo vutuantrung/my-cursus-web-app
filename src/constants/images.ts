@@ -1,6 +1,7 @@
 import logo from '../assets/images/logo.svg';
 import logo1 from '../assets/images/logo1.svg';
 import ct_logo from '../assets/images/ct_logo.svg';
+import sign_logo from '../assets/images/sign_logo.png';
 
 import img_1 from '../assets/images/left-imgs/img-1.jpg';
 import img_2 from '../assets/images/left-imgs/img-2.jpg';
@@ -37,6 +38,7 @@ const images = {
     logo,
     logo1,
     ct_logo,
+    sign_logo,
     img_1,
     img_2,
     img_5,

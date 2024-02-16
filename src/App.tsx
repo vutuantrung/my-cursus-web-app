@@ -7,10 +7,11 @@ import './assets/styles/css/style.css';
 import './assets/styles/css/vertical-responsive-menu.min.css';
 import './assets/styles/css/jquery-steps.css';
 import './assets/styles/css/responsive.css';
-// import './assets/styles/css/instructor-responsive.css';
 import './assets/styles/css/night-mode.css';
+import './assets/styles/css/instructor-responsive.css';
+import './assets/styles/css/instructor-dashboard.css';
 
-import ShoppingCart from './pages/shoppingCart/ShoppingCart';
+import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
 
 import Help from './pages/main/Help/Help';
 import Settings from './pages/main/Settings/Settings';
@@ -25,23 +26,23 @@ import AddStream from './pages/main/LiveStream/AddStream';
 
 import CoursDetails from './pages/main/CourseDetails';
 
-import SignIn from './pages/signIn';
-import SignUp from './pages/signUp';
-import SignUpSteps from './pages/signUpSteps';
+import SignIn from './pages/SignIn/SignIn';
+import SignUp from './pages/SignUp/SignUp';
+import SignUpSteps from './pages/SignUpSteps/SignUpSteps';
 
-import PaidMembership from './pages/paidMembership';
+import PaidMembership from './pages/PaidMembership/PaidMembership';
 import CheckoutMemberShip from './pages/checkoutMembership';
 import Invoice from './pages/invoice';
 import ApplyJob from './pages/applyJob';
 import BlogSingleView from './pages/blogSingleView';
-import SearchResult from './pages/searchResult';
-import Thankyou from './pages/thankyou';
+import SearchResult from './pages/SearchResult/SearchResult';
+import Thankyou from './pages/Thankyou/Thankyou';
 import CommingSoon from './pages/commingSoon';
-import About from './pages/about';
 import OurBlog from './pages/about/OurBlog';
 import CompanyDetails from './pages/about/CompanyDetails';
 import Career from './pages/about/Career';
 import Press from './pages/about/Press';
+import About from './pages/about';
 import AboutUs from './pages/about/AboutUs';
 import AboutMe from './pages/main/MyInstructorProfile/AboutMe';
 import Discussions from './pages/main/MyInstructorProfile/Discussions';
@@ -49,7 +50,7 @@ import MyCourses from './pages/main/MyInstructorProfile/MyCourses';
 import PurchasedCourses from './pages/main/MyInstructorProfile/PurchasedCourses';
 import Subscriptions from './pages/main/MyInstructorProfile/Subscriptions';
 import ContactUs from './pages/contactUs/ContactUs';
-import TermsOfUse from './pages/termsOfUse';
+import TermsOfUse from './pages/TermsOfUse/TermsOfUse';
 import Main from './pages/main';
 import { Error404 } from './pages/errors';
 import { Body } from './pages/main/Body';

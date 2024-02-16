@@ -31,40 +31,6 @@ const AppHeader = () => {
         if (night_mode_switch.current) {
             night_mode_switch.current.addEventListener('click', onNightModeSwitch);
         }
-
-        /*Floating Code for Iframe Start*/
-        if (
-            $(
-                'iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"],iframe[src*="https://player.vimeo.com/"]'
-            ).length > 0
-        ) {
-            /*Wrap (all code inside div) all vedio code inside div*/
-            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').wrap(
-                "<div class='iframe-parent-class'></div>"
-            );
-            /*main code of each (particular) vedio*/
-            $('iframe[src*="https://www.youtube.com/embed/"],iframe[src*="https://player.vimeo.com/"]').each(function (index) {
-                /*Floating js Start*/
-                const windows = $(window);
-                const iframeWrap = $(this).parent();
-                const iframe = $(this);
-                const iframeHeight = iframe.outerHeight();
-                windows.on('scroll', function () {
-                    const windowScrollTop = windows.scrollTop();
-                    const iframeBottom = iframeHeight! + iframeWrap.offset()!.top;
-
-                    if (windowScrollTop! > iframeBottom) {
-                        iframeWrap.height(iframeHeight!);
-                        iframe.addClass('stuck');
-                        $('.scrolldown').css({ display: 'none' });
-                    } else {
-                        iframeWrap.height('auto');
-                        iframe.removeClass('stuck');
-                    }
-                });
-                /*Floating js End*/
-            });
-        }
     }, []);
 
     return (
@@ -85,11 +51,11 @@ const AppHeader = () => {
                 </Link>
             </div>
             <div className="top-category">
-                <div className="ui compact menu cate-dpdwn">
+                <div className="ui compact cate-dpdwn cate-wrapper">
                     <div className="ui simple dropdown item">
-                        <a href="#" className="option_links p-0" title="categories">
+                        <div className="option_links p-0" title="categories">
                             <i className="uil uil-apps"></i>
-                        </a>
+                        </div>
                         <div className="menu dropdown_category5">
                             {CATEGORIES.map((item) => {
                                 return (

@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 function GeneralInfoSteps() {
     return (
         <div className="tab-from-content">

@@ -1,5 +1,5 @@
+import StudentThoughtCard from '../../../components/StudentThoughtCard';
 import { generateRandomNumber } from '../../../helpers/helpers';
-import { StudentThought } from './components/StudentThought';
 
 export const StudentThoughtsSection = () => {
     const dumpData = [
@@ -46,7 +46,7 @@ export const StudentThoughtsSection = () => {
                 <div className="la5lo1">
                     <div className="owl-carousel Student_says owl-theme">
                         {dumpData.map((item) => (
-                            <StudentThought key={item.id} {...item} />
+                            <StudentThoughtCard key={item.id} {...item} />
                         ))}
                     </div>
                 </div>

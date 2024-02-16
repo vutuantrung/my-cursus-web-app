@@ -1,16 +1,36 @@
+import { Link } from 'react-router-dom';
+import { IMAGES } from '../../constants';
+import { useEffect, useState } from 'react';
+
 const SignUpSteps = () => {
+    const [docState, setDocState] = useState('');
+    useEffect(() => {
+        if (document.readyState === 'complete') {
+            setDocState(document.readyState);
+        } else {
+            document.onreadystatechange = () => {
+                setDocState(document.readyState);
+            };
+        }
+    }, []);
+
+    useEffect(() => {
+        if (docState === 'complete') {
+            ($('.ui.dropdown') as any).dropdown();
+        }
+    }, [docState]);
     return (
         <div className="sign_in_up_bg">
             <div className="container">
                 <div className="row justify-content-lg-center justify-content-md-center">
                     <div className="col-lg-12">
                         <div className="main_logo25" id="logo">
-                            <a href="index.html">
-                                <img src="images/logo.svg" alt="" />
-                            </a>
-                            <a href="index.html">
-                                <img className="logo-inverse" src="images/ct_logo.svg" alt="" />
-                            </a>
+                            <Link to="/">
+                                <img src={IMAGES.logo} alt="logo" />
+                            </Link>
+                            <Link to="/">
+                                <img className="logo-inverse" src={IMAGES.ct_logo} alt="ct_logo" />
+                            </Link>
                         </div>
                     </div>
 
@@ -110,11 +130,11 @@ const SignUpSteps = () => {
                                 </div>
                             </div>
                             <p className="mb-0 mt-30">
-                                Already have an account? <a href="sign_in.html">Log In</a>
+                                Already have an account? <Link to="/signIn">Log In</Link>
                             </p>
                         </div>
                         <div className="sign_footer">
-                            <img src="images/sign_logo.png" alt="" />© 2020 <strong>Cursus</strong>. All Rights Reserved.
+                            <img src={IMAGES.sign_logo} alt="sign_logo" />© 2020 <strong>Cursus</strong>. All Rights Reserved.
                         </div>
                     </div>
                 </div>

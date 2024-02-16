@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import AppFooter from '../../../Layouts/AppFooter';
 import { generateRandomNumber } from '../../../helpers/helpers';
+import LiveStreamCard from '../../../components/LiveStreamCard';
 
 const LiveStream = () => {
     const streamDumpData = [
@@ -114,20 +115,8 @@ const LiveStream = () => {
                                     <div className="row">
                                         {streamDumpData.map((item) => {
                                             return (
-                                                <div key={item.id} className="col-md-3">
-                                                    <div className="stream_1 mb-30">
-                                                        <Link to={`/liveStream/output/${item.id}`}>
-                                                            <div className="stream_bg">
-                                                                <img src={item.avatar} alt="" />
-                                                                <h4>{item.name}</h4>
-                                                                {item.isLive && (
-                                                                    <p>
-                                                                        live<span></span>
-                                                                    </p>
-                                                                )}
-                                                            </div>
-                                                        </Link>
-                                                    </div>
+                                                <div key={item.id} className="mb-30 col-md-3">
+                                                    <LiveStreamCard {...item} />
                                                 </div>
                                             );
                                         })}

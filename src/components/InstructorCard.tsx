@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ICONS } from '../../../../constants';
+import { ICONS } from '../constants';
 
-export const Instructor = (item: any) => {
+const InstructorCard = (item: any) => {
     const displaySocialLinks = () => {
         return (
             <div>
@@ -64,3 +64,5 @@ export const Instructor = (item: any) => {
         </div>
     );
 };
+
+export default InstructorCard;

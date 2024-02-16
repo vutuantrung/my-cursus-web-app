@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { IMAGES } from '../../../constants';
 import { generateRandomNumber } from '../../../helpers/helpers';
 import AppFooter from '../../../Layouts/AppFooter';
+import LiveStreamCard from '../../../components/LiveStreamCard';
 
 const LiveOutput = () => {
     const dumpData = [
@@ -205,23 +206,7 @@ const LiveOutput = () => {
                                 <div className="la5lo1">
                                     <div className="owl-carousel live_stream owl-theme">
                                         {dumpData.map((item) => {
-                                            return (
-                                                <div key={item.id} className="item">
-                                                    <div className="stream_1">
-                                                        <Link to={`/liveStream/output/${item.id}`} className="stream_bg">
-                                                            {/* <a href="live_output.html" className="stream_bg"> */}
-                                                            <img src={item.avatar} alt="" />
-                                                            <h4>{item.name}</h4>
-                                                            {item.isLive && (
-                                                                <p>
-                                                                    live<span></span>
-                                                                </p>
-                                                            )}
-                                                            {/* </a> */}
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                            );
+                                            return <LiveStreamCard key={item.id} {...item} />;
                                         })}
                                     </div>
                                 </div>

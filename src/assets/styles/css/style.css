@@ -478,7 +478,7 @@ header {
 
 .search120 {
     float: left;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .srch10 {
@@ -745,6 +745,10 @@ i.icon1 {
 .ui.menu.cate-dpdwn {
     box-shadow: none !important;
     border: 0 !important;
+}
+
+.cate-wrapper {
+    margin: 20px;
 }
 
 .ui.menu.cate-dpdwn > .item:hover {
@@ -2627,7 +2631,7 @@ i.icon1 {
 }
 
 .ui[class*='left icon'].swdh11.input > input {
-    padding-left: 4.2em !important;
+    /* padding-left: 4.2em !important; */
     padding-right: 1em !important;
     height: 50px;
     font-size: 14px;
@@ -4317,8 +4321,8 @@ a.rmv-btn i {
 }
 
 .ui.selection.active.dropdown.cntry152 {
-    border-top-left-radius: 1.5rem !important;
-    border-top-right-radius: 1.5rem !important;
+    border-bottom-left-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
     box-shadow: none !important;
     border: 1px solid #333 !important;
 }

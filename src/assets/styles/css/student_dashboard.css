@@ -4105,8 +4105,8 @@ i.icon8 {
     display: inline-block;
     height: 18px;
     width: 37px;
-    top: 35%;
-    right: 13px;
+    /* top: 35%;
+    right: 13px; */
     position: absolute;
 }
 

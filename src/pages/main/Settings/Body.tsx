@@ -148,7 +148,6 @@ const Body = () => {
                                                                             className="prompt srch_explore"
                                                                             type="text"
                                                                             name="name"
-                                                                            value="Joginder"
                                                                             id="id[name]"
                                                                             required
                                                                             maxLength={64}
@@ -165,7 +164,6 @@ const Body = () => {
                                                                             className="prompt srch_explore"
                                                                             type="text"
                                                                             name="surname"
-                                                                            value="Singh"
                                                                             id="id[surname]"
                                                                             required
                                                                             maxLength={64}
@@ -182,7 +180,6 @@ const Body = () => {
                                                                             className="prompt srch_explore"
                                                                             type="text"
                                                                             name="headline"
-                                                                            value="I am a Web Designer"
                                                                             id="id_headline"
                                                                             required
                                                                             maxLength={60}
@@ -243,7 +240,6 @@ const Body = () => {
                                                                             className="prompt srch_explore"
                                                                             type="text"
                                                                             name="site"
-                                                                            value="gambolthemes.net"
                                                                             id="id_site"
                                                                             required
                                                                             maxLength={64}

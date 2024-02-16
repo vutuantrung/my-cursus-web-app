@@ -1,11 +1,11 @@
-import { CoursItem } from './components/CoursItem';
 import { generateRandomNumber } from '../../../helpers/helpers';
+import CourseCardVertical from '../../../components/CourseCardVertical';
 
 export const FeatureCoursesSection = () => {
     const dumpData = [
         {
             id: 15123,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Complete Python Bootcamp: Go from zero to hero in Python 3',
             tag: 'Web Development | Python',
@@ -18,7 +18,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 1267,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'The Complete JavaScript Course 2020: Build Real Projects!',
             tag: 'Development | JavaScript',
@@ -31,7 +31,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 612,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Beginning C++ Programming - From Beginner to Beyond',
             tag: 'Development | C++',
@@ -44,7 +44,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 1281,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'The Complete Digital Marketing Course - 12 Courses in 1',
             tag: 'Digital Marketing | Marketing',
@@ -57,7 +57,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 9452,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Microsoft Excel - Excel from Beginner to Advanced',
             tag: 'Office Productivity | Excel',
@@ -70,7 +70,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 11111,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'Angular 8 - The Complete Guide (2020 Edition)',
             tag: 'Development | Angular',
@@ -83,7 +83,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 83111,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'WordPress for Beginners: Create a Website Step by Step',
             tag: 'Design | Wordpress',
@@ -96,7 +96,7 @@ export const FeatureCoursesSection = () => {
         },
         {
             id: 6666,
-            isFeaturedCours: true,
+            isBestSeller: true,
             theme: `./assets/images/test/img_cours_sample/${generateRandomNumber(1, 18)}.jpg`,
             name: 'CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)',
             tag: 'Design | CSS',
@@ -117,7 +117,7 @@ export const FeatureCoursesSection = () => {
             <div className="la5lo1">
                 <div className="owl-carousel featured_courses owl-theme">
                     {dumpData.map((item) => {
-                        return <CoursItem key={item.id} {...item} />;
+                        return <CourseCardVertical key={item.id} {...item} />;
                     })}
                 </div>
             </div>

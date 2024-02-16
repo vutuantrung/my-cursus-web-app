@@ -1,4 +1,4 @@
-export const StudentThought = (item: any) => {
+const StudentThoughtCard = (item: any) => {
     return (
         <div className="item">
             <div className="fcrse_4 mb-20">
@@ -15,3 +15,5 @@ export const StudentThought = (item: any) => {
         </div>
     );
 };
+
+export default StudentThoughtCard;

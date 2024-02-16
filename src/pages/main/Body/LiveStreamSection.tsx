@@ -1,6 +1,7 @@
-import LiveStreamItem from './components/LiveStreamItem';
-import { generateRandomNumber } from '../../../helpers/helpers';
 import { Link } from 'react-router-dom';
+
+import { generateRandomNumber } from '../../../helpers/helpers';
+import LiveStreamCard from '../../../components/LiveStreamCard';
 
 export const LiveStreamSection = (props: any) => {
     const dumpData = [
@@ -68,7 +69,7 @@ export const LiveStreamSection = (props: any) => {
             <div className="la5lo1">
                 <div className="owl-carousel live_stream owl-theme">
                     {dumpData.map((item) => {
-                        return <LiveStreamItem key={item.id} {...item} />;
+                        return <LiveStreamCard key={item.id} {...item} />;
                     })}
                 </div>
             </div>

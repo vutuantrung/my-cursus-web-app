@@ -498,7 +498,7 @@ header {
 
 .search120 {
     float: left;
-    margin-left: 80px;
+    /* margin-left: 80px; */
 }
 
 .srch10 {
@@ -2025,7 +2025,7 @@ table {
 }
 
 .ui[class*='left icon'].swdh11.input > input {
-    padding-left: 4.2em !important;
+    /* padding-left: 4.2em !important; */
     padding-right: 1em !important;
     height: 50px;
     font-size: 14px;
@@ -2061,8 +2061,8 @@ table {
 }
 
 .ui.selection.active.dropdown.cntry152 {
-    border-top-left-radius: 1.5rem !important;
-    border-top-right-radius: 1.5rem !important;
+    border-bottom-left-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
     box-shadow: none !important;
     border: 1px solid #333 !important;
 }
