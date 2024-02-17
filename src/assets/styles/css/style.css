@@ -1312,6 +1312,9 @@ i.icon1 {
 }
 
 .play_btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
     width: 50px;
     height: 50px;

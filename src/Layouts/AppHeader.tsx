@@ -211,7 +211,7 @@ const AppHeader = () => {
                             </div>
                             <div className="night_mode_switch__btn">
                                 <a href="###" id="night-mode" className="btn-night-mode" ref={night_mode_switch}>
-                                    <i className="uil uil-moon"></i> Night mode
+                                    <i className="uil uil-moon" style={{ display: 'flex' }}></i> Night mode
                                     <span className="btn-night-mode-switch">
                                         <span className="uk-switch-button"></span>
                                     </span>

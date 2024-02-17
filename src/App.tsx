@@ -11,8 +11,6 @@ import './assets/styles/css/night-mode.css';
 import './assets/styles/css/instructor-responsive.css';
 import './assets/styles/css/instructor-dashboard.css';
 
-import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
-
 import Help from './pages/main/Help/Help';
 import Settings from './pages/main/Settings/Settings';
 
@@ -77,6 +75,7 @@ import CertificateStartForm from './pages/certificate/StartForm/CertificateStart
 import CertificateFillForm from './pages/certificate/FillForm/CertificateFillForm';
 import CertificateTestView from './pages/certificate/TestView/CertificateTestView';
 import CertificateTestResult from './pages/certificate/TestResult/CertificateTestResult';
+import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 
 const App = () => {
     const [docState, setDocState] = useState('');
