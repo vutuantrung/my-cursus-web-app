@@ -293,6 +293,7 @@ const Explore = () => {
                                                 className="prompt srch_explore"
                                                 type="text"
                                                 placeholder="Search for Tuts Videos, Tutors, Tests and more.."
+                                                style={{ paddingLeft: '60px' }}
                                             />
                                             <i className="uil uil-search-alt icon icon2"></i>
                                         </div>

@@ -2044,6 +2044,7 @@ table {
 }
 
 .srch_explore {
+    padding-left: 60px;
     background: #fff !important;
     border: 1px solid #e5e5e5 !important;
     color: #333 !important;
