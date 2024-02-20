@@ -24,6 +24,7 @@ import AllInstructors from './InstructorProfile/AllInstructors';
 import AddStream from './LiveStream/AddStream';
 import AppHeader from '../../Layouts/AppHeader';
 import AppLeftsideBar from '../../Layouts/AppLeftsideBar';
+import CardSamples from './CardSamples/CardSamples';
 
 const Main = () => {
     const [docState, setDocState] = useState('');
@@ -95,6 +96,8 @@ const Main = () => {
             <div className="wrapper app-footer-padding">
                 <Routes>
                     <Route path="" Component={Body} />
+
+                    <Route path="cardSamples" Component={CardSamples} />
 
                     <Route path="explore" Component={Explore} />
                     <Route path="savedCourses" Component={SavedCourses} />

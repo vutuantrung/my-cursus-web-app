@@ -8,8 +8,8 @@ import { PopularInstructorsSection } from './PopularInstructorsSection';
 import { RightSideBar } from './RightSideBar';
 import { StudentThoughtsSection } from './StudentThoughtsSection';
 import AppFooter from '../../../Layouts/AppFooter';
-import { SampleCards } from './SampleCards';
 import Earth from '../../../components/Earth';
+import CardAlexruix3 from '../../../components/Cards/CardAlexruix3';
 
 export const Body = () => {
     useEffect(() => {
@@ -71,20 +71,6 @@ export const Body = () => {
                 1400: { items: 3 },
             },
         });
-        // Sample cards
-        ($('.sample_cards') as any).owlCarousel({
-            ...carouselOptions,
-            loop: false,
-            items: 2,
-            margin: 10,
-            responsive: {
-                0: { items: 1 },
-                600: { items: 2 },
-                1000: { items: 3 },
-                1200: { items: 4 },
-                1400: { items: 5 },
-            },
-        });
     }, []);
     return (
         <>
@@ -95,7 +81,6 @@ export const Body = () => {
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Earth />
                             </div>
-                            <SampleCards />
                             <LiveStreamSection />
                             <FeatureCoursesSection />
                             <NewestCoursesSection />

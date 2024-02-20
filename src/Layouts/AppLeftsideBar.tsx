@@ -99,6 +99,11 @@ const AppLeftsideBar = () => {
                                     </Link>
                                 </li>
                                 <li className="sub_menu--item">
+                                    <Link to="/cardSamples" className="sub_menu--link">
+                                        Cards
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
                                     <Link to="/signIn" className="sub_menu--link">
                                         Sign In
                                     </Link>

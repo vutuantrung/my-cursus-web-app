@@ -58,6 +58,9 @@
 .card__figure {
     width: 100%;
     height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     overflow: hidden;
     transform: var(--rotate-animation) var(--scale-animation);

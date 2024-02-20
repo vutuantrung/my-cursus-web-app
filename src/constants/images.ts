@@ -10,6 +10,7 @@ import img_6 from '../assets/images/left-imgs/img-6.jpg';
 import img_8 from '../assets/images/left-imgs/img-8.jpg';
 import img_9 from '../assets/images/left-imgs/img-9.jpg';
 
+import smitPrajapatiProfilePic from '../assets/images/smitPrajapatiProfilePic.svg';
 import avatar from '../assets/images/test/avatar.jpg';
 import img_cours_sample_0 from '../assets/images/test/img_cours_sample_0.jpg';
 import img_cours_sample_1 from '../assets/images/test/img_cours_sample_1.jpg';
@@ -48,6 +49,7 @@ const images = {
     hd_dp,
     img_cours_sample_0,
     img_cours_sample_1,
+    smitPrajapatiProfilePic,
     avatar,
     avatar_instructor_0,
     avatar_instructor_1,

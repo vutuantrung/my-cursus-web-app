@@ -13,7 +13,9 @@
 
 # sample data
 /src/assets/images/test
+/src/assets/images/test_2
 /public/assets/images/test
+/public/assets/images/test_2
 
 # misc
 .DS_Store

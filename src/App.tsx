@@ -75,7 +75,8 @@ import CertificateStartForm from './pages/certificate/StartForm/CertificateStart
 import CertificateFillForm from './pages/certificate/FillForm/CertificateFillForm';
 import CertificateTestView from './pages/certificate/TestView/CertificateTestView';
 import CertificateTestResult from './pages/certificate/TestResult/CertificateTestResult';
-import ShoppingCart from './pages/shoppingCart/ShoppingCart';
+import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
+import CardSamples from './pages/main/CardSamples/CardSamples';
 
 const App = () => {
     const [docState, setDocState] = useState('');
@@ -105,6 +106,7 @@ const App = () => {
                     <Route path="" element={<Body />} />
 
                     <Route path="explore" element={<Explore />} />
+                    <Route path="cardSamples" element={<CardSamples />} />
                     <Route path="savedCourses" element={<SavedCourses />} />
                     <Route path="settings" element={<Settings />} />
                     <Route path="help" element={<Help />} />
