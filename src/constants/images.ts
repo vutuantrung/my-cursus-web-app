@@ -30,6 +30,8 @@ import blog from '../assets/images/blog_icon.png';
 import careers from '../assets/images/career_icon.png';
 import developerArea from '../assets/images/developer_icon.png';
 
+import pizza from '../assets/images/pizza.svg';
+
 import hd_dp from '../assets/images/hd_dp.jpg';
 const images = {
     helpIcon,
@@ -60,6 +62,7 @@ const images = {
     team,
     certicon,
     plus,
+    pizza,
 };
 
 export default images;

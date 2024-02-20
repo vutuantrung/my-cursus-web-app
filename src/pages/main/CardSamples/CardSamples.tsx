@@ -16,6 +16,9 @@ import CardAlexruix4 from '../../../components/Cards/CardAlexruix4';
 import CardKemboiDun from '../../../components/Cards/CardKemboiDun';
 import CardVinodjangid07 from '../../../components/Cards/CardVinodjangid07';
 import CardSmitPrajapati2 from '../../../components/Cards/CardSmitPrajapati2';
+import CardPradeepsaranbishnoi from '../../../components/Cards/CardPradeepsaranbishnoi';
+import CardElSombrero2 from '../../../components/Cards/CardElSombrero2';
+import CardSmitPrajapati3 from '../../../components/Cards/CardSmitPrajapati3';
 
 const CardSamples = () => {
     return (
@@ -69,6 +72,10 @@ const CardSamples = () => {
                 <p>CardSmitPrajapati2</p>
             </div>
             <div className={styles['card-item']}>
+                <CardSmitPrajapati3 />
+                <p>CardSmitPrajapati3</p>
+            </div>
+            <div className={styles['card-item']}>
                 <CardGharsh11032000 />
                 <p>CardGharsh11032000</p>
             </div>
@@ -83,6 +90,14 @@ const CardSamples = () => {
             <div className={styles['card-item']}>
                 <CardVinodjangid07 />
                 <p>CardVinodjangid07</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardPradeepsaranbishnoi />
+                <p>CardPradeepsaranbishnoi</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardElSombrero2 />
+                <p>CardElSombrero2</p>
             </div>
         </div>
     );
