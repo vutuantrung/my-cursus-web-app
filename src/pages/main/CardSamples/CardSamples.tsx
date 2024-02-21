@@ -19,6 +19,13 @@ import CardSmitPrajapati2 from '../../../components/Cards/CardSmitPrajapati2';
 import CardPradeepsaranbishnoi from '../../../components/Cards/CardPradeepsaranbishnoi';
 import CardElSombrero2 from '../../../components/Cards/CardElSombrero2';
 import CardSmitPrajapati3 from '../../../components/Cards/CardSmitPrajapati3';
+import CardAnthonyPreite from '../../../components/Cards/CardAnthonyPreite';
+import CardElijahwgummerPoc from '../../../components/Cards/CardElijahwgummerPoc';
+import CardArshshaikh06 from '../../../components/Cards/CardArshshaikh06';
+import CardEduardoAmaroMaciel from '../../../components/Cards/CardEduardoAmaroMaciel';
+import CardHtwarriors108 from '../../../components/Cards/CardHtwarriors108';
+import CardEslamHany from '../../../components/Cards/CardEslamHany';
+import CardDaniel1227k from '../../../components/Cards/CardDaniel1227k';
 
 const CardSamples = () => {
     return (
@@ -98,6 +105,30 @@ const CardSamples = () => {
             <div className={styles['card-item']}>
                 <CardElSombrero2 />
                 <p>CardElSombrero2</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardAnthonyPreite />
+                <p>CardAnthonyPreite</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardElijahwgummerPoc />
+                <p>CardElijahwgummerPoc</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardEduardoAmaroMaciel />
+                <p>CardEduardoAmaroMaciel</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardHtwarriors108 />
+                <p>CardHtwarriors108</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardEslamHany />
+                <p>CardEslamHany</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardDaniel1227k />
+                <p>CardDaniel1227k</p>
             </div>
         </div>
     );
