@@ -1,3 +1,5 @@
+import styles from './CardSamples.module.css';
+
 import CardAlexruix from '../../../components/Cards/CardAlexruix';
 import CardLovelyDragon from '../../../components/Cards/CardLovelyDragon';
 import CardProgramaConPid from '../../../components/Cards/CardProgramaConPid';
@@ -10,8 +12,6 @@ import CardTiagoadag from '../../../components/Cards/CardTiagoadag';
 import CardBrunoguyy12 from '../../../components/Cards/CardBrunoguyy12';
 import CardAlexruix3 from '../../../components/Cards/CardAlexruix3';
 import CardGharsh11032000 from '../../../components/Cards/CardGharsh11032000';
-
-import styles from './CardSamples.module.css';
 import CardAlexruix4 from '../../../components/Cards/CardAlexruix4';
 import CardKemboiDun from '../../../components/Cards/CardKemboiDun';
 import CardVinodjangid07 from '../../../components/Cards/CardVinodjangid07';
@@ -21,11 +21,12 @@ import CardElSombrero2 from '../../../components/Cards/CardElSombrero2';
 import CardSmitPrajapati3 from '../../../components/Cards/CardSmitPrajapati3';
 import CardAnthonyPreite from '../../../components/Cards/CardAnthonyPreite';
 import CardElijahwgummerPoc from '../../../components/Cards/CardElijahwgummerPoc';
-import CardArshshaikh06 from '../../../components/Cards/CardArshshaikh06';
 import CardEduardoAmaroMaciel from '../../../components/Cards/CardEduardoAmaroMaciel';
 import CardHtwarriors108 from '../../../components/Cards/CardHtwarriors108';
 import CardEslamHany from '../../../components/Cards/CardEslamHany';
 import CardDaniel1227k from '../../../components/Cards/CardDaniel1227k';
+// import CardPraashoo7 from '../../../components/Cards/CardPraashoo7';
+import CardSowmyaSeshadri from '../../../components/Cards/CardSowmyaSeshadri';
 
 const CardSamples = () => {
     return (
@@ -129,6 +130,14 @@ const CardSamples = () => {
             <div className={styles['card-item']}>
                 <CardDaniel1227k />
                 <p>CardDaniel1227k</p>
+            </div>
+            {/* <div className={styles['card-item']}>
+                <CardPraashoo7 />
+                <p>CardPraashoo7</p>
+            </div> */}
+            <div className={styles['card-item']}>
+                <CardSowmyaSeshadri />
+                <p>CardSowmyaSeshadri</p>
             </div>
         </div>
     );
