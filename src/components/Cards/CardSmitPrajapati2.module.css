@@ -117,7 +117,7 @@
 }
 
 .box1:hover {
-    background-image: url('../../assets/images/test/test_img_vertical_1.jpg');
+    background-image: url('../../assets/images/test/test_img_vertical_3.jpg');
     background-size: cover;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .box2:hover {
-    background-image: url('../../assets/images/test/test_img_vertical_2.jpg');
+    background-image: url('../../assets/images/test/test_img_vertical_4.jpg');
     background-size: cover;
 }
 
@@ -141,6 +141,6 @@
 }
 
 .box3:hover {
-    background-image: url('../../assets/images/test/test_img_vertical.jpg');
+    background-image: url('../../assets/images/test/test_img_vertical_5.jpg');
     background-size: cover;
 }

@@ -75,8 +75,10 @@ import CertificateStartForm from './pages/certificate/StartForm/CertificateStart
 import CertificateFillForm from './pages/certificate/FillForm/CertificateFillForm';
 import CertificateTestView from './pages/certificate/TestView/CertificateTestView';
 import CertificateTestResult from './pages/certificate/TestResult/CertificateTestResult';
-import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
 import CardSamples from './pages/main/CardSamples/CardSamples';
+import ShoppingCart from './pages/shoppingCart/ShoppingCart';
+import MonsterElectrico from './pages/working/MonsterElectrico/MonsterElectrico';
+import PerspectiveSlider from './pages/working/PerspectiveSlider/PerspectiveSlider';
 
 const App = () => {
     const [docState, setDocState] = useState('');
@@ -155,6 +157,11 @@ const App = () => {
                     <Route path="payout" element={<InstructorPayout />} />
                     <Route path="statement" element={<InstructorStatement />} />
                     <Route path="verification" element={<InstructorVerification />} />
+                </Route>
+
+                <Route path="working">
+                    <Route path="monsterelectrico" element={<MonsterElectrico />} />
+                    <Route path="perspectiveSlider" element={<PerspectiveSlider />} />
                 </Route>
 
                 <Route path="termsOfUse" element={<TermsOfUse />} />

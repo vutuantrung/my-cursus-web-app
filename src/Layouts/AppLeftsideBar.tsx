@@ -81,6 +81,24 @@ const AppLeftsideBar = () => {
                                 </li>
                             </ul>
                         </li>
+                        <li className="menu--item  menu--item__has_sub_menu">
+                            <label className="menu--link" title="Tests">
+                                <i className="uil uil-clipboard-alt menu--icon"></i>
+                                <span>Working</span>
+                            </label>
+                            <ul className="sub_menu">
+                                <li className="sub_menu--item">
+                                    <Link to="/working/monsterelectrico" className="sub_menu--link">
+                                        Monster Electrico
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/perspectiveSlider" className="sub_menu--link">
+                                        3D Perspective Slider
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
                         <li className="menu--item">
                             <NavLink to="/savedCourses" className="menu--link menu--label" title="Saved Courses">
                                 <i className="uil uil-heart-alt menu--icon"></i>

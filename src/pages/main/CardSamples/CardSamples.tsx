@@ -27,6 +27,7 @@ import CardEslamHany from '../../../components/Cards/CardEslamHany';
 import CardDaniel1227k from '../../../components/Cards/CardDaniel1227k';
 // import CardPraashoo7 from '../../../components/Cards/CardPraashoo7';
 import CardSowmyaSeshadri from '../../../components/Cards/CardSowmyaSeshadri';
+import CardJaydipPrajapati1910 from '../../../components/Cards/CardJaydipPrajapati1910';
 
 const CardSamples = () => {
     return (
@@ -138,6 +139,10 @@ const CardSamples = () => {
             <div className={styles['card-item']}>
                 <CardSowmyaSeshadri />
                 <p>CardSowmyaSeshadri</p>
+            </div>
+            <div className={styles['card-item']}>
+                <CardJaydipPrajapati1910 />
+                <p>CardJaydipPrajapati1910</p>
             </div>
         </div>
     );
