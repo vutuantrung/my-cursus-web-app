@@ -97,6 +97,16 @@ const AppLeftsideBar = () => {
                                         3D Perspective Slider
                                     </Link>
                                 </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/clipBlinds" className="sub_menu--link">
+                                        Clip Blinds
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/expandingFlexCards" className="sub_menu--link">
+                                        Expanding Flex Cards
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                         <li className="menu--item">

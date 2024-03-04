@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './PerspectiveSlider.module.css';
+import PageHeader from '../../../Layouts/PageHeader';
 
 const PerspectiveSlider = () => {
     const [docState, setDocState] = useState('');
@@ -66,9 +67,8 @@ const PerspectiveSlider = () => {
             private animationStopped: any;
 
             constructor(el: any) {
-                console.log('[el]', el);
-                const imgClass = (this.IMG_CLASS = 'tmp_slider__images-item');
-                const textClass = (this.TEXT_CLASS = 'tmp_slider__text-item');
+                const imgClass = (this.IMG_CLASS = 'slider__images-item');
+                const textClass = (this.TEXT_CLASS = 'slider__text-item');
                 const activeImgClass = (this.ACTIVE_IMG_CLASS = `${imgClass}--active`);
                 const activeTextClass = (this.ACTIVE_TEXT_CLASS = `${textClass}--active`);
 
@@ -79,7 +79,6 @@ const PerspectiveSlider = () => {
                 // taking advantage of the live nature of 'getElement...' methods
                 this.activeImg = el.getElementsByClassName(styles[activeImgClass]);
                 this.activeText = el.getElementsByClassName(styles[activeTextClass]);
-                console.log('[activeText]', this.activeText);
                 this.images = el.getElementsByTagName('img');
 
                 document.getElementById('slider-dots')!.addEventListener('click', this.onDotClick.bind(this));
@@ -204,15 +203,14 @@ const PerspectiveSlider = () => {
                 this.startTransition(nextId);
             }
             transitionItem(nextId: any) {
-                console.log('[transitionItem');
                 function onImageTransitionEnd(e: any) {
                     e.stopPropagation();
 
-                    nextImg.classList.remove(transitClass);
+                    nextImg.classList.remove(styles[transitClass]);
 
                     self.inTransit = false;
 
-                    this.className = imgClass;
+                    this.className = styles[imgClass];
                     this.removeEventListener('transitionend', onImageTransitionEnd);
                 }
 
@@ -226,20 +224,20 @@ const PerspectiveSlider = () => {
                 const activeTextClass = this.ACTIVE_TEXT_CLASS;
                 const subActiveClass = `${imgClass}--subactive`;
                 const transitClass = `${imgClass}--transit`;
-                const nextImg = el.querySelector(`.${imgClass}[data-id='${nextId}']`);
-                const nextText = el.querySelector(`.${textClass}[data-id='${nextId}']`);
+                const nextImg = el.querySelector(`.${styles[imgClass]}[data-id='${nextId}']`);
+                const nextText = el.querySelector(`.${styles[textClass]}[data-id='${nextId}']`);
 
                 let outClass = '';
                 let inClass = '';
 
                 this.animationStopped = true;
 
-                nextText.classList.add(activeTextClass);
+                nextText.classList.add(styles[activeTextClass]);
 
                 el.style.setProperty('--from-left', nextId);
 
-                currentImg.classList.remove(activeImgClass);
-                currentImg.classList.add(subActiveClass);
+                currentImg.classList.remove(styles[activeImgClass]);
+                currentImg.classList.add(styles[subActiveClass]);
 
                 if (currentId < nextId) {
                     outClass = `${imgClass}--next`;
@@ -249,16 +247,16 @@ const PerspectiveSlider = () => {
                     inClass = `${imgClass}--next`;
                 }
 
-                nextImg.classList.add(outClass);
+                nextImg.classList.add(styles[outClass]);
 
                 requestAnimationFrame(() => {
-                    nextImg.classList.add(transitClass, activeImgClass);
-                    nextImg.classList.remove(outClass);
+                    nextImg.classList.add(styles[transitClass], styles[activeImgClass]);
+                    nextImg.classList.remove(styles[outClass]);
 
                     this.animationStopped = false;
                     this.positionImage(this.getMouseCoefficients());
 
-                    currentImg.classList.add(transitClass, inClass);
+                    currentImg.classList.add(styles[transitClass], styles[inClass]);
                     currentImg.addEventListener('transitionend', onImageTransitionEnd);
                 });
 
@@ -266,12 +264,10 @@ const PerspectiveSlider = () => {
             }
             startTransition(nextId: any) {
                 function onTextTransitionEnd(e: any) {
-                    console.log('[pseudoElement]', e.pseudoElement);
                     if (!e.pseudoElement) {
                         e.stopPropagation();
 
                         requestAnimationFrame(() => {
-                            console.log('[requestAnimationFrame');
                             self.transitionItem(nextId);
                         });
 
@@ -283,16 +279,15 @@ const PerspectiveSlider = () => {
                 const activeText = this.activeText[0];
                 const backwardsClass = `${this.TEXT_CLASS}--backwards`;
                 const self = this;
-                console.log('[startTransition]', this.inTransit, backwardsClass, activeText);
 
                 this.inTransit = true;
 
-                activeText.classList.add(backwardsClass);
-                activeText.classList.remove(this.ACTIVE_TEXT_CLASS);
+                activeText.classList.add(styles[backwardsClass]);
+                activeText.classList.remove(styles[this.ACTIVE_TEXT_CLASS]);
                 activeText.addEventListener('transitionend', onTextTransitionEnd);
 
                 requestAnimationFrame(() => {
-                    activeText.classList.remove(backwardsClass);
+                    activeText.classList.remove(styles[backwardsClass]);
                 });
             }
             next() {
@@ -301,7 +296,6 @@ const PerspectiveSlider = () => {
                 let nextId = +this.activeImg[0].dataset.id + 1;
 
                 if (nextId > this.length) nextId = 1;
-                console.log('neexxt', this.inTransit, nextId);
                 this.startTransition(nextId);
             }
             prev() {
@@ -317,7 +311,7 @@ const PerspectiveSlider = () => {
                 function onBackgroundTransitionEnd(e: any) {
                     if (e.target === this) {
                         this.style.setProperty('--img-prev', imageUrl);
-                        this.classList.remove(bgClass);
+                        this.classList.remove(styles[bgClass]);
                         this.removeEventListener('transitionend', onBackgroundTransitionEnd);
                     }
                 }
@@ -328,12 +322,11 @@ const PerspectiveSlider = () => {
 
                 el.style.setProperty('--img-next', imageUrl);
                 el.addEventListener('transitionend', onBackgroundTransitionEnd);
-                el.classList.add(bgClass);
+                el.classList.add(styles[bgClass]);
             }
         }
 
         let timer: any = 0;
-        console.log('[docState]', docState);
         if (docState === 'complete') {
             const sliderEl = document.getElementById('slider');
             if (!sliderEl) {
@@ -353,89 +346,88 @@ const PerspectiveSlider = () => {
     }, [docState]);
 
     return (
-        <div className={`${styles['slider']}`} id="slider">
-            <div className={styles['slider__content']} id="slider-content">
-                <div className={styles['slider__images']}>
-                    <div
-                        className={`${styles['slider__images-item']} ${styles['slider__images-item--active']} tmp_slider__images-item--active`}
-                        data-id="1"
-                    >
-                        <img src="../assets/images/test/bgHorizontal/奈汐酱Nice.jpg" alt="" />
-                    </div>
-                    <div className={`${styles['slider__images-item']} tmp_slider__images-item`} data-id="2">
-                        <img src="../assets/images/test/bgHorizontal/笑芳香沁写真.jpg" alt="" />
-                    </div>
-                    <div className={`${styles['slider__images-item']} tmp_slider__images-item`} data-id="3">
-                        <img src="../assets/images/test/bgHorizontal/HaneAme.jpg" alt="" />
-                    </div>
-                    <div className={`${styles['slider__images-item']} tmp_slider__images-item`} data-id="4">
-                        <img src="../assets/images/test/bgHorizontal/Byoru.jpg" alt="" />
-                    </div>
-                    <div className={`${styles['slider__images-item']} tmp_slider__images-item`} data-id="5">
-                        <img src="../assets/images/test/bgHorizontal/Azami.jpg" alt="" />
-                    </div>
-                </div>
-                <div className={styles['slider__text']}>
-                    <div
-                        className={`${styles['slider__text-item']} ${styles['slider__text-item--active']} tmp_slider__text-item tmp_slider__text-item--active`}
-                        data-id="1"
-                    >
-                        <div className={styles['slider__text-item-head']}>
-                            <h3>奈汐酱Nice</h3>
+        <div>
+            <PageHeader />
+            <div className={styles['wrapper']}>
+                <div className={`${styles['slider']}`} id="slider">
+                    <div className={styles['slider__content']} id="slider-content">
+                        <div className={styles['slider__images']}>
+                            <div className={`${styles['slider__images-item']} ${styles['slider__images-item--active']}`} data-id="1">
+                                <img src="../assets/images/test/bgHorizontal/奈汐酱Nice.jpg" alt="" />
+                            </div>
+                            <div className={`${styles['slider__images-item']}`} data-id="2">
+                                <img src="../assets/images/test/bgHorizontal/笑芳香沁写真.jpg" alt="" />
+                            </div>
+                            <div className={`${styles['slider__images-item']}`} data-id="3">
+                                <img src="../assets/images/test/bgHorizontal/HaneAme.jpg" alt="" />
+                            </div>
+                            <div className={`${styles['slider__images-item']}`} data-id="4">
+                                <img src="../assets/images/test/bgHorizontal/Byoru.jpg" alt="" />
+                            </div>
+                            <div className={`${styles['slider__images-item']}`} data-id="5">
+                                <img src="../assets/images/test/bgHorizontal/Azami.jpg" alt="" />
+                            </div>
                         </div>
-                        <div className={styles['slider__text-item-info']}>
-                            <p>“And into the forest I go, to lose my mind and find my soul”</p>
+                        <div className={styles['slider__text']}>
+                            <div className={`${styles['slider__text-item']} ${styles['slider__text-item--active']}`} data-id="1">
+                                <div className={styles['slider__text-item-head']}>
+                                    <h3>奈汐酱Nice</h3>
+                                </div>
+                                <div className={styles['slider__text-item-info']}>
+                                    <p>“And into the forest I go, to lose my mind and find my soul”</p>
+                                </div>
+                            </div>
+                            <div className={`${styles['slider__text-item']}`} data-id="2">
+                                <div className={styles['slider__text-item-head']}>
+                                    <h3>笑芳香沁写真</h3>
+                                </div>
+                                <div className={styles['slider__text-item-info']}>
+                                    <p>“Mist to mist, drops to drops. For water thou art, and unto water shalt thou return”</p>
+                                </div>
+                            </div>
+                            <div className={`${styles['slider__text-item']}`} data-id="3">
+                                <div className={styles['slider__text-item-head']}>
+                                    <h3>Hane Ame</h3>
+                                </div>
+                                <div className={styles['slider__text-item-info']}>
+                                    <p>“Go to the edge of the cliff and jump off. Build your wings on the way down”</p>
+                                </div>
+                            </div>
+                            <div className={`${styles['slider__text-item']}`} data-id="4">
+                                <div className={styles['slider__text-item-head']}>
+                                    <h3>Byoru</h3>
+                                </div>
+                                <div className={styles['slider__text-item-info']}>
+                                    <p>“What are men to rocks and mountains?”</p>
+                                </div>
+                            </div>
+                            <div className={`${styles['slider__text-item']}`} data-id="5">
+                                <div className={styles['slider__text-item-head']}>
+                                    <h3>Azami</h3>
+                                </div>
+                                <div className={styles['slider__text-item-info']}>
+                                    <p>“On all the peaks lies peace”</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className={`${styles['slider__text-item']} tmp_slider__text-item`} data-id="2">
-                        <div className={styles['slider__text-item-head']}>
-                            <h3>笑芳香沁写真</h3>
+                    <div className={styles['slider__nav']}>
+                        <div className={styles['slider__nav-arrows']}>
+                            <div className={`${styles['slider__nav-arrow']} ${styles['slider__nav-arrow--left']}`} id="left">
+                                to left
+                            </div>
+                            <div className={`${styles['slider__nav-arrow']} ${styles['slider__nav-arrow--right']}`} id="right">
+                                to right
+                            </div>
                         </div>
-                        <div className={styles['slider__text-item-info']}>
-                            <p>“Mist to mist, drops to drops. For water thou art, and unto water shalt thou return”</p>
-                        </div>
-                    </div>
-                    <div className={`${styles['slider__text-item']} tmp_slider__text-item`} data-id="3">
-                        <div className={styles['slider__text-item-head']}>
-                            <h3>Hane Ame</h3>
-                        </div>
-                        <div className={styles['slider__text-item-info']}>
-                            <p>“Go to the edge of the cliff and jump off. Build your wings on the way down”</p>
-                        </div>
-                    </div>
-                    <div className={`${styles['slider__text-item']} tmp_slider__text-item`} data-id="4">
-                        <div className={styles['slider__text-item-head']}>
-                            <h3>Byoru</h3>
-                        </div>
-                        <div className={styles['slider__text-item-info']}>
-                            <p>“What are men to rocks and mountains?”</p>
+                        <div className={styles['slider__nav-dots']} id="slider-dots">
+                            <div className={`${styles['slider__nav-dot']} ${styles['slider__nav-dot--active']}`} data-id="1"></div>
+                            <div className={styles['slider__nav-dot']} data-id="2"></div>
+                            <div className={styles['slider__nav-dot']} data-id="3"></div>
+                            <div className={styles['slider__nav-dot']} data-id="4"></div>
+                            <div className={styles['slider__nav-dot']} data-id="5"></div>
                         </div>
                     </div>
-                    <div className={`${styles['slider__text-item']} tmp_slider__text-item`} data-id="5">
-                        <div className={styles['slider__text-item-head']}>
-                            <h3>Azami</h3>
-                        </div>
-                        <div className={styles['slider__text-item-info']}>
-                            <p>“On all the peaks lies peace”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className={styles['slider__nav']}>
-                <div className={styles['slider__nav-arrows']}>
-                    <div className={`${styles['slider__nav-arrow']} ${styles['slider__nav-arrow--left']}`} id="left">
-                        to left
-                    </div>
-                    <div className={`${styles['slider__nav-arrow']} ${styles['slider__nav-arrow--right']}`} id="right">
-                        to right
-                    </div>
-                </div>
-                <div className={styles['slider__nav-dots']} id="slider-dots">
-                    <div className={`${styles['slider__nav-dot']} ${styles['slider__nav-dot--active']}`} data-id="1"></div>
-                    <div className={styles['slider__nav-dot']} data-id="2"></div>
-                    <div className={styles['slider__nav-dot']} data-id="3"></div>
-                    <div className={styles['slider__nav-dot']} data-id="4"></div>
-                    <div className={styles['slider__nav-dot']} data-id="5"></div>
                 </div>
             </div>
         </div>

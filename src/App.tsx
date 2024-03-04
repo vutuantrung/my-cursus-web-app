@@ -79,6 +79,8 @@ import CardSamples from './pages/main/CardSamples/CardSamples';
 import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 import MonsterElectrico from './pages/working/MonsterElectrico/MonsterElectrico';
 import PerspectiveSlider from './pages/working/PerspectiveSlider/PerspectiveSlider';
+import ClipBlinds from './pages/working/ClipBlinds/ClipBlinds';
+import ExpandingFlexCards from './pages/working/ExpandingFlexCards/ExpandingFlexCards';
 
 const App = () => {
     const [docState, setDocState] = useState('');
@@ -162,6 +164,8 @@ const App = () => {
                 <Route path="working">
                     <Route path="monsterelectrico" element={<MonsterElectrico />} />
                     <Route path="perspectiveSlider" element={<PerspectiveSlider />} />
+                    <Route path="clipBlinds" element={<ClipBlinds />} />
+                    <Route path="expandingFlexCards" element={<ExpandingFlexCards />} />
                 </Route>
 
                 <Route path="termsOfUse" element={<TermsOfUse />} />
