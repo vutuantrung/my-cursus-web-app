@@ -29,7 +29,7 @@ const ExpandingFlexCards = () => {
         }
     }, [docState]);
     return (
-        <div>
+        <div style={{ width: '100vw' }}>
             <PageHeader />
             <div className={styles['wrapper_option']}>
                 <div className={styles['options']}>

@@ -76,11 +76,16 @@ import CertificateFillForm from './pages/certificate/FillForm/CertificateFillFor
 import CertificateTestView from './pages/certificate/TestView/CertificateTestView';
 import CertificateTestResult from './pages/certificate/TestResult/CertificateTestResult';
 import CardSamples from './pages/main/CardSamples/CardSamples';
-import ShoppingCart from './pages/shoppingCart/ShoppingCart';
 import MonsterElectrico from './pages/working/MonsterElectrico/MonsterElectrico';
 import PerspectiveSlider from './pages/working/PerspectiveSlider/PerspectiveSlider';
 import ClipBlinds from './pages/working/ClipBlinds/ClipBlinds';
 import ExpandingFlexCards from './pages/working/ExpandingFlexCards/ExpandingFlexCards';
+import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
+import FoodCart from './pages/working/FoodCart/FoodCart';
+import SplitShowcase from './pages/working/SplitShowcase/SplitShowcase';
+import SplitImage from './pages/working/SplitImage/SplitImage';
+import FullImageReveal from './pages/working/FullImageReveal/FullImageReveal';
+import MotionRevealSlidesShow from './pages/working/MotionRevealSlidesShow/MotionRevealSlidesShow';
 
 const App = () => {
     const [docState, setDocState] = useState('');
@@ -166,6 +171,11 @@ const App = () => {
                     <Route path="perspectiveSlider" element={<PerspectiveSlider />} />
                     <Route path="clipBlinds" element={<ClipBlinds />} />
                     <Route path="expandingFlexCards" element={<ExpandingFlexCards />} />
+                    <Route path="foodCart" element={<FoodCart />} />
+                    <Route path="splitShowcase" element={<SplitShowcase />} />
+                    <Route path="splitImage" element={<SplitImage />} />
+                    <Route path="fullImageReveal" element={<FullImageReveal />} />
+                    <Route path="motionRevealSlidesShow" element={<MotionRevealSlidesShow />} />
                 </Route>
 
                 <Route path="termsOfUse" element={<TermsOfUse />} />

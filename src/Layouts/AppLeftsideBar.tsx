@@ -107,6 +107,31 @@ const AppLeftsideBar = () => {
                                         Expanding Flex Cards
                                     </Link>
                                 </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/foodCart" className="sub_menu--link">
+                                        Food Cart
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/splitShowcase" className="sub_menu--link">
+                                        Split Showcase
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/splitImage" className="sub_menu--link">
+                                        Split Image
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/fullImageReveal" className="sub_menu--link">
+                                        Full Image Reveal
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/motionRevealSlidesShow" className="sub_menu--link">
+                                        Motion Reveal SlidesShow
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                         <li className="menu--item">
