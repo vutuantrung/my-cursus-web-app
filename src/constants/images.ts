@@ -33,6 +33,7 @@ import developerArea from '../assets/images/developer_icon.png';
 import pizza from '../assets/images/pizza.svg';
 
 import hd_dp from '../assets/images/hd_dp.jpg';
+
 const images = {
     helpIcon,
     blog,

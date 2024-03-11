@@ -132,6 +132,16 @@ const AppLeftsideBar = () => {
                                         Motion Reveal SlidesShow
                                     </Link>
                                 </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/imageSlider" className="sub_menu--link">
+                                        Image Slider Sample
+                                    </Link>
+                                </li>
+                                <li className="sub_menu--item">
+                                    <Link to="/working/freewall" className="sub_menu--link">
+                                        Freewall
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                         <li className="menu--item">

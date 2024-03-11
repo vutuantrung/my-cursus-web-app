@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import 'semantic-ui-css/semantic.min.css';
@@ -76,16 +76,19 @@ import CertificateFillForm from './pages/certificate/FillForm/CertificateFillFor
 import CertificateTestView from './pages/certificate/TestView/CertificateTestView';
 import CertificateTestResult from './pages/certificate/TestResult/CertificateTestResult';
 import CardSamples from './pages/main/CardSamples/CardSamples';
-import MonsterElectrico from './pages/working/MonsterElectrico/MonsterElectrico';
-import PerspectiveSlider from './pages/working/PerspectiveSlider/PerspectiveSlider';
-import ClipBlinds from './pages/working/ClipBlinds/ClipBlinds';
-import ExpandingFlexCards from './pages/working/ExpandingFlexCards/ExpandingFlexCards';
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
-import FoodCart from './pages/working/FoodCart/FoodCart';
-import SplitShowcase from './pages/working/SplitShowcase/SplitShowcase';
-import SplitImage from './pages/working/SplitImage/SplitImage';
-import FullImageReveal from './pages/working/FullImageReveal/FullImageReveal';
-import MotionRevealSlidesShow from './pages/working/MotionRevealSlidesShow/MotionRevealSlidesShow';
+
+const FoodCart = lazy(() => import('./pages/working/FoodCart/FoodCart'));
+const ClipBlinds = lazy(() => import('./pages/working/ClipBlinds/ClipBlinds'));
+const MonsterElectrico = lazy(() => import('./pages/working/MonsterElectrico/MonsterElectrico'));
+const PerspectiveSlider = lazy(() => import('./pages/working/PerspectiveSlider/PerspectiveSlider'));
+const ExpandingFlexCards = lazy(() => import('./pages/working/ExpandingFlexCards/ExpandingFlexCards'));
+const SplitShowcase = lazy(() => import('./pages/working/SplitShowcase/SplitShowcase'));
+const SplitImage = lazy(() => import('./pages/working/SplitImage/SplitImage'));
+const FullImageReveal = lazy(() => import('./pages/working/FullImageReveal/FullImageReveal'));
+const MotionRevealSlidesShow = lazy(() => import('./pages/working/MotionRevealSlidesShow/MotionRevealSlidesShow'));
+const ImageSlider = lazy(() => import('./pages/working/ImageSlider/ImageSlider'));
+const FreewallComponent = lazy(() => import('./pages/working/FreewallComponent/FreewallComponent'));
 
 const App = () => {
     const [docState, setDocState] = useState('');
@@ -167,15 +170,94 @@ const App = () => {
                 </Route>
 
                 <Route path="working">
-                    <Route path="monsterelectrico" element={<MonsterElectrico />} />
-                    <Route path="perspectiveSlider" element={<PerspectiveSlider />} />
-                    <Route path="clipBlinds" element={<ClipBlinds />} />
-                    <Route path="expandingFlexCards" element={<ExpandingFlexCards />} />
-                    <Route path="foodCart" element={<FoodCart />} />
-                    <Route path="splitShowcase" element={<SplitShowcase />} />
-                    <Route path="splitImage" element={<SplitImage />} />
-                    <Route path="fullImageReveal" element={<FullImageReveal />} />
-                    <Route path="motionRevealSlidesShow" element={<MotionRevealSlidesShow />} />
+                    <Route
+                        path="monsterelectrico"
+                        element={
+                            <Suspense>
+                                <MonsterElectrico />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="perspectiveSlider"
+                        element={
+                            <Suspense>
+                                <PerspectiveSlider />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="clipBlinds"
+                        element={
+                            <Suspense>
+                                <ClipBlinds />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="expandingFlexCards"
+                        element={
+                            <Suspense>
+                                <ExpandingFlexCards />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="foodCart"
+                        element={
+                            <Suspense>
+                                <FoodCart />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="splitShowcase"
+                        element={
+                            <Suspense>
+                                <SplitShowcase />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="splitImage"
+                        element={
+                            <Suspense>
+                                <SplitImage />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="fullImageReveal"
+                        element={
+                            <Suspense>
+                                <FullImageReveal />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="motionRevealSlidesShow"
+                        element={
+                            <Suspense>
+                                <MotionRevealSlidesShow />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="imageSlider"
+                        element={
+                            <Suspense>
+                                <ImageSlider />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="freewall"
+                        element={
+                            <Suspense>
+                                <FreewallComponent />
+                            </Suspense>
+                        }
+                    />
                 </Route>
 
                 <Route path="termsOfUse" element={<TermsOfUse />} />

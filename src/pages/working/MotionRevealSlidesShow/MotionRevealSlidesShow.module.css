@@ -168,6 +168,22 @@
     pointer-events: none;
 }
 
+.slide__img_0 {
+    background-image: url(/public/assets/images/test/thumbs/1.jpg);
+}
+.slide__img_1 {
+    background-image: url(/public/assets/images/test/thumbs/2.jpg);
+}
+.slide__img_2 {
+    background-image: url(/public/assets/images/test/thumbs/3.jpg);
+}
+.slide__img_3 {
+    background-image: url(/public/assets/images/test/thumbs/4.jpg);
+}
+.slide__img_4 {
+    background-image: url(/public/assets/images/test/thumbs/5.jpg);
+}
+
 .slide__img::after {
     content: '';
     background: rgba(22, 63, 191, 0.62);
@@ -320,6 +336,22 @@
     background-size: cover;
     background-position: 50% 50%;
     backface-visibility: hidden;
+}
+
+.preview__img_0 {
+    background-image: url(/public/assets/images/test/bgHorizontal/1.jpg);
+}
+.preview__img_1 {
+    background-image: url(/public/assets/images/test/bgHorizontal/2.jpg);
+}
+.preview__img_2 {
+    background-image: url(/public/assets/images/test/bgHorizontal/3.jpg);
+}
+.preview__img_3 {
+    background-image: url(/public/assets/images/test/bgHorizontal/4.jpg);
+}
+.preview__img_4 {
+    background-image: url(/public/assets/images/test/bgHorizontal/5.jpg);
 }
 
 .preview__img::after {

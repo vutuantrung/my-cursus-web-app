@@ -61,7 +61,7 @@ const PageHeader = () => {
         // });
     }, []);
     return (
-        <header className="header clearfix">
+        <div className="header clearfix">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -128,7 +128,7 @@ const PageHeader = () => {
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
     );
 };
 export default PageHeader;

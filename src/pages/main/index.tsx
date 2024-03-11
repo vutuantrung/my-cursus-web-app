@@ -29,25 +29,18 @@ import CardSamples from './CardSamples/CardSamples';
 const Main = () => {
     const [docState, setDocState] = useState('');
 
-    console.log('document.onreadystatechange:', document.readyState);
-
     useEffect(() => {
-        console.log(document.readyState);
         if (document.readyState === 'complete') {
             setDocState(document.readyState);
         } else {
             setTimeout(() => {
-                console.log(document.readyState);
                 setDocState(document.readyState);
             }, 1000);
         }
     }, []);
 
     useEffect(() => {
-        // console.log('main useEffect', document.readyState, docState);
         if (docState === 'complete') {
-            console.log('gonna set ....');
-
             const querySelector = document.querySelector.bind(document);
             const nav = document.querySelector('.vertical_nav');
             const wrapper = document.querySelector('.wrapper');
